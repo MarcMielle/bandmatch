@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  belongs_to :band
   has_one :preference, as: :entity
   has_many :messages, foreign_key: :author_id
 
