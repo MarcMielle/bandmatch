@@ -13,4 +13,8 @@ class BandsController < ApplicationController
 
   def add_musician
   end
+
+  def band_params
+    params.require(:band).permit(:name, :music_style, :avatar)
+  end
 end

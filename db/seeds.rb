@@ -4,13 +4,17 @@ Band.destroy_all
 
 puts 'Creating bands and musicians...'
 
-band1 = Band.create!(name: "Overmist", music_style: "rock")
-band2 = Band.create!(name: "442", music_style: "rock")
-band3 = Band.create!(name: "Storm Dance Ego", music_style: "house")
-band4 = Band.create!(name: "Violin Flower's", music_style: "classique")
-band5 = Band.create!(name: "DOCIL", music_style: "folk")
-band6 = Band.create!(name: "Water Fire", music_style: "funk")
-band7 = Band.create!(name: "Brume", music_style: "classique")
+band1 = Band.new(name: "Overmist", music_style: "rock")
+file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
+band1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
+band1.save!
+
+band2 = Band.new(name: "442", music_style: "rock")
+band3 = Band.new(name: "Storm Dance Ego", music_style: "house")
+band4 = Band.new(name: "Violin Flower's", music_style: "classique")
+band5 = Band.new(name: "DOCIL", music_style: "folk")
+band6 = Band.new(name: "Water Fire", music_style: "funk")
+band7 = Band.new(name: "Brume", music_style: "classique")
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
@@ -28,9 +32,10 @@ user1 = User.new(
   bio: "Nicolas, batteur débutant. Passionné de musique et plus particulièrement de rock (Nirvana, U2, Radiohead, etc), pop 80-90's et de musique instrumentale."
 )
 
-file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
+=begin file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
 user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
-user1.save!
+user1.save! 
+=end
 
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
