@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'bands/index'
-  get 'bands/show'
-  get 'bands/edit'
-  get 'bands/update'
-  get 'bands/add_musician'
+
   root to: 'pages#home'
   devise_for :users
 
