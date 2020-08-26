@@ -255,29 +255,29 @@ user16 = User.new(
 user16.save!
 
 user17 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "totorea@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
+  first_name:    "Toréa",
+  last_name: "Tessier",
   age:  28,
-  location:  "Carquefou",
+  location:  "Nantes",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 1,
   instrument:    "basse",
-  music_styles: ["jazz"],
+  music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
 )
 user17.save!
 
 user18 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "eloco@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
-  age:  28,
-  location:  "Carquefou",
+  first_name:    "Cedric",
+  last_name: "Villard",
+  age:  40,
+  location:  "Vertou",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 10,
   instrument:    "basse",
   music_styles: ["jazz"],
   weekly_rehearsal_frequency:  2
@@ -287,93 +287,136 @@ user18.save!
 user19 = User.new(
   email:    "bidobido@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
+  first_name:    "Nicolas",
+  last_name: "Pasquier",
   age:  28,
-  location:  "Carquefou",
+  location:  "Nantes",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 8,
   instrument:    "basse",
-  music_styles: ["jazz"],
+  music_styles: ["funk"],
   weekly_rehearsal_frequency:  2
 )
 user19.save!
 
 user20 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "zmaalouf@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
-  age:  28,
-  location:  "Carquefou",
+  first_name:    "Zaïd",
+  last_name: "Maalouf",
+  age:  19,
+  location:  "Vertou",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 2,
   instrument:    "basse",
-  music_styles: ["jazz"],
-  weekly_rehearsal_frequency:  2
+  music_styles: ["rock"],
+  weekly_rehearsal_frequency:  4
 )
 user20.save!
 
 user21 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "alexx440@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
-  age:  28,
+  first_name:    "Alexandre",
+  last_name: "Duvilliers",
+  age:  44,
   location:  "Carquefou",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 2,
   instrument:    "basse",
-  music_styles: ["jazz"],
-  weekly_rehearsal_frequency:  2
+  music_styles: ["folk"],
+  weekly_rehearsal_frequency:  1
 )
 user21.save!
 
 user22 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "guillaume.boudel@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
+  first_name:    "Guillaume",
+  last_name: "Boudel",
   age:  28,
-  location:  "Carquefou",
+  location:  "Orvault",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 20,
   instrument:    "basse",
-  music_styles: ["jazz"],
-  weekly_rehearsal_frequency:  2
+  music_styles: ["funk"],
+  weekly_rehearsal_frequency:  5
 )
 user22.save!
 
 user23 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "nathh44000@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
-  age:  28,
+  first_name:    "Nathan",
+  last_name: "Kloutz",
+  age:  18,
   location:  "Carquefou",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 1,
   instrument:    "basse",
-  music_styles: ["jazz"],
+  music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
 )
 user23.save!
 
 user24 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "pierre.gabriel@gmail.com",
   password: "password",
-  first_name:    "Eric",
-  last_name: "Lelong",
-  age:  28,
-  location:  "Carquefou",
+  first_name:    "Pierre",
+  last_name: "Gabriel",
+  age:  30,
+  location:  "Rezé",
   gender:    "Homme",
-  years_of_experience: 4,
+  years_of_experience: 1,
   instrument:    "basse",
   music_styles: ["jazz"],
   weekly_rehearsal_frequency:  2
 )
 user24.save!
 
+user25 = User.new(
+  email:    "lena.costecalde@gmail.com",
+  password: "password",
+  first_name:    "Léna",
+  last_name: "Costecalde",
+  age:  29,
+  location:  "Trentemoult",
+  gender:    "Femme",
+  years_of_experience: 2,
+  instrument:    "basse",
+  music_styles: ["jazz"],
+  weekly_rehearsal_frequency:  2
+)
+user25.save!
 
+user26 = User.new(
+  email:    "maureen.petit@gmail.com",
+  password: "password",
+  first_name:    "Maureen",
+  last_name: "Petit",
+  age:  20,
+  location:  "La Montagne",
+  gender:    "Femme",
+  years_of_experience: 1,
+  instrument:    "basse",
+  music_styles: ["rock"],
+  weekly_rehearsal_frequency:  2
+)
+user26.save!
+
+user27 = User.new(
+  email:    "zhoulou44@gmail.com",
+  password: "password",
+  first_name:    "Zhou",
+  last_name: "Wenshu",
+  age:  37,
+  location:  "Nantes",
+  gender:    "Femme",
+  years_of_experience: 29,
+  instrument:    "basse",
+  music_styles: ["jazz"],
+  weekly_rehearsal_frequency:  4
+)
+user27.save!
 
 puts 'Finished!'
