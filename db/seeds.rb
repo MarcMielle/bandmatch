@@ -28,10 +28,8 @@ user1 = User.new(
   bio: "Nicolas, batteur débutant. Passionné de musique et plus particulièrement de rock (Nirvana, U2, Radiohead, etc), pop 80-90's et de musique instrumentale."
 )
 
-=begin 
-file = File.open(Rails.root.join("db/fixtures/images/users/user1.jpg"))
-user1.avatar.attach(io: file, filename: 'caro.png', content_type: 'image/png') 
-=end
+file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
+user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
 user1.save!
 
 user2 = User.new(

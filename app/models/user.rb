@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   belongs_to :band, optional: true
   has_one :preference, as: :entity
+  has_one_attached :photo
   has_many :messages, foreign_key: :author_id
 
   validates :instrument, inclusion: { in: Preference::INSTRUMENTS }
