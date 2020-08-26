@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_102156) do
+ActiveRecord::Schema.define(version: 2020_08_26_103533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_102156) do
     t.string "location"
     t.string "gender"
     t.integer "years_of_experience"
-    t.bigint "band_id", null: false
+    t.bigint "band_id"
     t.string "instrument"
     t.string "music_styles", default: [], array: true
     t.integer "weekly_rehearsal_frequency"
