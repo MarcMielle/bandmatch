@@ -1,9 +1,16 @@
-Band.destroy_all
 User.destroy_all
+Band.destroy_all
+
 
 puts 'Creating bands and musicians...'
 
-band1 = Band.create!(name: "Overmist", music_style: "Rock")
+band1 = Band.create!(name: "Overmist", music_style: "rock")
+band2 = Band.create!(name: "442", music_style: "rock")
+band3 = Band.create!(name: "Storm Dance Ego", music_style: "house")
+band4 = Band.create!(name: "Violin Flower's", music_style: "classique")
+band5 = Band.create!(name: "DOCIL", music_style: "folk")
+band6 = Band.create!(name: "Water Fire", music_style: "funk")
+band7 = Band.create!(name: "Brume", music_style: "classique")
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
@@ -285,7 +292,7 @@ user18 = User.new(
 user18.save!
 
 user19 = User.new(
-  email:    "bidobido@gmail.com",
+  email:    "nicolo44@gmail.com",
   password: "password",
   first_name:    "Nicolas",
   last_name: "Pasquier",
