@@ -1,6 +1,9 @@
 class Preference < ApplicationRecord
-  INSTRUMENTS  = ["guitare", "voix"]
-  MUSIC_STYLES = ["rock", "jazz"]
+  INSTRUMENTS  = ["guitare", "chant", "batterie", "basse", "piano", "violon", "dj", "flute",\
+                  "trompette", "hautbois", "ukulele", "banjo", "trombonne", "saxophone", "tuba",\
+                  "harpe", "clarinette", "cor", "harmonica", "violoncelle"]
+  MUSIC_STYLES = ["rock", "jazz", "pop", "house", "classique", "folk", "funk",\
+                  "blues", "rap", "reggae", "country", "metal", "electro"]
 
   belongs_to :entity, polymorphic: true
 
