@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_one :preference, as: :entity
   has_one_attached :avatar
   has_many :messages, foreign_key: :author_id
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
   validates :instrument, inclusion: { in: Preference::INSTRUMENTS }
 

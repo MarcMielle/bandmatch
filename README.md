@@ -48,3 +48,7 @@ OUTPUT :
 
 retourner score + "%"
 
+si (diff1 = preferences_musicien1.années - musicien2.années) > 0 alors
+score -= diff1*4
+si (diff2 = preferences_musicien1.freq - musicien2.freq) > 0 alors
+score -= diff2*7
