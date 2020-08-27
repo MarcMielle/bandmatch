@@ -45,6 +45,7 @@ band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
 puts 'Band 7/7 created'
 puts 'All bands have been created... OH YEAAAAAH.'
+puts "\u{1f609}"
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
@@ -240,6 +241,7 @@ user10.avatar.attach(io: file, filename: 'user10.jpg', content_type: 'image/jpg'
 user10.save!
 puts 'User 10/27 created'
 puts 'Wait, wait ! We are almost done.'
+puts "\u{1f618}"
 
 user11 = User.new(
   email:    "wenzou987@gmail.com",
@@ -450,6 +452,13 @@ user21.avatar.attach(io: file, filename: 'user21.jpeg', content_type: 'image/jpe
 user21.save!
 puts 'User 21/27 created'
 puts 'Soon finished !!'
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
 
 user22 = User.new(
   email:    "guillaume.boudel@gmail.com",
