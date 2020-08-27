@@ -1,1 +1,110 @@
 // Specific CSS for your home-page
+.container-buttons-homepage {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  align-items: center;
+  padding: 50px;
+  // margin-bottom: 20px;
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.box-picto {
+  border: 1px solid white;
+  margin: 20px;
+  width: 220px;
+  padding: 8px;
+}
+
+.picto-img {
+  width: 180px;
+  margin-bottom: 13px;
+  height: 180px;
+}
+
+
+.picto-title {
+  text-align: center;
+  width: 200px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.picto-text {
+  text-align: center;
+  width: 200px;
+  font-size: 12px;
+}
+
+
+.background-testimonials {
+  border-top-right-radius: 248px;
+  padding-top: 30px;
+  // margin: 0px;
+  height: 1020px;
+  background-color: $bandmatch_light_grey;
+}
+
+.card-testimonial {
+  // height: 200px;
+  // width: 900px;
+  background-color: white;
+  border: 0.5px solid $bandmatch_dark_grey;
+  margin: 20px;
+  justify-content: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.card-testimonial-right {
+  // height: 200px;
+  // width: 900px;
+  background-color: white;
+  border: 0.5px solid $bandmatch_dark_grey;
+  margin: 20px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 0px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.card-testimonial-content {
+  display: flex;
+  padding: 25px;
+  // width: 850px;
+}
+
+.card-testimonial-content-img {
+  background-color: $bandmatch_purple;
+  width: 110px;
+  padding: 20px;
+  height: 135px;
+  align-self: center;
+  border-radius: 60px;
+}
+
+.card-testimonial-content-text {
+  border: blue;
+  // width: 700px;
+  // height: 140px;
+  padding: 20px;
+}
+
+
+.card-testimonial-content-text-right {
+  border: blue;
+  // width: 700px;
+  // height: 140px;
+  padding: 20px;
+  text-align: right;
+}

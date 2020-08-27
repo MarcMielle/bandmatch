@@ -2,11 +2,47 @@
 .white-btn {
   background-color: white;
   color: black !important;
-  padding: 10px;
-  border-radius: 50px;
+  padding: 7px;
+  border-radius: 150px;
+  border: 0.5px solid white;
+  width: 110px;
+  font-size: 13px;
+  text-align: center;
   &:hover {
     text-decoration: none;
-    background-color: grey;
+    background-color: #F5F5F5;
+    border: 0.5px solid #F5F5F5;
+  }
+}
+
+.primary-orange-btn {
+  background-color: $bandmatch_orange;
+  color: white !important;
+  padding: 10px;
+  border-radius: 50px;
+  border: 0.5px solid $bandmatch_orange;
+  font-size: 13px;
+  width: 110px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background-color: $bandmatch_orange_hover;
+    border: 0.5px solid $bandmatch_orange_hover;
+  }
+}
+
+.secondary-orange-btn {
+  background-color: white;
+  color: $bandmatch_orange !important;
+  padding: 10px;
+  border-radius: 50px;
+  border: 0.5px solid $bandmatch_orange;
+  font-size: 13px;
+  width: 110px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background-color: #F5F5F5;
   }
 }
 
