@@ -1,2 +1,14 @@
-<h1>Musicians#index</h1>
-<p>Find me in app/views/musicians/index.html.erb</p>
+<div class="container">
+  <h1>Les musiciens qui matchent avec vous !</h1>
+    <h3>Vous recherchez un <strong>guitariste</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</h3>
+        <div class="cards">
+          <% @users.each do | user | %>
+           <div class="card">
+           <h4><strong><%= user.first_name %> <%= user.last_name %></strong></h4>
+           <%= user.age %> ans
+           <%= user.instrument %>
+           <%= user.music_styles.join(" ") %>
+          </div>
+      <% end %>
+        </div>
+</div>
