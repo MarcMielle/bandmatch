@@ -1,5 +1,12 @@
 class MusiciansController < ApplicationController
   def index
+    @musicians = User.all
+    @markers = @musicians.geocoded.map do |musician|
+      {
+        lat: musician.latitude,
+        lng: musician.longitude
+      }
+    end
   end
 
   def edit
