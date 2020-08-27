@@ -48,3 +48,47 @@
   border-radius: 40px 0 40px 40px;
   box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
 }
+
+.card-avatar-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.card-avatar {
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $bandmatch_dark_grey;
+}
+
+.card-info{
+  text-align: left;
+  // margin-left: 100px;
+}
+
+.card-info-items{
+  display: flex;
+  justify-content: align-left;
+  text-align: left;
+  i {
+    margin-right: 4px;
+    color: $bandmatch_purple;
+  }
+}
+.card-preference {
+  display: flex;
+  justify-content: space-around;
+  text-align: bottom;
+  // margin-top: 30px;
+}
+.card-preference-items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  i {
+    margin-right: 4px;
+    color: $bandmatch_purple;
+  }
+}
