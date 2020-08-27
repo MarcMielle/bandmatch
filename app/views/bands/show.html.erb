@@ -2,6 +2,6 @@
 <p>Find me in app/views/bands/show.html.erb</p>
 
 <p><strong>Name:</strong>
-  <%= band1.name %>
+  <%= @band.name %>
 </p>
-# <%= cl_image_tag band1.avatar.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill %>
