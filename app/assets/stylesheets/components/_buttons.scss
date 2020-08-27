@@ -6,7 +6,7 @@
   border-radius: 150px;
   border: 0.5px solid white;
   width: 110px;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   &:hover {
     text-decoration: none;
@@ -18,11 +18,10 @@
 .primary-orange-btn {
   background-color: $bandmatch_orange;
   color: white !important;
-  padding: 10px;
+  padding: 12px 25px;
   border-radius: 50px;
   border: 0.5px solid $bandmatch_orange;
-  font-size: 13px;
-  width: 110px;
+  font-size: 15px;
   text-align: center;
   &:hover {
     text-decoration: none;
@@ -34,10 +33,10 @@
 .secondary-orange-btn {
   background-color: white;
   color: $bandmatch_orange !important;
-  padding: 10px;
+  padding: 12px 25px;
   border-radius: 50px;
   border: 0.5px solid $bandmatch_orange;
-  font-size: 13px;
+  font-size: 15px;
   width: 110px;
   text-align: center;
   &:hover {
