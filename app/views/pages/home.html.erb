@@ -1,2 +1,109 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container justify-content-center">
+
+  <div class="container-buttons-homepage">
+    <div>
+      <%= link_to "Se connecter", new_user_session_path, class: "primary-orange-btn"%>
+    </div>
+    <div>
+      <%= link_to "Se connecter", new_user_session_path, class: "secondary-orange-btn"%>
+    </div>
+  </div>
+</div>
+
+<div class="container justify-content-center">
+  <h2>Comment ça marche ?</h2>
+</div>
+<div class="container justify-content-center">
+    <div class="box-picto">
+      <div>
+        <div>
+        <%= image_tag "picto-people-search.svg", class: "picto-img" %>
+        </div>
+        <div>
+          <p class="picto-title">Renseignez vos critères</p>
+        </div>
+        <div>
+          <p class="picto-text">Style musical, ville, expérience, recherchez avec vos critères précis.</p>
+        </div>
+      </div>
+    </div>
+    <div class="box-picto">
+      <div>
+        <div>
+        <%= image_tag "picto-match.svg", class: "picto-img" %>
+        </div>
+        <div>
+          <p class="picto-title">Trouvez le meilleur match</p>
+        </div>
+        <div>
+          <p class="picto-text">L'algoritme BandMatch trouve les meilleurs matchs pour vous</p>
+        </div>
+      </div>
+    </div>
+    <div class="box-picto">
+      <div>
+        <div>
+        <%= image_tag "picto-play-music.svg", class: "picto-img" %>
+        </div>
+        <div>
+          <p class="picto-title">Jouez ensemble !</p>
+        </div>
+        <div>
+          <p class="picto-text">Contactez le groupe ou le musicien qui vous intéresse et jouez ensemble.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+
+<div class="background-testimonials">
+  <br>
+  <div class="container justify-content-center">
+    <h2>Ils témoignent</h2>
+  </div>
+  <br>
+  <br>
+  <div class="container justify-content-center flex-column">
+
+
+
+   <div class="card-testimonial">
+    <div class="card-testimonial-content">
+      <div class="card-testimonial-content-img">
+
+      </div>
+
+      <div class="card-testimonial-content-text">
+        <h3>Freddy Mercury</h3>
+        <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="card-testimonial-right">
+    <div class="card-testimonial-content">
+
+
+      <div class="card-testimonial-content-text-right">
+        <h3>Freddy Mercury</h3>
+        <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
+      </div>
+      <div class="card-testimonial-content-img">
+
+      </div>
+    </div>
+  </div>
+
+       <div class="card-testimonial">
+    <div class="card-testimonial-content">
+      <div class="card-testimonial-content-img">
+      </div>
+      <div class="card-testimonial-content-text">
+        <h3>Mickael Jackson</h3>
+        <p>" Après des années à jouer avec mes frères je voulais changer. Je pense que le cd de notre nouveau groupe est le prochain dans le top 5 de l'été, c'est sûr !! ;) "</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
