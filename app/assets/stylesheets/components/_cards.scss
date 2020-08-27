@@ -58,6 +58,9 @@
 }
 .card-avatar {
   width: 100px;
+  border-radius: 60px;
+  object-fit: cover;
+  align-self: center;
   text-align: center;
   vertical-align: middle;
   background-color: $bandmatch_dark_grey;
