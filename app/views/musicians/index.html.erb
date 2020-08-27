@@ -1,2 +1,34 @@
-<h1>Musicians#index</h1>
-<p>Find me in app/views/musicians/index.html.erb</p>
+<div class="container">
+  <h1>Les musiciens qui matchent avec vous !</h1>
+    <p>Vous recherchez un <strong>guitariste</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
+        <div class="cards">
+          <% @users.each do | user | %>
+           <div class="card">
+            <div class="card-avatar-info">
+              <div class="card-avatar">
+                <p>Photo</p>
+              </div>
+              <div class="card-info">
+             <p><strong><%= user.first_name %> <%= user.last_name %></strong></p>
+             <p><%= user.age %> ans</p>
+             <div class="card-info-items">
+               <p><i class="fas fa-map-marker-alt"></i></p>
+               <p><%= user.location %></p>
+             </div>
+             </div>
+            </div>
+            <div class="card-preference">
+              <div class="card-preference-items">
+                <p><i class="fas fa-music"></i></p>
+                <p><%= user.instrument.capitalize %></p>
+              </div>
+              <div class="card-preference-items">
+                <p><i class="fas fa-puzzle-piece"></i></p>
+                <p><%= user.music_styles.join(" ").capitalize %></p>
+              </div>
+              <p>75%</p>
+            </div>
+          </div>
+      <% end %>
+        </div>
+</div>
