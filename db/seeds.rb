@@ -5,37 +5,37 @@ puts 'Creating bands and musicians...'
 
 band1 = Band.new(name: "Overmist", music_style: "rock")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo1.PNG"))
-band1.avatar.attach(io: file, filename: 'logo1.PNG', content_type: 'image/PNG') 
+band1.avatar.attach(io: file, filename: 'logo1.PNG', content_type: 'image/PNG')
 band1.save!
 
 band2 = Band.new(name: "442", music_style: "rock")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo2.png"))
-band2.avatar.attach(io: file, filename: 'logo2.png', content_type: 'image/png') 
+band2.avatar.attach(io: file, filename: 'logo2.png', content_type: 'image/png')
 band2.save!
 
 band3 = Band.new(name: "Storm Dance Ego", music_style: "house")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo3.png"))
-band3.avatar.attach(io: file, filename: 'logo3.png', content_type: 'image/png') 
+band3.avatar.attach(io: file, filename: 'logo3.png', content_type: 'image/png')
 band3.save!
 
 band4 = Band.new(name: "Violin Flower's", music_style: "classique")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo4.png"))
-band4.avatar.attach(io: file, filename: 'logo4.png', content_type: 'image/png') 
+band4.avatar.attach(io: file, filename: 'logo4.png', content_type: 'image/png')
 band4.save!
 
 band5 = Band.new(name: "DOCIL", music_style: "folk")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo5.png"))
-band5.avatar.attach(io: file, filename: 'logo5.png', content_type: 'image/png') 
+band5.avatar.attach(io: file, filename: 'logo5.png', content_type: 'image/png')
 band5.save!
 
 band6 = Band.new(name: "Water Fire", music_style: "funk")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo6.png"))
-band6.avatar.attach(io: file, filename: 'logo6.png', content_type: 'image/png') 
+band6.avatar.attach(io: file, filename: 'logo6.png', content_type: 'image/png')
 band6.save!
 
 band7 = Band.new(name: "Brume", music_style: "classique")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo7.jpg"))
-band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg') 
+band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
 
 user1 = User.new(
@@ -53,11 +53,11 @@ user1 = User.new(
   weekly_rehearsal_frequency:  2,
   bio: "Nicolas, batteur débutant. Passionné de musique et plus particulièrement de rock (Nirvana, U2, Radiohead, etc), pop 80-90's et de musique instrumentale."
 )
-user1.save! 
+user1.save!
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
-user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
-user1.save! 
+user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
+user1.save!
 
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
@@ -76,7 +76,7 @@ user2 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user2.png"))
-user2.avatar.attach(io: file, filename: 'user2.png', content_type: 'image/png') 
+user2.avatar.attach(io: file, filename: 'user2.png', content_type: 'image/png')
 user2.save!
 
 user3 = User.new(
@@ -94,7 +94,7 @@ user3 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user3.png"))
-user3.avatar.attach(io: file, filename: 'user3.png', content_type: 'image/png') 
+user3.avatar.attach(io: file, filename: 'user3.png', content_type: 'image/png')
 user3.save!
 
 user4 = User.new(
@@ -112,7 +112,7 @@ user4 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user4.jpeg"))
-user4.avatar.attach(io: file, filename: 'user4.jpeg', content_type: 'image/jpeg') 
+user4.avatar.attach(io: file, filename: 'user4.jpeg', content_type: 'image/jpeg')
 user4.save!
 
 user5 = User.new(
@@ -130,7 +130,7 @@ user5 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user5.jpeg"))
-user5.avatar.attach(io: file, filename: 'user5.jpeg', content_type: 'image/jpeg') 
+user5.avatar.attach(io: file, filename: 'user5.jpeg', content_type: 'image/jpeg')
 user5.save!
 
 user6 = User.new(
@@ -148,7 +148,7 @@ user6 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user6.jpg"))
-user6.avatar.attach(io: file, filename: 'user6.jpg', content_type: 'image/jpg') 
+user6.avatar.attach(io: file, filename: 'user6.jpg', content_type: 'image/jpg')
 user6.save!
 
 user7 = User.new(
@@ -166,7 +166,7 @@ user7 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user7.jpeg"))
-user7.avatar.attach(io: file, filename: 'user7.jpeg', content_type: 'image/jpeg') 
+user7.avatar.attach(io: file, filename: 'user7.jpeg', content_type: 'image/jpeg')
 user7.save!
 
 user8 = User.new(
@@ -184,7 +184,7 @@ user8 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user8.jpg"))
-user8.avatar.attach(io: file, filename: 'user8.jpg', content_type: 'image/jpg') 
+user8.avatar.attach(io: file, filename: 'user8.jpg', content_type: 'image/jpg')
 user8.save!
 
 user9 = User.new(
@@ -202,7 +202,7 @@ user9 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user9.jpeg"))
-user9.avatar.attach(io: file, filename: 'user9.jpeg', content_type: 'image/jpeg') 
+user9.avatar.attach(io: file, filename: 'user9.jpeg', content_type: 'image/jpeg')
 user9.save!
 
 user10 = User.new(
@@ -220,7 +220,7 @@ user10 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user10.jpg"))
-user10.avatar.attach(io: file, filename: 'user10.jpg', content_type: 'image/jpg') 
+user10.avatar.attach(io: file, filename: 'user10.jpg', content_type: 'image/jpg')
 user10.save!
 
 user11 = User.new(
@@ -238,7 +238,7 @@ user11 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user11.jpg"))
-user11.avatar.attach(io: file, filename: 'user11.jpg', content_type: 'image/jpg') 
+user11.avatar.attach(io: file, filename: 'user11.jpg', content_type: 'image/jpg')
 user11.save!
 
 user12 = User.new(
@@ -256,7 +256,7 @@ user12 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user12.jpeg"))
-user12.avatar.attach(io: file, filename: 'user12.jpeg', content_type: 'image/jpeg') 
+user12.avatar.attach(io: file, filename: 'user12.jpeg', content_type: 'image/jpeg')
 user12.save!
 
 user13 = User.new(
@@ -274,7 +274,7 @@ user13 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user13.jpg"))
-user13.avatar.attach(io: file, filename: 'user13.jpg', content_type: 'image/jpg') 
+user13.avatar.attach(io: file, filename: 'user13.jpg', content_type: 'image/jpg')
 user13.save!
 
 user14 = User.new(
@@ -292,7 +292,7 @@ user14 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user14.jpg"))
-user14.avatar.attach(io: file, filename: 'user14.jpg', content_type: 'image/jpg') 
+user14.avatar.attach(io: file, filename: 'user14.jpg', content_type: 'image/jpg')
 user14.save!
 
 user15 = User.new(
@@ -310,7 +310,7 @@ user15 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user15.jpg"))
-user15.avatar.attach(io: file, filename: 'user15.jpg', content_type: 'image/jpg') 
+user15.avatar.attach(io: file, filename: 'user15.jpg', content_type: 'image/jpg')
 user15.save!
 
 user16 = User.new(
@@ -327,8 +327,8 @@ user16 = User.new(
   weekly_rehearsal_frequency:  3
 )
 
-file = File.open(Rails.root.join("db/fixtures/images/users/user16.jpg"))
-user16.avatar.attach(io: file, filename: 'user16.jpg', content_type: 'image/jpg') 
+file = File.open(Rails.root.join("db/fixtures/images/users/user16.png"))
+user16.avatar.attach(io: file, filename: 'user16.png', content_type: 'image/png')
 user16.save!
 
 user17 = User.new(
@@ -346,7 +346,7 @@ user17 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user17.jpg"))
-user17.avatar.attach(io: file, filename: 'user17.jpg', content_type: 'image/jpg') 
+user17.avatar.attach(io: file, filename: 'user17.jpg', content_type: 'image/jpg')
 user17.save!
 
 user18 = User.new(
@@ -364,7 +364,7 @@ user18 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user18.jpg"))
-user18.avatar.attach(io: file, filename: 'user18.jpg', content_type: 'image/jpg') 
+user18.avatar.attach(io: file, filename: 'user18.jpg', content_type: 'image/jpg')
 user18.save!
 
 user19 = User.new(
@@ -382,7 +382,7 @@ user19 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user19.jpeg"))
-user19.avatar.attach(io: file, filename: 'user19.jpeg', content_type: 'image/jpeg') 
+user19.avatar.attach(io: file, filename: 'user19.jpeg', content_type: 'image/jpeg')
 user19.save!
 
 user20 = User.new(
@@ -400,7 +400,7 @@ user20 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user20.jpeg"))
-user20.avatar.attach(io: file, filename: 'user20.jpeg', content_type: 'image/jpeg') 
+user20.avatar.attach(io: file, filename: 'user20.jpeg', content_type: 'image/jpeg')
 user20.save!
 
 user21 = User.new(

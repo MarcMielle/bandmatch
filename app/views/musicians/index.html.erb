@@ -6,7 +6,7 @@
            <div class="card">
             <div class="card-avatar-info">
               <div class="card-avatar">
-                <p>Photo</p>
+                <%= cl_image_tag user.avatar.key, height: 150, width: 100, crop: :fill %>
               </div>
               <div class="card-info">
              <p><strong><%= user.first_name %> <%= user.last_name %></strong></p>
