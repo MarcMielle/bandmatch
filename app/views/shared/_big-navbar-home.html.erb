@@ -1,13 +1,29 @@
 <div class="header-homepage linear-gradient">
   <div class="navbar-home-btns">
+    <%= link_to "/" do %>
     <%= image_tag "logo-bandmatch-white.svg", class: "logo" %>
-    <%= link_to "Se connecter", new_user_session_path, class: "white-btn"%>
+    <% end %>
+    <div class="d-flex">
+      <% if user_signed_in? %>
+      <div class="nav-item message-i">
+        <%= link_to "/conversations" do %>
+        <%= image_tag "icon-navbar-message.png", class: "icon-message" %>
+        <% end %>
+      </div>
+      <div class="nav-item dropdown">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "My profile", "/musicians/:id", class: "dropdown-item" %>
+          <%= link_to "My band profile", "/bands/:id", class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </div>
+      <% else %>
+      <%= link_to "Se connecter", new_user_session_path, class: "white-btn"%>
+      <% end  %>
+    </div>
   </div>
   <div class="container">
     <h1>Avec Bandmatch, n'attendez plus  <br>pour jouer ensemble !</h1>
   </div>
 </div>
-
-
-
-

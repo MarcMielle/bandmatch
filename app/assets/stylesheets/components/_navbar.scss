@@ -1,6 +1,8 @@
+// Navbar classique du wagon
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  margin-bottom: 45px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,17 +10,11 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.logo {
   width: 230px;
-  padding: 10px;
-  // background-size: cover;
 }
 
 
-// Logo sur la grande banner home page
+// Header de la home page
 .navbar-home-btns {
   display: flex;
   justify-content: space-between;
@@ -30,11 +26,13 @@
   // background-color: $bandmatch_purple;
   padding: 30px;
   border-bottom-left-radius: 248px;
+  margin-bottom: 45px;
     h1 {
       color: white;
       text-align: center;
-      padding-top: 160px;
+      padding-top: 140px;
       font-family: Arial;
+      font-size: 50px;
     }
     p {
       color: white;
@@ -44,3 +42,10 @@
 .linear-gradient {
   background: linear-gradient(to right, $bandmatch_purple, $bandmatch_light_purple);
 }
+
+.logo {
+  width: 230px;
+  padding: 10px;
+  // background-size: cover;
+}
+

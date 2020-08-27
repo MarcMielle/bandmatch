@@ -1,10 +1,8 @@
 <div class="header-homepage linear-gradient">
-  <h1>Avec Bandmatch, n'attendez plus 
-  pour jouer ensemble !</h1>
-
-  <p>blabla</p>
-
-
+  <div class="navbar-home-btns">
+    <%= link_to "/" do %>
+      <%= image_tag "logo-bandmatch-white.svg", class: "logo" %>
+    <% end %>
+    <%= link_to "Se connecter", new_user_session_path, class: "white-btn"%>
+  </div>
 </div>
-
-
