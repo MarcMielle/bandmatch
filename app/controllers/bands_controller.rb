@@ -1,4 +1,5 @@
 class BandsController < ApplicationController
+  before_action :set_band, only: [:show, :edit, :update]
 
   def index
     @bands = Band.all
@@ -8,11 +9,9 @@ class BandsController < ApplicationController
   end
 
   def edit
-    @band = Band.find(params[:id])
   end
 
   def update
-    @band = Band.find(params[:id])
     @band.update(band_params)
 
     # no need for app/views/bands/update.html.erb
@@ -26,5 +25,9 @@ class BandsController < ApplicationController
 
   def band_params
     params.require(:band).permit(:name, :music_style, :avatar)
+  end
+
+  def set_band
+    @band = Band.find(params[:id])
   end
 end

@@ -1,7 +1,6 @@
 User.destroy_all
 Band.destroy_all
 
-
 puts 'Creating bands and musicians...'
 
 band1 = Band.new(name: "Overmist", music_style: "rock")
