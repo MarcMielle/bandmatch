@@ -14,6 +14,7 @@ class MusiciansController < ApplicationController
   end
 
   def show
+    @musician = User.find(params["id"])
   end
 
   def update
