@@ -1,0 +1,15 @@
+.background-footer {
+  background-color: $bandmatch_light_grey;
+  margin: 0;
+  margin-top: 45px;
+  height: 200px;
+  border-top-right-radius: 248px;
+  display: flex;
+  padding: 35px;
+  justify-content: space-between;
+}
+
+.links-footer {
+  flex-direction: column;
+  align-self: center;
+}

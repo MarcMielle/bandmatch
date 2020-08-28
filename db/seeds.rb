@@ -43,9 +43,16 @@ band7 = Band.new(name: "Brume", music_style: "classique")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo7.jpg"))
 band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
+<<<<<<< HEAD
+>>>>>>> 22af1c103bc6097c88fd4f94023a241abf5517c9
+=======
 puts 'Band 7/7 created'
 puts 'All bands have been created... OH YEAAAAAH.'
+<<<<<<< HEAD
 puts "\u{1f609}"
+=======
+>>>>>>> e1c88db3b153f82b1874820a0c631df2772ab302
+>>>>>>> master
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
@@ -70,6 +77,7 @@ user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
 user1.save! 
 puts 'User 1/27 created'
 
+<<<<<<< HEAD
 pref1 = Preference.new(
   instrument: "basse",
   age_min: 20,
@@ -82,6 +90,8 @@ pref1 = Preference.new(
   music_style: "rock"
 )
 pref1.save!
+=======
+>>>>>>> master
 
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
