@@ -36,7 +36,7 @@
           <p class="picto-title">Trouvez le meilleur match</p>
         </div>
         <div>
-          <p class="picto-text">L'algoritme BandMatch trouve les meilleurs matchs pour vous</p>
+          <p class="picto-text">L''algoritme BandMatch trouve les meilleurs matchs pour vous</p>
         </div>
       </div>
     </div>
@@ -108,4 +108,25 @@
   </div>
 
   </div>
+</div>
+
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+
+    <div class="container">
+    <%= simple_form_for(@user) do |f| %>
+
+    <%= f.input :instrument, as: :string, html5: true %>
+    <%= f.input :age_min %>
+    <%= f.input :age_max %>
+    <%= f.input :gender, as: :string, html5: true %>
+    <%= f.input :years_of_experience_min %>
+    <%= f.input :weekly_rehearsal_frequency_min %>
+    <%= f.input :location, as: :string, html5: true %>
+    <%= f.input :location_radius_in_km %>
+    <%= f.input :music_style, as: :string, html5: true %>
+    <%= f.submit class: "btn btn-flat-green", data: {confirm: "Are you sure about updating your preferences ?"}%>
+  <% end %>
+<% end %>
+
 </div>
