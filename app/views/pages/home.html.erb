@@ -1,3 +1,19 @@
+<% if user_signed_in? %>
+  <div class="container">
+    <%= form_tag(musicians_path, method: :get) do %>
+      <%= search_field_tag 'location', 'Ville' %>
+      <%= search_field_tag 'gender', 'Genre' %>
+      <%= select_tag "instrument", raw("<option>Guitare</option><option>Chant</option><option>Batterie</option><option>Basse</option><option>Piano</option>") %>
+      <%= search_field_tag 'years_of_exp_min', 'Experience' %>
+      <%= search_field_tag 'location_radius_in_km', 'Autour de moi' %>
+      <%= search_field_tag 'age_min', 'Age Min' %>
+      <%= search_field_tag 'age_min', 'Age Max' %>
+      <%= search_field_tag 'music_style', 'Style' %>
+    <% end %>
+  </div>
+<% end %>
+
+<% if !user_signed_in? %>
 <div class="container justify-content-center">
 
   <div class="container-buttons-homepage">
@@ -109,22 +125,6 @@
 
   </div>
 </div>
-
-<% if user_signed_in? %>
-    <div class="container">
-    <%= simple_form_for(@user) do |f| %>
-
-    <%= f.input :instrument, as: :string, html5: true %>
-    <%= f.input :age_min %>
-    <%= f.input :age_max %>
-    <%= f.input :gender, as: :string, html5: true %>
-    <%= f.input :years_of_experience_min %>
-    <%= f.input :weekly_rehearsal_frequency_min %>
-    <%= f.input :location, as: :string, html5: true %>
-    <%= f.input :location_radius_in_km %>
-    <%= f.input :music_style, as: :string, html5: true %>
-    <%= f.submit class: "btn btn-flat-green", data: {confirm: "Are you sure about updating your preferences ?"}%>
-  <% end %>
 <% end %>
 
-</div>
+
