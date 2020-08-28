@@ -1,30 +1,40 @@
-<h1>Bands#index</h1>
-<p>Find me in app/views/bands/index.html.erb</p>
+<div class="container">
+  <h1>Les groupes qui matchent avec vous !</h1>
+    <p>Vous recherchez un <strong>groupe</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
+  <div id="map"
+       style="width: 100%; height: 600px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
-<h1>Bands</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Music style</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bands.each do |band| %>
-      <tr>
-        <td><%= band.name %></td>
-        <td><%= band.music_style %></td>
-        <td><%= cl_image_tag band.avatar.key, height: 300, width: 400, crop: :fill %></td>
-        #<td><%= link_to 'Show', band %></td>
-        #<td><%= link_to 'Edit', edit_band_path(band) %></td>
-        #<td><%= link_to 'Destroy', band, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+        <div class="cards">
+          <% @bands.each do | band | %>
+             <div class="card">
+            <%= link_to 'bands' do %>
+              <div class="card-avatar-info">
+                <div class="card-avatar">
+                  <%= cl_image_tag band.avatar.key, height: 150, width: 100, class: "card-avatar-in-band",crop: :fill %>
+                </div>
+                <div class="card-info">
+                  <p><strong><%= band.name %></strong></p>
+                  <% band.users.each do |user| %>
+                    <div class="card-avatar">
+                      <%= cl_image_tag user.avatar.key, height: 50, width: 50, class: "card-avatar-in-band",crop: :fill %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <div class="card-preference">
+                <div class="card-preference-items-in-bands">
+                  <p><i class="fas fa-puzzle-piece"></i></p>
+                  <p><%= band.music_style.capitalize %></p>
+                </div>
+                <p>75%</p>
+              </div>
+            <% end %>
+             </div>
+          <% end %>
+        </div>
+</div>
 
