@@ -95,3 +95,42 @@
     color: $bandmatch_purple;
   }
 }
+
+// Card de la show musician
+
+.background-card-show {
+  background-color: $bandmatch_light_grey;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  padding-top: 30px;
+  height: 380px;
+  width: 900px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+.background-card-show-content {
+  display: flex;
+  padding: 20px;
+}
+
+.background-card-show-text {
+  margin-left: 30px;
+  align-self: center;
+}
+
+.background-card-show-picture {
+  background-color: $bandmatch_purple;
+  width: 150px;
+  height: 250px;
+  align-self: center;
+  border-radius: 70px;
+  object-fit: cover;
+}
+
+.contact-btn {
+  justify-content: center;
+  display: flex;
+}
