@@ -66,8 +66,8 @@ user1 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
-user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
-user1.save! 
+user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
+user1.save!
 puts 'User 1/27 created'
 
 pref1 = Preference.new(
@@ -79,7 +79,7 @@ pref1 = Preference.new(
   weekly_rehearsal_frequency_min: 2,
   location: "Nantes"
   location_radius_in_km: 2,
-  music_style: "rock"
+  music_style: "rock",
 )
 pref1.save!
 
@@ -398,7 +398,7 @@ user16 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user16.png"))
-user16.avatar.attach(io: file, filename: 'user16.png', content_type: 'image/png') 
+user16.avatar.attach(io: file, filename: 'user16.png', content_type: 'image/png')
 user16.save!
 puts 'User 16/27 created'
 
