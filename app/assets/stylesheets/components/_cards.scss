@@ -104,8 +104,8 @@
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
   padding-top: 30px;
-  height: 380px;
-  width: 900px;
+  height: 390px;
+  width: 700px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -128,9 +128,14 @@
   align-self: center;
   border-radius: 70px;
   object-fit: cover;
+  margin-left: 30px;
 }
 
 .contact-btn {
   justify-content: center;
   display: flex;
+}
+
+.center {
+  text-align: center;
 }
