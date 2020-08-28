@@ -1,3 +1,19 @@
+<% if user_signed_in? %>
+  <div class="container">
+    <%= form_tag(musicians_path, method: :get) do %>
+      <%= search_field_tag 'location', 'Ville' %>
+      <%= search_field_tag 'gender', 'Genre' %>
+      <%= select_tag "instrument", raw("<option>Guitare</option><option>Chant</option><option>Batterie</option><option>Basse</option><option>Piano</option>") %>
+      <%= search_field_tag 'years_of_exp_min', 'Experience' %>
+      <%= search_field_tag 'location_radius_in_km', 'Autour de moi' %>
+      <%= search_field_tag 'age_min', 'Age Min' %>
+      <%= search_field_tag 'age_min', 'Age Max' %>
+      <%= search_field_tag 'music_style', 'Style' %>
+    <% end %>
+  </div>
+<% end %>
+
+<% if !user_signed_in? %>
 <div class="container justify-content-center">
 
   <div class="container-buttons-homepage">
@@ -36,7 +52,7 @@
           <p class="picto-title">Trouvez le meilleur match</p>
         </div>
         <div>
-          <p class="picto-text">L'algoritme BandMatch trouve les meilleurs matchs pour vous</p>
+          <p class="picto-text">L''algoritme BandMatch trouve les meilleurs matchs pour vous</p>
         </div>
       </div>
     </div>
@@ -109,3 +125,6 @@
 
   </div>
 </div>
+<% end %>
+
+

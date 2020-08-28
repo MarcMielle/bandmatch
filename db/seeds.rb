@@ -45,6 +45,7 @@ band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
 puts 'Band 7/7 created'
 puts 'All bands have been created... OH YEAAAAAH.'
+puts "\u{1f609}"
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
@@ -53,6 +54,8 @@ user1 = User.new(
   last_name: "Hubert",
   age:  23,
   location:  "Nantes",
+  latitude: 47.226942523237135,
+  longitude: -1.5574251094395386,
   gender:    "Homme",
   years_of_experience: 2,
   band: band1,
@@ -67,6 +70,19 @@ user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
 user1.save! 
 puts 'User 1/27 created'
 
+pref1 = Preference.new(
+  instrument: "basse",
+  age_min: 20,
+  age_max: 30,
+  gender: "Homme",
+  years_of_experience_min: 5,
+  weekly_rehearsal_frequency_min: 2,
+  location: "Nantes"
+  location_radius_in_km: 2,
+  music_style: "rock"
+)
+pref1.save!
+
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
   password: "password",
@@ -74,6 +90,8 @@ user2 = User.new(
   last_name: "Mielle",
   age:  23,
   location:  "Nantes",
+  latitude: 47.228446619133024,
+  longitude: -1.533128536710766,
   gender:    "Homme",
   years_of_experience: 17,
   band: band1,
@@ -94,7 +112,9 @@ user3 = User.new(
   first_name:    "Tommie",
   last_name: "Petit",
   age:  27,
-  location:  "Ancenis",
+  location:  "Nantes",
+  latitude: 47.229255818105216,
+  longitude: -1.552312556097799,
   gender:    "Homme",
   years_of_experience: 12,
   instrument:    "basse",
@@ -114,6 +134,8 @@ user4 = User.new(
   last_name: "Toledo",
   age:  25,
   location:  "Saint-Herblain",
+  latitude: 47.218148648897646,
+  longitude: -1.6369903592577284,
   gender:    "Femme",
   years_of_experience: 10,
   instrument:    "piano",
@@ -133,6 +155,8 @@ user5 = User.new(
   last_name: "Cipresso",
   age:  32,
   location:  "Nantes",
+  latitude: 47.22174622719891,
+  longitude: -1.5372898281725988,
   gender:    "Femme",
   years_of_experience: 3,
   instrument:    "chant",
@@ -152,6 +176,8 @@ user6 = User.new(
   last_name: "Fougasse",
   age:  38,
   location:  "Saint-Herblain",
+  latitude: 47.20794326478688,
+  longitude: -1.6450670154310498,
   gender:    "Homme",
   years_of_experience: 20,
   instrument:    "batterie",
@@ -171,6 +197,8 @@ user7 = User.new(
   last_name: "Hecquet",
   age:  40,
   location:  "Rezé",
+  latitude: 47.183522737321724,
+  longitude: -1.5407777029670822,
   gender:    "Homme",
   years_of_experience: 2,
   instrument:    "chant",
@@ -190,6 +218,8 @@ user8 = User.new(
   last_name: "Ménard",
   age:  22,
   location:  "Trentemoult",
+  latitude: 47.19157802108903,
+  longitude: -1.5789418702111702,
   gender:    "Homme",
   years_of_experience: 4,
   instrument:    "guitare",
@@ -209,6 +239,8 @@ user9 = User.new(
   last_name: "Kabra",
   age:  24,
   location:  "Orvault",
+  latitude: 47.272547336372114,
+  longitude: -1.6254050540861265,
   gender:    "Homme",
   years_of_experience: 4,
   instrument:    "guitare",
@@ -228,6 +260,8 @@ user10 = User.new(
   last_name: "Madénian",
   age:  33,
   location:  "Orvault",
+  latitude: 47.277058839005626,
+  longitude: -1.6322543840107362,
   gender:    "Femme",
   years_of_experience: 20,
   instrument:    "piano",
@@ -240,6 +274,7 @@ user10.avatar.attach(io: file, filename: 'user10.jpg', content_type: 'image/jpg'
 user10.save!
 puts 'User 10/27 created'
 puts 'Wait, wait ! We are almost done.'
+puts "\u{1f618}"
 
 user11 = User.new(
   email:    "wenzou987@gmail.com",
@@ -248,6 +283,8 @@ user11 = User.new(
   last_name: "Yang",
   age:  20,
   location:  "Nantes",
+  latitude: 47.27524468156568,
+  longitude: -1.6312438937961726,
   gender:    "Femme",
   years_of_experience: 13,
   instrument:    "violon",
@@ -267,6 +304,8 @@ user12 = User.new(
   last_name: "Stefan",
   age:  30,
   location:  "Orvault",
+  latitude: 47.2760336034527,
+  longitude: -1.6264169451571209,
   gender:    "Homme",
   years_of_experience: 4,
   instrument:    "dj",
@@ -286,6 +325,8 @@ user13 = User.new(
   last_name: "Zefira",
   age:  54,
   location:  "Nantes",
+  latitude: 47.214452321006824,
+  longitude: -1.5662846331969793,
   gender:    "Femme",
   years_of_experience: 30,
   instrument:    "flute",
@@ -305,6 +346,8 @@ user14 = User.new(
   last_name: "Lelong",
   age:  28,
   location:  "Carquefou",
+  latitude: 47.29620653196488,
+  longitude: -1.4884428045743436,
   gender:    "Homme",
   years_of_experience: 4,
   instrument:    "basse",
@@ -324,6 +367,8 @@ user15 = User.new(
   last_name: "Molinaro",
   age:  34,
   location:  "Bouguenais",
+  latitude: 47.1809938229643,
+  longitude: -1.6232901267064803,
   gender:    "Homme",
   years_of_experience: 4,
   instrument:    "basse",
@@ -343,6 +388,8 @@ user16 = User.new(
   last_name: "Hernandez",
   age:  46,
   location:  "Sautron",
+  latitude: 47.25807818454346,
+  longitude: -1.66156184404338,
   gender:    "Homme",
   years_of_experience: 20,
   instrument:    "basse",
@@ -362,6 +409,8 @@ user17 = User.new(
   last_name: "Tessier",
   age:  28,
   location:  "Nantes",
+  latitude: 47.2023695817449,
+  longitude: -1.560512519233781,
   gender:    "Homme",
   years_of_experience: 1,
   instrument:    "basse",
@@ -381,6 +430,8 @@ user18 = User.new(
   last_name: "Villard",
   age:  40,
   location:  "Vertou",
+  latitude: 47.16640177231086,
+  longitude: -1.474853602217494,
   gender:    "Homme",
   years_of_experience: 10,
   instrument:    "basse",
@@ -400,6 +451,8 @@ user19 = User.new(
   last_name: "Pasquier",
   age:  28,
   location:  "Nantes",
+  latitude: 47.24968171959527,
+  longitude: -1.5580962854817626,
   gender:    "Homme",
   years_of_experience: 8,
   instrument:    "basse",
@@ -419,6 +472,8 @@ user20 = User.new(
   last_name: "Maalouf",
   age:  19,
   location:  "Vertou",
+  latitude: 47.165316436116605,
+  longitude: -1.4675778474907553,
   gender:    "Homme",
   years_of_experience: 2,
   instrument:    "basse",
@@ -438,6 +493,8 @@ user21 = User.new(
   last_name: "Duvilliers",
   age:  44,
   location:  "Carquefou",
+  latitude: 47.29776656441853,
+  longitude: -1.4896089085892528,
   gender:    "Homme",
   years_of_experience: 2,
   instrument:    "basse",
@@ -450,6 +507,13 @@ user21.avatar.attach(io: file, filename: 'user21.jpeg', content_type: 'image/jpe
 user21.save!
 puts 'User 21/27 created'
 puts 'Soon finished !!'
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
+puts "\u{1f418}"
 
 user22 = User.new(
   email:    "guillaume.boudel@gmail.com",
@@ -458,6 +522,8 @@ user22 = User.new(
   last_name: "Boudel",
   age:  28,
   location:  "Orvault",
+  latitude: 47.27764420123874,
+  longitude: -1.6351777329146455,
   gender:    "Homme",
   years_of_experience: 20,
   instrument:    "basse",
@@ -478,6 +544,8 @@ user23 = User.new(
   last_name: "Kloutz",
   age:  18,
   location:  "Carquefou",
+  latitude: 47.29982487014429,
+  longitude: -1.4902957917761217,
   gender:    "Homme",
   years_of_experience: 1,
   instrument:    "basse",
@@ -497,6 +565,8 @@ user24 = User.new(
   last_name: "Gabriel",
   age:  30,
   location:  "Rezé",
+  latitude: 47.17253556867943,
+  longitude: -1.5542212221914542,
   gender:    "Homme",
   years_of_experience: 1,
   instrument:    "basse",
@@ -516,6 +586,8 @@ user25 = User.new(
   last_name: "Costecalde",
   age:  29,
   location:  "Trentemoult",
+  latitude: 47.193477227476286,
+  longitude: -1.5835078809993952,
   gender:    "Femme",
   years_of_experience: 2,
   instrument:    "basse",
@@ -534,7 +606,9 @@ user26 = User.new(
   first_name:    "Maureen",
   last_name: "Petit",
   age:  20,
-  location:  "La Montagne",
+  location:  "Ancenis",
+  latitude: 47.37170013725689,
+  longitude: -1.1714697185532708,
   gender:    "Femme",
   years_of_experience: 1,
   instrument:    "basse",
@@ -554,6 +628,8 @@ user27 = User.new(
   last_name: "Wenshu",
   age:  37,
   location:  "Nantes",
+  latitude: 47.215911182514276,
+  longitude: -1.5367528832422006,
   gender:    "Femme",
   years_of_experience: 29,
   instrument:    "basse",
