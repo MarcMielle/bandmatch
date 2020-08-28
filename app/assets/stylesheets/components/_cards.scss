@@ -55,9 +55,8 @@
 .card-avatar-info {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 10px;
   height: 150px;
-  margin-bottom: 20px;
 }
 .card-avatar {
   width: 100px;
@@ -86,12 +85,19 @@
   display: flex;
   justify-content: space-around;
   text-align: bottom;
+  vertical-align: middle;
   // margin-top: 30px;
+}
+.card-preference p {
+  margin: 0px;
 }
 .card-preference-items {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  vertical-align: middle;
+  align-self: center;
+
   i {
     margin-right: 4px;
     color: $bandmatch_purple;
@@ -109,6 +115,7 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
+  align-self: center;
   i {
     margin-right: 4px;
     color: $bandmatch_orange;
