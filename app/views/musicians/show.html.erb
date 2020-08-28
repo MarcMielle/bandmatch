@@ -7,7 +7,8 @@
     <div class="background-card-show-content">
 
       <div>
-        <%= image_tag "user3.png", class: "background-card-show-picture" %>
+        <!-- <%= image_tag "user3.png", class: "background-card-show-picture" %> -->
+        <%= cl_image_tag(@musician.avatar.key, width: 400, height: 300, crop: :fill, class: "background-card-show-picture") %>
       </div>
 
       <div class="background-card-show-text">
@@ -25,6 +26,7 @@ s
     </div>
     <div class="contact-btn">
       <%= link_to "Me contacter", conversations_path, class: "primary-orange-btn" %>
+
     </div>
   </div>
 
@@ -35,7 +37,7 @@ s
   <div class="container">
     <h2 class="center">Bio</h2>
     <br>
-    <p> <%= @musician.first_name.capitalize %> , né le 26 juillet 1943 à Dartford (Kent, Angleterre), est un musicien, auteur-compositeur et chanteur britannique, cofondateur en 1962, avec Keith Richards, Brian Jones et Ian Stewart du groupe de rock britannique The Rolling Stones. Avec Keith Richards, au sein d'un partenariat qu'ils ont baptisé The Glimmer Twins (les jumeaux étincelants), il est l'auteur-compositeur de la plupart des titres du répertoire original du groupe.  </p>
+    <p> <%= @musician.first_name.capitalize %> , né le 26 juillet 1943 à Dartford (Kent, Angleterre), est un musicien, auteur-compositeur et chanteur britannique, cofondateur en 1962, avec Keith Richards, Brian Jones et Ian Stewart du groupe de rock britannique The Rolling Stones. Avec Keith Richards, au sein d'un partenariat qu'ils ont baptisé The Glimmer Twins (les jumeaux étincelants), il est l'auteur-compositeur de la plupart des titres du répertoire original du groupe. </p>
   </div>
   <br>
   <br>
