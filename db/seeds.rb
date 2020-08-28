@@ -77,10 +77,11 @@ pref1 = Preference.new(
   gender: "Homme",
   years_of_experience_min: 5,
   weekly_rehearsal_frequency_min: 2,
-  location: "Nantes"
+  location: "Nantes",
   location_radius_in_km: 2,
   music_style: "rock"
 )
+pref1.entity = user1
 pref1.save!
 
 user2 = User.new(
