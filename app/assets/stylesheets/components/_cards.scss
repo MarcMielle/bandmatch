@@ -47,20 +47,24 @@
   display: flex;
   border-radius: 40px 0 40px 40px;
   box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+  a {
+    color: $bandmatch_black;
+  }
 }
 
 .card-avatar-info {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 10px;
   height: 150px;
-  margin-bottom: 20px;
 }
 .card-avatar {
   width: 100px;
+  border-radius: 60px;
+  object-fit: cover;
+  align-self: center;
   text-align: center;
   vertical-align: middle;
-  background-color: $bandmatch_dark_grey;
 }
 
 .card-info{
@@ -81,14 +85,84 @@
   display: flex;
   justify-content: space-around;
   text-align: bottom;
+  vertical-align: middle;
   // margin-top: 30px;
+}
+.card-preference p {
+  margin: 0px;
 }
 .card-preference-items {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  vertical-align: middle;
+  align-self: center;
+
   i {
     margin-right: 4px;
     color: $bandmatch_purple;
   }
+}
+
+// Card de la show musician
+
+.background-card-show {
+  background-color: $bandmatch_light_grey;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  padding-top: 30px;
+  height: 390px;
+  width: 700px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+.background-card-show-content {
+  display: flex;
+  padding: 20px;
+}
+
+.background-card-show-text {
+  margin-left: 30px;
+  align-self: center;
+}
+
+.background-card-show-picture {
+  background-color: $bandmatch_purple;
+  width: 150px;
+  height: 250px;
+  align-self: center;
+  border-radius: 70px;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+.contact-btn {
+  justify-content: center;
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+.card-avatar-in-band {
+  border-radius: 60px;
+  object-fit: cover;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card-preference-items-in-bands {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-self: center;
+  i {
+    margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+
 }
