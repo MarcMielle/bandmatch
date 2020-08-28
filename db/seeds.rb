@@ -47,8 +47,8 @@ band7.save!
 >>>>>>> 22af1c103bc6097c88fd4f94023a241abf5517c9
 =======
 puts 'Band 7/7 created'
-puts 'All bands have been created... OH YEAAAAAH.'
->>>>>>> e1c88db3b153f82b1874820a0c631df2772ab302
+puts 'All bands have been created... OH YEAAAAAH !'
+
 
 user1 = User.new(
   email:    "nicolas.hbt@gmail.com",
