@@ -80,3 +80,12 @@ $strawberry: $bandmatch_purple;
 
 
 }
+.affinity-container-bands{
+  background-color: $papaya;
+
+  .rail{ stroke: $granola; }
+
+  .progress{ stroke: $bandmatch_orange; }
+
+  .percentage{ color: $bandmatch_orange; }
+}

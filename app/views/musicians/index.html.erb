@@ -7,6 +7,7 @@
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         <div class="cards">
           <% @users.each do | user | %>
+          <%= link_to(musician_path(user.id)) do %>
            <div class="card">
             <div class="card-avatar-info">
               <div class="card-avatar">
@@ -40,6 +41,7 @@
               </div>
             </div>
           </div>
+      <% end %>
       <% end %>
         </div>
 </div>
