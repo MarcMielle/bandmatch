@@ -1,5 +1,6 @@
 <% if user_signed_in? %>
-  <div class="container">
+
+ <div class="container">
     <%= form_tag(musicians_path, method: :get) do %>
       <%= search_field_tag 'location', 'Ville' %>
       <%= search_field_tag 'gender', 'Genre' %>
@@ -126,5 +127,3 @@
   </div>
 </div>
 <% end %>
-
-
