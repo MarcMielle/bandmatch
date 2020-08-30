@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./vanillaSelectBox.css">
+<script src="./vanillaSelectBox.js"></script>
 <% if user_signed_in? %>
 
  <div class="container">
@@ -12,6 +14,7 @@
       <%= select_tag 'music_style', raw("<option>Rock</option><option>Jazz</option><option>Pop</option><option>House</option><option>Classique</option><option>Folk<option>Funk</option><option>Blues</option><option>Electro</option>") %>
     <% end %>
   </div>
+
 <% end %>
   
 <% if !user_signed_in? %>
