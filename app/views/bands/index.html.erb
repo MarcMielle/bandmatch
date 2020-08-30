@@ -24,12 +24,14 @@
                   <p><%= band.music_style.capitalize %></p>
                 </div>
                 <div class="affinity-container">
-                  <div class="gauge-container">
-                    <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
-                      <circle class="rail" r="67" cx="75" cy="75" />
-                      <circle class="progress" r="67" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
-                    </svg>
-                    <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                  <div class="affinity-container-bands">
+                    <div class="gauge-container">
+                      <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                        <circle class="rail" r="67" cx="75" cy="75" />
+                        <circle class="progress" r="67" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                      </svg>
+                      <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                    </div>
                   </div>
                 </div>
               </div>

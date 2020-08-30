@@ -2,6 +2,24 @@
   display: grid;
   grid-gap: 30px;
   margin-top: 100px;
+  p {
+  color: $bandmatch_black;
+  }
+  a {
+    text-decoration: none;
+    color: $bandmatch_black;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  a:hover {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.03);
+  }
 }
 
 // Smallest device
