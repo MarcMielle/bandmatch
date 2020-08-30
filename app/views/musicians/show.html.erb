@@ -7,7 +7,7 @@
     <div class="background-card-show-content">
 
       <div>
-      <%= cl_image_tag current_user.avatar.key, crop: :fill, class: "background-card-show-picture" %>
+      <%= cl_image_tag @user.avatar.key, crop: :fill, class: "background-card-show-picture" %>
       </div>
 
       <div class="background-card-show-text">
@@ -19,7 +19,6 @@
           <div>  <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d'expérience</div>
           <div> <i class="fas fa-puzzle-piece"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois par semaine </div>
         </ul>
-s
       </div>
 
     </div>

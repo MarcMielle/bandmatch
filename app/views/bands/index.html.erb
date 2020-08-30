@@ -1,16 +1,10 @@
 <div class="container">
   <h1>Les groupes qui matchent avec vous !</h1>
     <p>Vous recherchez un <strong>groupe</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
-  <div id="map"
-       style="width: 100%; height: 600px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
         <div class="cards">
           <% @bands.each do | band | %>
+          <%= link_to (band_path(band.id)) do %>
              <div class="card">
-            <%= link_to 'bands' do %>
               <div class="card-avatar-info">
                 <div class="card-avatar">
                   <%= cl_image_tag band.avatar.key, height: 150, width: 100, class: "card-avatar-in-band",crop: :fill %>
@@ -39,8 +33,8 @@
                   </div>
                 </div>
               </div>
-            <% end %>
              </div>
+          <% end %>
           <% end %>
         </div>
 </div>
