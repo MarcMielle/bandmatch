@@ -1,0 +1,50 @@
+.conversations-container {
+  border-radius: 40px 40px 40px 40px;
+  padding: 12px;
+  width: 50%;
+  border-style: solid;
+  border-color: $bandmatch_dark_grey;
+  border-width: 1px;
+}
+.conversation-cards {
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 100px;
+  p {
+  color: $bandmatch_black;
+  margin-bottom: 0;
+  padding: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: $bandmatch_black;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  a:hover {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.03);
+  }
+}
+.conversation-card {
+  background-color: $bandmatch_light_grey;
+  padding: 12px;
+  height: 200px;
+  display: flex;
+  border-radius: 40px 0 40px 40px;
+  box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+  a {
+    color: $bandmatch_black;
+  }
+}
+
+.card-info-items-conversation{
+  display: flex;
+  justify-content: align-left;
+  text-align: left;
+}

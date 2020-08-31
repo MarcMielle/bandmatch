@@ -1,5 +1,7 @@
 User.destroy_all
 Band.destroy_all
+Conversation.destroy_all
+
 
 puts 'Creating bands and musicians...'
 
@@ -67,8 +69,8 @@ user1 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user1.png"))
-user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png') 
-user1.save! 
+user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
+user1.save!
 puts 'User 1/27 created'
 
 pref1 = Preference.new(
@@ -84,6 +86,20 @@ pref1 = Preference.new(
 )
 pref1.entity = user1
 pref1.save!
+
+pref2 = Preference.new(
+  instrument: "basse",
+  age_min: 20,
+  age_max: 30,
+  gender: "Homme",
+  years_of_experience_min: 5,
+  weekly_rehearsal_frequency_min: 2,
+  location: "Nantes",
+  location_radius_in_km: 2,
+  music_style: "rock"
+)
+pref2.entity = band1
+pref2.save!
 
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
@@ -409,7 +425,7 @@ user16 = User.new(
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user16.png"))
-user16.avatar.attach(io: file, filename: 'user16.png', content_type: 'image/png') 
+user16.avatar.attach(io: file, filename: 'user16.png', content_type: 'image/png')
 user16.save!
 puts 'User 16/27 created'
 
@@ -657,3 +673,11 @@ user27.save!
 puts 'User 27/27 created'
 
 puts 'Finished! Now enjoy our awesome website!'
+
+puts 'Creating conversations...'
+conversation1 = Conversation.new(user1_id: user1[:id], user2_id: user2[:id])
+conversation1.save!
+conversation2 = Conversation.new(user1_id: user1[:id], user2_id: user3[:id])
+conversation2.save!
+conversation3 = Conversation.new(user1_id: user1[:id], user2_id: user4[:id])
+conversation3.save!
