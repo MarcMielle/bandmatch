@@ -140,6 +140,7 @@ user5 = User.new(
   location:  "Nantes",
   gender:    "Femme",
   years_of_experience: 3,
+  band: band2,
   instrument:    "chant",
   music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
@@ -369,6 +370,7 @@ user17 = User.new(
   location:  "Nantes",
   gender:    "Homme",
   years_of_experience: 1,
+  band: band2,
   instrument:    "basse",
   music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
@@ -407,6 +409,7 @@ user19 = User.new(
   location:  "Nantes",
   gender:    "Homme",
   years_of_experience: 8,
+  band: band2,
   instrument:    "basse",
   music_styles: ["funk"],
   weekly_rehearsal_frequency:  2
