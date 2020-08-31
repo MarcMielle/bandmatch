@@ -22,17 +22,18 @@
 }
 
 .header-homepage {
-  height: 410px;
+  height: 470px;
   // background-color: $bandmatch_purple;
   padding: 30px;
   border-bottom-left-radius: 248px;
   margin-bottom:35px;
     h1 {
       color: white;
-      text-align: center;
-      padding-top: 90px;
+      text-align: left;
+      padding-top: 80px;
+      padding-left: 250px;
       font-family: Arial;
-      font-size: 45px;
+      font-size: 60px;
     }
     p {
       color: white;
@@ -46,6 +47,12 @@
 .logo {
   width: 230px;
   padding: 10px;
-  // background-size: cover;
 }
 
+// photo dans navbar
+.title-pic {
+  width: 400px;
+  position: relative;
+  top: -322px;
+  left: 535px;
+}
