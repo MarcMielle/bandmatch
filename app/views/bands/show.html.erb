@@ -15,34 +15,16 @@
             <p>Membres : </p>
 
             <div class="one-member">
-              <% @band.user.each do |user| %>
+              <% @band.users.each do |user| %>
               <div class="one-member-pic">
-                <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
+                <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
               </div>
               <div class="one-member-name">
-                <p>Bob Dylan</p>
+                <p> <%= user.first_name %> </p>
+
               </div>
               <% end %>
             </div>
-
-            <div class="one-member">
-              <div class="one-member-pic">
-                <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
-              </div>
-              <div class="one-member-name">
-                <p>Bob Dylan</p>
-              </div>
-            </div>
-
-            <div class="one-member">
-              <div class="one-member-pic">
-                <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
-              </div>
-              <div class="one-member-name">
-                <p>Bob Dylan</p>
-              </div>
-            </div>
-
           </div>
 
       </div>
@@ -54,9 +36,9 @@
       </div>
         <!-- colonne 3 (matching score) -->
       <div class="col3">
-        <div class="affinity-container">
-          <div class="affinity-container-bands">
-            <div class="gauge-container">
+        <div class="affinity-container band-circle">
+          <div class="affinity-container-bands band-circle">
+            <div class="gauge-container band-gauge">
               <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
                 <circle class="rail" r="47" cx="75" cy="75" />
                 <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />

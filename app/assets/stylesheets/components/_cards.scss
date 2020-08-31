@@ -128,9 +128,6 @@
   border-bottom-right-radius: 60px;
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
-  padding-top: 30px;
-  height: 390px;
-  width: 750px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -153,6 +150,7 @@
   border-radius: 70px;
   object-fit: cover;
   margin-left: 30px;
+  margin-top: 30px;
 }
 .contact-btn {
   justify-content: center;
@@ -217,10 +215,10 @@
   }
 }
 .band-logo {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   align-self: center;
-  border-radius: 100px;
+  border-radius: 90px;
   object-fit: cover;
 }
 .box-logo {
@@ -233,17 +231,21 @@
   flex-direction: column;
   margin: 10px 0;
 }
-
+.col1 {
+  padding-right: 30px;
+}
 .col2 {
   padding: 0 30px;
+  padding-top: 40px;
 }
 .col3 {
-  padding: 0 30px;
+  padding-left: 20px;
 }
 
 .one-member {
-  flex-direction: row;
   font-size: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .one-member-pic {
@@ -254,7 +256,17 @@
   object-fit: cover;
 }
 
-
-
+.one-member-name {
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+.band-circle {
+  width: 100px;
+}
+.band-gauge {
+  width: 100% !important;
+}
 
 // ----------------------------------------//
