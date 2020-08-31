@@ -43,6 +43,7 @@ band7 = Band.new(name: "Brume", music_style: "classique")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo7.jpg"))
 band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
+
 puts 'Band 7/7 created'
 puts 'All bands have been created... OH YEAAAAAH.'
 puts "\u{1f609}"
@@ -160,6 +161,7 @@ user5 = User.new(
   longitude: -1.5372898281725988,
   gender:    "Femme",
   years_of_experience: 3,
+  band: band2,
   instrument:    "chant",
   music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
@@ -202,6 +204,7 @@ user7 = User.new(
   longitude: -1.5407777029670822,
   gender:    "Homme",
   years_of_experience: 2,
+  band: band7,
   instrument:    "chant",
   music_styles: ["classique"],
   weekly_rehearsal_frequency:  1
@@ -223,6 +226,7 @@ user8 = User.new(
   longitude: -1.5789418702111702,
   gender:    "Homme",
   years_of_experience: 4,
+  band: band5,
   instrument:    "guitare",
   music_styles: ["folk"],
   weekly_rehearsal_frequency:  2
@@ -244,6 +248,7 @@ user9 = User.new(
   longitude: -1.6254050540861265,
   gender:    "Homme",
   years_of_experience: 4,
+  band: band6,
   instrument:    "guitare",
   music_styles: ["funk"],
   weekly_rehearsal_frequency:  2
@@ -265,6 +270,7 @@ user10 = User.new(
   longitude: -1.6322543840107362,
   gender:    "Femme",
   years_of_experience: 20,
+  band: band4,
   instrument:    "piano",
   music_styles: ["classique"],
   weekly_rehearsal_frequency:  5
@@ -289,6 +295,7 @@ user11 = User.new(
   gender:    "Femme",
   years_of_experience: 13,
   instrument:    "violon",
+  band: band7,
   music_styles: ["classique"],
   weekly_rehearsal_frequency:  5
 )
@@ -309,6 +316,7 @@ user12 = User.new(
   longitude: -1.6264169451571209,
   gender:    "Homme",
   years_of_experience: 4,
+  band: band3,
   instrument:    "dj",
   music_styles: ["house"],
   weekly_rehearsal_frequency:  2
@@ -330,6 +338,7 @@ user13 = User.new(
   longitude: -1.5662846331969793,
   gender:    "Femme",
   years_of_experience: 30,
+  band: band4,
   instrument:    "flute",
   music_styles: ["classique"],
   weekly_rehearsal_frequency:  3
@@ -394,6 +403,7 @@ user16 = User.new(
   gender:    "Homme",
   years_of_experience: 20,
   instrument:    "basse",
+  band: band6,
   music_styles: ["folk"],
   weekly_rehearsal_frequency:  3
 )
@@ -414,6 +424,7 @@ user17 = User.new(
   longitude: -1.560512519233781,
   gender:    "Homme",
   years_of_experience: 1,
+  band: band2,
   instrument:    "basse",
   music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
@@ -456,6 +467,7 @@ user19 = User.new(
   longitude: -1.5580962854817626,
   gender:    "Homme",
   years_of_experience: 8,
+  band: band5,
   instrument:    "basse",
   music_styles: ["funk"],
   weekly_rehearsal_frequency:  2
@@ -527,6 +539,7 @@ user22 = User.new(
   longitude: -1.6351777329146455,
   gender:    "Homme",
   years_of_experience: 20,
+  band: band5,
   instrument:    "basse",
   music_styles: ["funk"],
   weekly_rehearsal_frequency:  5
