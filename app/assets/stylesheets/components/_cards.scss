@@ -83,11 +83,14 @@
   align-self: center;
   text-align: center;
   vertical-align: middle;
+  margin-right: 13px;
+  // margin-bottom: 13px;
 }
 
 .card-info{
   text-align: left;
   // margin-left: 100px;
+  margin-bottom: 15px;
 }
 
 .card-info-items{
@@ -104,7 +107,7 @@
   justify-content: space-around;
   text-align: bottom;
   vertical-align: middle;
-  // margin-top: 30px;
+  margin-top: 15px;
 }
 .card-preference p {
   margin: 0px;
