@@ -1,3 +1,4 @@
+Message.destroy_all
 Conversation.destroy_all
 User.destroy_all
 Band.destroy_all
@@ -680,3 +681,7 @@ conversation2 = Conversation.new(user1_id: user1[:id], user2_id: user21[:id])
 conversation2.save!
 conversation3 = Conversation.new(user1_id: user1[:id], user2_id: user5[:id])
 conversation3.save!
+
+puts 'Creating messages...'
+message1 = Message.new(conversation_id: conversation1[:id], author_id: user1[:id], content: "Hello Marco, Alexandre Duvilliers n'est dispo qu'une fois par semaine, on doit trouver un autre bassiste \u{1f615}")
+message1.save!
