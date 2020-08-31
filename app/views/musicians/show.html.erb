@@ -1,60 +1,68 @@
-<!-- <h1 class="justify-content-center "> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
- -->
+<div class="container">
+   <h1 class="center"> <%= @user.first_name %> <%= @user.last_name %> </h1>
+    <div class="container justify-content-center">
+    <div class="background-card-show">
+      <div class="background-card-show-content">
 
- <h1 class="center"> <%= @user.first_name %> <%= @user.last_name %> </h1>
-<div class="container justify-content-center">
-  <div class="background-card-show">
-    <div class="background-card-show-content">
+        <div>
+        <%= cl_image_tag @user.avatar.key, crop: :fill, class: "background-card-show-picture" %>
+        </div>
 
-      <div>
-      <%= cl_image_tag @user.avatar.key, crop: :fill, class: "background-card-show-picture" %>
+        <div class="background-card-show-text">
+          <ul>
+            <div> <i class="fas fa-birthday-cake"></i> <%= @user.age %> ans </div>
+            <br>
+            <div> <i class="fas fa-map-marker-alt"></i> A <%= @user.location %> </div>
+            <br>
+            <div> <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d'expérience</div>
+            <br>
+            <div> <i class="fas fa-check-circle"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois / semaine </div>
+          </ul>
+        </div>
+
+          <div class="affinity-container">
+                  <div class="gauge-container">
+                    <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                      <circle class="rail" r="47" cx="75" cy="75" />
+                      <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                    </svg>
+                    <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                  </div>
+                </div>
       </div>
-
-      <div class="background-card-show-text">
-        <ul>
-          <div> <i class="fas fa-birthday-cake"></i> <%= @user.age %> ans </div>
-          <br>
-          <div> <i class="fas fa-map-marker-alt"></i> A <%= @user.location %> </div>
-          <br>
-          <div> <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d'expérience</div>
-          <br>
-          <div> <i class="fas fa-check-circle"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois / semaine </div>
-        </ul>
+      <div class="contact-btn">
+        <%= link_to "Me contacter", conversations_path, class: "primary-orange-btn" %>
       </div>
-
     </div>
-    <div class="contact-btn">
-      <%= link_to "Me contacter", conversations_path, class: "primary-orange-btn" %>
-    </div>
-  </div>
 
 
-<br>
-<br>
-<br>
-</div>
   <br>
-  <div class="container bio">
-    <h2 class="center">Bio</h2>
+  <br>
+  <br>
+  </div>
     <br>
-    <p> <%= @user.first_name.capitalize %> , né le 26 juillet 1943 à Dartford (Kent, Angleterre), est un musicien, auteur-compositeur et chanteur britannique, cofondateur en 1962, avec Keith Richards, Brian Jones et Ian Stewart du groupe de rock britannique The Rolling Stones. Avec Keith Richards, au sein d'un partenariat qu'ils ont baptisé The Glimmer Twins (les jumeaux étincelants), il est l'auteur-compositeur de la plupart des titres du répertoire original du groupe.  </p>
-  </div>
-  <br>
-
-
-<div class="container justify-content-center">
-  <div class="background-card-soundcloud ">
-    <div class="background-card-show-content">
-      <div class="soundcloud-logo">
-        <%= link_to "https://soundcloud.com/" do %>
-          <%= image_tag "soundcloud.svg", class: "soundcloud" %>
-        <% end %>
-      </div>
-      <div class="soundclound-text">
-        <p><strong>Suivez-moi</strong> sur Soundclound !</p>
-      </div>
+    <div class="container bio">
+      <h2 class="center">Bio</h2>
+      <br>
+      <p> <%= @user.first_name.capitalize %> , né le 26 juillet 1943 à Dartford (Kent, Angleterre), est un musicien, auteur-compositeur et chanteur britannique, cofondateur en 1962, avec Keith Richards, Brian Jones et Ian Stewart du groupe de rock britannique The Rolling Stones. Avec Keith Richards, au sein d'un partenariat qu'ils ont baptisé The Glimmer Twins (les jumeaux étincelants), il est l'auteur-compositeur de la plupart des titres du répertoire original du groupe.  </p>
     </div>
+    <br>
 
 
+  <div class="container justify-content-center">
+    <div class="background-card-soundcloud ">
+      <div class="background-card-show-content">
+        <div class="soundcloud-logo">
+          <%= link_to "https://soundcloud.com/" do %>
+            <%= image_tag "soundcloud.svg", class: "soundcloud" %>
+          <% end %>
+        </div>
+        <div class="soundclound-text">
+          <p><strong>Suivez-moi</strong> sur Soundclound !</p>
+        </div>
+      </div>
+
+
+    </div>
   </div>
 </div>
