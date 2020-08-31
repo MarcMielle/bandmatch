@@ -15,12 +15,14 @@
             <p>Membres : </p>
 
             <div class="one-member">
+              <% @band.user.each do |user| %>
               <div class="one-member-pic">
                 <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
               </div>
               <div class="one-member-name">
                 <p>Bob Dylan</p>
               </div>
+              <% end %>
             </div>
 
             <div class="one-member">
@@ -62,6 +64,8 @@
               <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
             </div>
           </div>
+        <div> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
+
         </div>
       </div>
 
