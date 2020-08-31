@@ -21,28 +21,13 @@ class User < ApplicationRecord
     Conversation.where('user1_id = :id OR user2_id = :id', id: id)
   end
 
-  def filters_query
-    <<~SQL
-      users.instrument = :instrument
-      AND
-      users.age >= :age_min
-      AND
-      users.age <= :age_max
-      AND
-      users.gender = :gender
-    SQL
-  end
-
-  def filtered_musicians_with_affinity(user_scope = User.all)
-    user_scope.where(filters_query, { 
+  def filtered_musicians_with_affinity_score(user_scope = User.all)
+    user_scope.select('users.*', "#{affinity_query} AS affinity_score").where(filters_query, { 
       instrument: default_preferences.instrument,
       age_min:    default_preferences.age_min,
       age_max:    default_preferences.age_max,
       gender:     default_preferences.gender
     }).near(default_preferences.location, default_preferences.location_radius_in_km)
-  end
-
-  def affinity_query
   end
 
   private
@@ -63,4 +48,35 @@ class User < ApplicationRecord
     band&.preference || preference
   end
 
+  def filters_query
+    <<~SQL
+      users.instrument = :instrument
+      AND
+      users.age >= :age_min
+      AND
+      users.age <= :age_max
+      AND
+      users.gender = :gender
+    SQL
+  end
+
+  def affinity_query
+    <<~SQL
+      (
+        (CASE WHEN '#{default_preferences.music_style}' = ANY (users.music_styles) THEN 100 ELSE 50 END) +
+        (
+          CASE WHEN users.years_of_experience >= #{default_preferences.years_of_experience_min}
+          THEN 0
+          ELSE (users.years_of_experience - #{default_preferences.years_of_experience_min}) * 4
+          END
+        ) +
+        (
+          CASE WHEN users.weekly_rehearsal_frequency >= #{default_preferences.weekly_rehearsal_frequency_min}
+          THEN 0
+          ELSE (users.weekly_rehearsal_frequency - #{default_preferences.weekly_rehearsal_frequency_min}) * 7
+          END
+        )
+      )
+    SQL
+  end
 end

@@ -1,6 +1,6 @@
 class MusiciansController < ApplicationController
   def index
-    @users = current_user.filtered_musicians_with_affinity
+    @users = current_user.filtered_musicians_with_affinity_score.includes(avatar_attachment: :blob)
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
