@@ -45,7 +45,7 @@ band7.avatar.attach(io: file, filename: 'logo7.jpg', content_type: 'image/jpg')
 band7.save!
 
 puts 'Band 7/7 created'
-puts 'All bands have been created... OH YEAAAAAH !'
+puts 'All bands have been created... OH YEAAAAAH.'
 puts "\u{1f609}"
 
 user1 = User.new(
@@ -71,6 +71,19 @@ user1.avatar.attach(io: file, filename: 'user1.png', content_type: 'image/png')
 user1.save! 
 puts 'User 1/27 created'
 
+pref1 = Preference.new(
+  instrument: "basse",
+  age_min: 20,
+  age_max: 30,
+  gender: "Homme",
+  years_of_experience_min: 5,
+  weekly_rehearsal_frequency_min: 2,
+  location: "Nantes",
+  location_radius_in_km: 2,
+  music_style: "rock"
+)
+pref1.entity = user1
+pref1.save!
 
 user2 = User.new(
   email:    "marc.mielle@gmail.com",

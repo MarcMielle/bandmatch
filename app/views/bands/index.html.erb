@@ -1,30 +1,43 @@
-<h1>Bands#index</h1>
-<p>Find me in app/views/bands/index.html.erb</p>
-
-<h1>Bands</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Music style</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bands.each do |band| %>
-      <tr>
-        <td><%= band.name %></td>
-        <td><%= band.music_style %></td>
-        <td><%= cl_image_tag band.avatar.key, height: 300, width: 400, crop: :fill %></td>
-        #<td><%= link_to 'Show', band %></td>
-        #<td><%= link_to 'Edit', edit_band_path(band) %></td>
-        #<td><%= link_to 'Destroy', band, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="container">
+  <h1>Les groupes qui matchent avec vous !</h1>
+    <p>Vous recherchez un <strong>groupe</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
+        <div class="cards">
+          <% @bands.each do | band | %>
+          <%= link_to (band_path(band.id)) do %>
+             <div class="card">
+              <div class="card-avatar-info">
+                <div class="card-avatar">
+                  <%= cl_image_tag band.avatar.key, height: 150, width: 100, class: "card-avatar-in-band",crop: :fill %>
+                </div>
+                <div class="card-info">
+                  <p><strong><%= band.name %></strong></p>
+                  <% band.users.each do |user| %>
+                    <div class="card-avatar">
+                      <%= cl_image_tag user.avatar.key, height: 50, width: 50, class: "card-avatar-in-band",crop: :fill %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <div class="card-preference">
+                <div class="card-preference-items-in-bands">
+                  <p><i class="fas fa-puzzle-piece"></i></p>
+                  <p><%= band.music_style.capitalize %></p>
+                </div>
+                <div class="affinity-container">
+                  <div class="affinity-container-bands">
+                    <div class="gauge-container">
+                      <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                        <circle class="rail" r="67" cx="75" cy="75" />
+                        <circle class="progress" r="67" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                      </svg>
+                      <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+          <% end %>
+          <% end %>
+        </div>
+</div>
 

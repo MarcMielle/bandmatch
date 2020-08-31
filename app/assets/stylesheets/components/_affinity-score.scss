@@ -1,0 +1,91 @@
+/* Here's where I got these color combos
+https://designschool.canva.com/blog/100-color-combinations/
+*/
+
+//palette 1
+// $papaya: #fe7a47;
+$papaya: transparent;
+$granola: $bandmatch_dark_grey;
+$strawberry: $bandmatch_purple;
+
+.affinity-container{
+
+  height: 50%;
+  width: 25%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+
+  .title{
+
+    text-align: center;
+    padding: 0 0 30px;
+    margin: 0;
+
+  }
+
+
+  background-color: $papaya;
+
+  .rail{ stroke: $granola; }
+
+  .progress{ stroke: $bandmatch_purple; }
+
+  .percentage{ color: $bandmatch_purple; }
+
+}
+
+.gauge-container{
+
+  display: inline-block;
+  position: relative;
+  width: 80%;
+
+  .gauge{
+
+    position: relative;
+    display: block;
+
+    circle{ stroke-width: 15; }
+
+    .rail{ fill: transparent; }
+
+    .progress{
+
+      fill: transparent;
+      stroke-linecap: round;
+
+    }
+
+  }
+
+  .center{
+
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+
+    &.percentage{ font-size: 1rem; }
+
+    &.icon{ font-size: 2vw; }
+
+    .percentSymbol{ font-size: .8em; }
+
+    .value{ font-size: 1.2em; }
+
+  }
+
+
+}
+.affinity-container-bands{
+  background-color: $papaya;
+
+  .rail{ stroke: $granola; }
+
+  .progress{ stroke: $bandmatch_orange; }
+
+  .percentage{ color: $bandmatch_orange; }
+}
