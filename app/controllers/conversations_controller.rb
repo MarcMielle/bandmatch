@@ -1,16 +1,27 @@
 class ConversationsController < ApplicationController
+  before_action :set_conversations, only: [:index, :show]
+
   def index
-    @conversations = Conversation.where(@user == current_user)
-    # not all just mine
   end
 
   def show
     @conversation = Conversation.find(params[:id])
+    @messages     = @conversation.messages
+    @message      = @conversation.messages.build
   end
 
   def new
   end
 
   def create
+  end
+
+  private
+
+  def set_conversations
+    @conversations = Conversation.where(
+      "user1_id = :current_user_id OR user2_id =:current_user_id",
+      current_user_id: current_user.id
+    )
   end
 end
