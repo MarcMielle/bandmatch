@@ -1,6 +1,7 @@
+Conversation.destroy_all
 User.destroy_all
 Band.destroy_all
-Conversation.destroy_all
+
 
 
 puts 'Creating bands and musicians...'
