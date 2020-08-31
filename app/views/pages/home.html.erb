@@ -4,16 +4,16 @@
     <%= form_tag(musicians_path, method: :get) do %>
       <%= search_field_tag 'location', 'Ville' %>
       <%= search_field_tag 'gender', 'Genre' %>
-      <%= select_tag "instrument", raw("<option>Guitare</option><option>Chant</option><option>Batterie</option><option>Basse</option><option>Piano</option>") %>
+      <%= select_tag "instrument", raw("<option>Guitare</option><option>Chant</option><option>Batterie</option><option>Basse</option><option>Piano</option><option>Violon</option><option>DJ</option><option>Flute</option><option>Trompette</option><option>Saxophone</option><option>Ukulele</option>") %>
       <%= search_field_tag 'years_of_exp_min', 'Experience' %>
       <%= search_field_tag 'location_radius_in_km', 'Autour de moi' %>
       <%= search_field_tag 'age_min', 'Age Min' %>
       <%= search_field_tag 'age_min', 'Age Max' %>
-      <%= search_field_tag 'music_style', 'Style' %>
+      <%= select_tag 'music_style', raw("<option>Rock</option><option>Jazz</option><option>Pop</option><option>House</option><option>Classique</option><option>Folk<option>Funk</option><option>Blues</option><option>Electro</option>") %>
     <% end %>
   </div>
 <% end %>
-
+  
 <% if !user_signed_in? %>
 <div class="container justify-content-center">
 
