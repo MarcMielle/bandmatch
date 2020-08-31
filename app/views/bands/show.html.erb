@@ -12,7 +12,7 @@
           <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "band-logo" %>
         </div>
         <div class="box-members">
-            <p>Membres : </p>
+            <p class="members">Membres : </p>
 
             <div class="one-member">
               <% @band.users.each do |user| %>
@@ -30,9 +30,9 @@
       </div>
         <!-- colonne 2 (bio du band) -->
       <div class="col2">
-        <h3 class="center">Bio du groupe</h3>
+        <h3 class="center"></h3>
         <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum vel cumque labore blanditiis dolores dolorem maiores in tempore alias. Veniam illum dolorum quod facilis laboriosam, aliquid, dignissimos deleniti eos molestias optio illo quaerat magnam id? Expedita maxime natus neque reprehenderit rerum, itaque alias omnis cupiditate ab ex, minus quis?</p>
+        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum vel cumque labore blanditiis dolores dolorem maiores in tempore alias. Veniam illum dolorum quod facilis laboriosam, aliquid, dignissimos deleniti eos molestias optio illo quaerat magnam id? Expedita maxime natus neque reprehenderit rerum, itaque alias omnis cupiditate ab ex, minus quis? "</p>
       </div>
         <!-- colonne 3 (matching score) -->
       <div class="col3">
@@ -53,16 +53,19 @@
 
       <!-- ci-dessous FIN background-card-show-content -->
       </div>
+
+      <div>
+        <div class="contact-btn">
+          <%= link_to "Contactez-nous !", conversations_path, class: "primary-orange-btn" %>
+        </div>
+      </div>
+
     <!-- ci-dessous FIN background-card-show -->
     </div>
 
 
 
-    <div>
-      <div class="contact-btn">
-        <%= link_to "Contactez-nous !", conversations_path, class: "primary-orange-btn" %>
-      </div>
-    </div>
+
 <!-- fin du container général de la page -->
 </div>
 </div>
