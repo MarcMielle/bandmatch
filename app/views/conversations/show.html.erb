@@ -1,9 +1,15 @@
 <div class="container">
   <% @messages.each do |message| %>
     <% if message.author == current_user %>
-      <p class="text-right"><%= message.content %></p>
+      <div class="my-message">
+        <span>Vous</span>
+        <p><%= message.content %></p>
+      </div>
     <% else %>
-      <p class="text-left"><%= message.content %></p>
+      <div class="other-message">
+      <span><%= @conversation.user2.first_name %></span>
+        <p><%= message.content %></p>
+      </div>
     <% end %>
   <% end %>
 <%= simple_form_for [ @conversation, @message ] do |f| %>
