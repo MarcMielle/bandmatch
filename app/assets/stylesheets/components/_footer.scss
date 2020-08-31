@@ -2,16 +2,29 @@
   background-color: $bandmatch_light_grey;
   margin: 0;
   margin-top: 46vh;
-  // height: 200px;
   border-top-right-radius: 248px;
   display: flex;
   padding: 35px;
-  // justify-content: space-between;
   position: static;
   bottom: 0;
+  ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+  }
+    ul li a:hover {
+    color: $bandmatch_orange;
+  }
 }
 
 .links-footer {
   flex-direction: column;
   align-self: center;
+  text-decoration: none;
+}
+
+.no-bull {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
 }
