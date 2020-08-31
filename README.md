@@ -31,24 +31,12 @@ ALGO :
 score = 100
 si preferences_musicien1.style != musicien2.style alors
     score -= 50
-selon (diff1 = preferences_musicien1.années - musicien2.années)
-    si 1 <= diff1 <= 3 alors
-        score -= 7
-    si 4 <= diff1 <= 7 alors
-        score -= 20
-    si diff1 > 7 alors
-        score -= 30
-selon (diff2 = preferences_musicien1.freq - musicien2.freq)
-    si 1 <= diff2 <= 2 alors
-        score -= 10
-    si diff2 > 2 alors
-        score -= 20
+si (diff1 = preferences_musicien1.années - musicien2.années) > 0 alors
+score -= diff1*4
+si (diff2 = preferences_musicien1.freq - musicien2.freq) > 0 alors
+score -= diff2*7
 
 OUTPUT :
 
 retourner score + "%"
 
-si (diff1 = preferences_musicien1.années - musicien2.années) > 0 alors
-score -= diff1*4
-si (diff2 = preferences_musicien1.freq - musicien2.freq) > 0 alors
-score -= diff2*7
