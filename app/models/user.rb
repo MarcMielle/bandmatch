@@ -21,6 +21,30 @@ class User < ApplicationRecord
     Conversation.where('user1_id = :id OR user2_id = :id', id: id)
   end
 
+  def filters_query
+    <<~SQL
+      users.instrument = :instrument
+      AND
+      users.age >= :age_min
+      AND
+      users.age <= :age_max
+      AND
+      users.gender = :gender
+    SQL
+  end
+
+  def filtered_musicians_with_affinity(user_scope = User.all)
+    user_scope.where(filters_query, { 
+      instrument: default_preferences.instrument,
+      age_min:    default_preferences.age_min,
+      age_max:    default_preferences.age_max,
+      gender:     default_preferences.gender
+    }).near(default_preferences.location, default_preferences.location_radius_in_km)
+  end
+
+  def affinity_query
+  end
+
   private
 
   def music_styles_included_in_list
@@ -34,4 +58,9 @@ class User < ApplicationRecord
       errors.add(:music_styles, :inclusion)
     end
   end
+
+  def default_preferences
+    band&.preference || preference
+  end
+
 end

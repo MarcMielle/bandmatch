@@ -1,6 +1,6 @@
 class MusiciansController < ApplicationController
   def index
-    @users = User.all
+    @users = current_user.filtered_musicians_with_affinity
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,

@@ -84,6 +84,20 @@ pref1 = Preference.new(
 pref1.entity = user1
 pref1.save!
 
+pref2 = Preference.new(
+  instrument: "basse",
+  age_min: 20,
+  age_max: 30,
+  gender: "Homme",
+  years_of_experience_min: 5,
+  weekly_rehearsal_frequency_min: 2,
+  location: "Nantes",
+  location_radius_in_km: 2,
+  music_style: "rock"
+)
+pref2.entity = band1
+pref2.save!
+
 user2 = User.new(
   email:    "marc.mielle@gmail.com",
   password: "password",
