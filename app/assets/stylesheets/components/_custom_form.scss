@@ -44,19 +44,19 @@ body
 #app-cover
 {
     position: absolute;
-    top: 0;
+    top: 400px;
     right: 0;
     left: 0;
     width: 300px;
-    height: 42px;
-    margin: 100px auto 0 auto;
+    height: 70px;
+    margin: 100px auto 300px auto;
 }
 
 #select-button
 {
     position: relative;
-    height: 16px;
-    padding: 12px 14px;
+    height: 30px;
+    padding: 17px 17px;
     background-color: #fff;
     border-radius: 4px;
     cursor: pointer;
