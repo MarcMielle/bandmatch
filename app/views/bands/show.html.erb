@@ -15,13 +15,15 @@
             <p class="members">Membres : </p>
 
             <div class="one-member">
+
               <% @band.users.each do |user| %>
+              <%= link_to musician_path(user.id) do %>
               <div class="one-member-pic">
                 <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
               </div>
               <div class="one-member-name">
                 <p> <%= user.first_name %> </p>
-
+              <% end %>
               </div>
               <% end %>
             </div>
