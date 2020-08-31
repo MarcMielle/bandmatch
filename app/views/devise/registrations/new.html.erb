@@ -15,10 +15,12 @@
                       input_html: { autocomplete: "email" }%>
           <%= f.input :password,
                       required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      placeholder: "******",
+                      hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: true,
+                      placeholder: "******",
                       input_html: { autocomplete: "new-password" } %>
         </div>
 
