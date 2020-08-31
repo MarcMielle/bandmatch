@@ -1,6 +1,6 @@
+Conversation.destroy_all
 User.destroy_all
 Band.destroy_all
-Conversation.destroy_all
 
 
 puts 'Creating bands and musicians...'
@@ -177,7 +177,6 @@ user5 = User.new(
   longitude: -1.5372898281725988,
   gender:    "Femme",
   years_of_experience: 3,
-  band: band2,
   instrument:    "chant",
   music_styles: ["rock"],
   weekly_rehearsal_frequency:  2
@@ -677,7 +676,7 @@ puts 'Finished! Now enjoy our awesome website!'
 puts 'Creating conversations...'
 conversation1 = Conversation.new(user1_id: user1[:id], user2_id: user2[:id])
 conversation1.save!
-conversation2 = Conversation.new(user1_id: user1[:id], user2_id: user3[:id])
+conversation2 = Conversation.new(user1_id: user1[:id], user2_id: user21[:id])
 conversation2.save!
-conversation3 = Conversation.new(user1_id: user1[:id], user2_id: user4[:id])
+conversation3 = Conversation.new(user1_id: user1[:id], user2_id: user5[:id])
 conversation3.save!
