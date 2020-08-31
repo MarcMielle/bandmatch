@@ -1,2 +1,21 @@
-<h1>Conversations#index</h1>
-<p>Find me in app/views/conversations/index.html.erb</p>
+<div class="container">
+  <div class="conversations-container">
+  <h1 class="text-align: center">Vos Conversations</h1>
+    <div class="conversation-cards">
+    <% @conversations.each do |conversation| %>
+      <div class="conversation-card">
+        <div class="card-avatar-info">
+          <div class="card-avatar">
+            <%= cl_image_tag conversation.user2.avatar.key, height: 150, width: 100, class: "card-avatar",crop: :fill %>
+          </div>
+           <div class="card-info">
+              <p><strong><%= conversation.user2.first_name %> <%= conversation.user2.last_name %></strong></p>
+              <p><%= conversation.user2.age %> ans</p>
+              <p><%= conversation.user2.instrument.capitalize %></p>
+           </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
