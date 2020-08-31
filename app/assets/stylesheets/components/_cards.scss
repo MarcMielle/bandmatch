@@ -215,31 +215,43 @@
     color: $bandmatch_orange;
   }
 }
-
-.box-logo {
-  background-color: red;
-  flex-direction: column;
-}
-.box-members {
-  background-color: blue;
-  flex-direction: column;
-}
-
-
-
-
-
-.background-card-show-picture-band {
+.band-logo {
   width: 130px;
   height: 130px;
   align-self: center;
   border-radius: 100px;
   object-fit: cover;
-  margin-left: 30px;
+}
+.box-logo {
+  flex-direction: column;
+  margin-bottom: 20px;
+  // border: 0.5px solid grey;
+}
+.box-members {
+  // border: 0.5px solid grey;
+  flex-direction: column;
+  margin: 10px 0;
 }
 
+.col2 {
+  padding: 0 30px;
+}
+.col3 {
+  padding: 0 30px;
+}
 
+.one-member {
+  flex-direction: row;
+  font-size: 10px;
+}
 
+.one-member-pic {
+  width: 45px;
+  height: 45px;
+  align-self: center;
+  border-radius: 100px;
+  object-fit: cover;
+}
 
 
 
