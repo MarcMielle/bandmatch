@@ -1,7 +1,82 @@
-<h1>Bands#show</h1>
-<p>Find me in app/views/bands/show.html.erb</p>
+<div class="container">
+   <h1 class="center"> <%= @band.name  %> </h1>
+    <div class="container">
+    <div class="background-card-show">
 
-<p><strong>Name:</strong>
-  <%= @band.name %>
-</p>
-<%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill %>
+      <!-- intérieur de la card show band -->
+      <div class="background-card-show-content">
+        <!-- colonne 1 (logo et membres) -->
+        <div class="col1">
+          <div class="box-logo">
+            <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "background-card-show-picture-band" %>
+          </div>
+          <div class="box-members">
+            <p>je suis les membres</p>
+          </div>
+        </div>
+        <!-- colonne 2 (bio du band) -->
+        <div class="col2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum vel cumque labore blanditiis dolores dolorem maiores in tempore alias. Veniam illum dolorum quod facilis laboriosam, aliquid, dignissimos deleniti eos molestias optio illo quaerat magnam id? Expedita maxime natus neque reprehenderit rerum, itaque alias omnis cupiditate ab ex, minus quis?</p>
+        </div>
+        <!-- colonne 3 (matching score) -->
+        <div class="col3">
+          <div class="affinity-container">
+            <div class="affinity-container-bands">
+              <div class="gauge-container">
+                <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                  <circle class="rail" r="47" cx="75" cy="75" />
+                  <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                </svg>
+                <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- ci-dessous FIN background-card-show-content -->
+      </div>
+    <!-- ci-dessous FIN background-card-show -->
+    </div>
+
+
+
+
+
+
+
+
+    <div>
+      <div class="contact-btn">
+        <%= link_to "Contactez-nous !", conversations_path, class: "primary-orange-btn" %>
+      </div>
+    </div>
+
+
+
+    <br>
+    <div class="container bio">
+      <h2 class="center">Bio</h2>
+      <br>
+      <p> <%= %> , né le 26 juillet 1943 à Dartford (Kent, Angleterre), est un musicien, auteur-compositeur et chanteur britannique, cofondateur en 1962, avec Keith Richards, Brian Jones et Ian Stewart du groupe de rock britannique The Rolling Stones. Avec Keith Richards, au sein d'un partenariat qu'ils ont baptisé The Glimmer Twins (les jumeaux étincelants), il est l'auteur-compositeur de la plupart des titres du répertoire original du groupe.  </p>
+    </div>
+    <br>
+
+
+  <div class="container justify-content-center">
+    <div class="background-card-soundcloud ">
+      <div class="background-card-show-content">
+        <div class="soundcloud-logo">
+          <%= link_to "https://soundcloud.com/" do %>
+            <%= image_tag "soundcloud.svg", class: "soundcloud" %>
+          <% end %>
+        </div>
+        <div class="soundclound-text">
+          <p><strong>Suivez-nous</strong> sur Soundclound !</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

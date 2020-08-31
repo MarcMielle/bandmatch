@@ -204,3 +204,44 @@
     color: $bandmatch_orange;
   }
 }
+
+// -------- cards de la show band --------//
+
+.background-card-show-text-band {
+  margin-left: 30px;
+  align-self: center;
+  i {
+    margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+}
+
+.box-logo {
+  background-color: red;
+  flex-direction: column;
+}
+.box-members {
+  background-color: blue;
+  flex-direction: column;
+}
+
+
+
+
+
+.background-card-show-picture-band {
+  width: 130px;
+  height: 130px;
+  align-self: center;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+// ----------------------------------------//
