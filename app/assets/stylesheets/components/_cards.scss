@@ -122,46 +122,40 @@
   }
 }
 
-// Card de la show musician
-
+/// Card de la show musician ///
 .background-card-show {
   background-color: $bandmatch_light_grey;
   border-bottom-right-radius: 60px;
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
-  padding-top: 30px;
-  height: 390px;
-  width: 700px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
-
-
 .background-card-show-content {
   display: flex;
   padding: 20px;
 }
-
 .background-card-show-text {
   margin-left: 30px;
   align-self: center;
+  i {
+    margin-right: 4px;
+    color: $bandmatch_purple;
+  }
 }
-
 .background-card-show-picture {
-  background-color: $bandmatch_purple;
-  width: 150px;
+  width: 160px;
   height: 250px;
   align-self: center;
   border-radius: 70px;
   object-fit: cover;
   margin-left: 30px;
+  margin-top: 30px;
 }
-
 .contact-btn {
   justify-content: center;
   display: flex;
 }
-
 .center {
   text-align: center;
 }
@@ -172,6 +166,31 @@
   text-align: center;
   vertical-align: middle;
 }
+.bio {
+  width: 750px;
+}
+.soundcloud {
+  width: 50px;
+  margin-left: 180px;
+  align-self: center;
+}
+.background-card-soundcloud {
+  background-color: $bandmatch_light_grey;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  padding-top: 20px;
+  height: 130px;
+  width: 750px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.soundclound-text{
+  align-self: center;
+  margin-left: 20px;
+}
+/// ----------------------------------- ///
+
 
 .card-preference-items-in-bands {
   display: flex;
@@ -182,5 +201,80 @@
     margin-right: 4px;
     color: $bandmatch_orange;
   }
-
 }
+
+// -------- cards de la show band --------//
+
+.background-card-show-text-band {
+  margin-left: 30px;
+  align-self: center;
+
+  i {
+    margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+}
+.band-logo {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  border-radius: 90px;
+  object-fit: cover;
+}
+.box-logo {
+  flex-direction: column;
+  margin-bottom: 20px;
+  // border: 0.5px solid grey;
+}
+.box-members {
+  // border: 0.5px solid grey;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.col1 {
+  padding-right: 30px;
+}
+.col2 {
+  padding: 0 30px;
+  padding-top: 40px;
+}
+.col3 {
+  padding-left: 20px;
+    i {
+    margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+}
+
+.one-member {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.one-member-pic {
+  width: 45px;
+  height: 45px;
+  align-self: center;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.one-member-name {
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+.band-circle {
+  width: 100px;
+}
+.band-gauge {
+  width: 100% !important;
+}
+
+.members {
+  color: $bandmatch_orange;
+}
+
+// ----------------------------------------//

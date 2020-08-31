@@ -1,12 +1,14 @@
 .background-footer {
   background-color: $bandmatch_light_grey;
   margin: 0;
-  margin-top: 45px;
-  height: 200px;
+  margin-top: 46vh;
+  // height: 200px;
   border-top-right-radius: 248px;
   display: flex;
   padding: 35px;
-  justify-content: space-between;
+  // justify-content: space-between;
+  position: static;
+  bottom: 0;
 }
 
 .links-footer {

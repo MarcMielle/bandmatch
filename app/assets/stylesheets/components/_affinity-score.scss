@@ -8,7 +8,7 @@ $papaya: transparent;
 $granola: $bandmatch_dark_grey;
 $strawberry: $bandmatch_purple;
 
-.affinity-container{
+.affinity-container {
 
   height: 50%;
   width: 25%;
@@ -34,6 +34,40 @@ $strawberry: $bandmatch_purple;
   .percentage{ color: $bandmatch_purple; }
 
 }
+
+//
+
+// .affinity-container-orange {
+
+//   height: 50%;
+//   width: 25%;
+//   text-align: center;
+//   display: table-cell;
+//   vertical-align: middle;
+
+//   .title{
+
+//     text-align: center;
+//     padding: 0 0 30px;
+//     margin: 0;
+
+//   }
+
+
+//   background-color: $papaya;
+
+//   .rail{ stroke: $granola; }
+
+//   .progress{ stroke: $bandmatch_orange; }
+
+//   .percentage{ color: $bandmatch_orange; }
+
+// }
+
+
+
+
+//
 
 .gauge-container{
 
