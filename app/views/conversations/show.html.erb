@@ -1,9 +1,13 @@
-<div>
+<div class="container">
   <% @messages.each do |message| %>
-    <p><%= message.content %></p>
+    <% if message.author == current_user %>
+      <p class="text-right"><%= message.content %></p>
+    <% else %>
+      <p class="text-left"><%= message.content %></p>
+    <% end %>
   <% end %>
-</div>
 <%= simple_form_for [ @conversation, @message ] do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@conversation.id}" %>
+  <%= f.input :content, label: false, placeholder: "Nouveau Message" %>
   <%= f.submit %>
 <% end %>
+</div>
