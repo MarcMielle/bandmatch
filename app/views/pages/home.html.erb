@@ -15,17 +15,37 @@
 
 <div>
   <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="ville" name="ville" placeholder="Ville">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+    <label for="sexe">Sexe</label>
+    <select id="sexe" name="sexe" placeholder="Sexe">
+      <option value="homme">Homme</option>
+      <option value="femme">Femme</option>
+    </select>
+
+    <label for="instrument">Instrument</label>
+    <select id="instrument" name="instrument" placeholder="Instrument">
+      <option value="guitare">Guitare</option>
+      <option value="chant">Chant</option>
+      <option value="batterie">Batterie</option>
+      <option value="basse">Basse</option>
+      <option value="piano">Piano</option>
+      <option value="violon">Violon</option>
+    </select>
+
+    <input type="text" id="exp" name="exp" placeholder="Années d expérience minimum">
+    <input type="text" id="age_min" name="age_min" placeholder="Age minimum">
+    <input type="text" id="age_max" name="age_max" placeholder="Age maximum">
+
+    <label for="style">Style</label>
+    <select id="style" name="style" placeholder="Style">
+      <option value="rock">Rock</option>
+      <option value="jazz">Jazz</option>
+      <option value="pop">Pop</option>
+      <option value="classique">Classique</option>
+      <option value="funk">Funk</option>
+      <option value="folk">Folk</option>
     </select>
   
     <input type="submit" value="Submit">
