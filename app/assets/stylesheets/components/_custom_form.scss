@@ -1,4 +1,16 @@
-.btn-musician{
+.simple_form input {
+  border: 1px solid purple; 
+}
+
+div.boolean, .simple_form input[type='submit'] {
+  margin-left: 170px;
+}
+
+.my-input{
+  border: 1px solid purple;
+}
+
+.my-button{
   width: 70%;
   background-color: #983cce;
   color: white;
@@ -8,9 +20,10 @@
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  justify-content: center;
 }
 
-.btn-musician:hover {
+.my-button:hover {
   background-color:  #451064;
 }
 
