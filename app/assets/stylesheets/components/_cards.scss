@@ -205,6 +205,15 @@
 
 // -------- cards de la show band --------//
 
+.background-card-show-band {
+  background-color: $bandmatch_light_grey;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 750px;
+}
 .background-card-show-text-band {
   margin-left: 30px;
   align-self: center;
@@ -215,8 +224,8 @@
   }
 }
 .band-logo {
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   align-self: center;
   border-radius: 90px;
   object-fit: cover;
@@ -236,7 +245,7 @@
 }
 .col2 {
   padding: 0 30px;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 .col3 {
   padding-left: 20px;
@@ -256,7 +265,7 @@
   width: 45px;
   height: 45px;
   align-self: center;
-  border-radius: 100px;
+  border-radius: 50px;
   object-fit: cover;
 }
 
@@ -278,3 +287,7 @@
 }
 
 // ----------------------------------------//
+
+.justify-center {
+  justify-content: center;
+}
