@@ -1,50 +1,69 @@
 <% if user_signed_in? %>
 
-<div id="input-styling-address">
-  <input type="search" placeholder="Ville" />
-</div>
-<br>
+ <div class="container">
+    <%= form_tag(musicians_path, method: :get) do %>
+      <%= search_field_tag 'location', 'Ville' %>
+      <%= search_field_tag 'gender', 'Genre' %>
+      <%= select_tag "instrument", raw("<option>Guitare</option><option>Chant</option><option>Batterie</option><option>Basse</option><option>Piano</option><option>Violon</option><option>DJ</option><option>Flute</option><option>Trompette</option><option>Saxophone</option><option>Ukulele</option>") %>
+      <%= search_field_tag 'years_of_exp_min', 'Experience' %>
+      <%= search_field_tag 'location_radius_in_km', 'Autour de moi' %>
+      <%= search_field_tag 'age_min', 'Age Min' %>
+      <%= search_field_tag 'age_min', 'Age Max' %>
+      <%= select_tag 'music_style', raw("<option>Rock</option><option>Jazz</option><option>Pop</option><option>House</option><option>Classique</option><option>Folk<option>Funk</option><option>Blues</option><option>Electro</option>") %>
+      <% end %>
+    </div>
+    <br>
+    <div class="container">
+      <form id="app-cover">
+      <div id="select-box">
+        <input type="checkbox" id="options-view-button">
+        <div id="select-button" class="brd">
+          <div id="selected-value">
+            <span>Instrument</span>
+          </div>
+        <div id="chevrons">
+          <i class="fas fa-chevron-up"></i>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div id="options">
+        <div class="option">
+          <input class="s-c top" type="radio" name="platform" value="guitare">
+          <input class="s-c bottom" type="radio" name="platform" value="guitare">
+          <span class="label">Guitare</span>
+          <span class="opt-val">Guitare</span>
+        </div>
+        <div class="option">
+          <input class="s-c top" type="radio" name="platform" value="batterie">
+          <input class="s-c bottom" type="radio" name="platform" value="batterie">
+          <i class="fab fa-dribbble"></i>
+          <span class="label">Batterie</span>
+          <span class="opt-val">Batterie</span>
+        <div class="option">
+          <input class="s-c top" type="radio" name="platform" value="chant">
+          <input class="s-c bottom" type="radio" name="platform" value="chant">
+          <span class="label">Chant</span>
+          <span class="opt-val">Chant</span>
+        </div>
+        <div class="option">
+          <input class="s-c top" type="radio" name="platform" value="basse">
+          <input class="s-c bottom" type="radio" name="platform" value="basse">
+          <span class="label">Basse</span>
+          <span class="opt-val">Basse</span>
+        </div>
+        <div class="option">
+          <input class="s-c top" type="radio" name="platform" value="piano">
+          <input class="s-c bottom" type="radio" name="platform" value="piano">
+          <span class="label">Piano</span>
+          <span class="opt-val">Piano</span>
+        </div>
 
-<div>
-    <label for="sexe">Sexe</label>
-    <select id="sexe" name="sexe" placeholder="Sexe">
-      <option value="homme">Homme</option>
-      <option value="femme">Femme</option>
-    </select>
+        </div>
+      </div>
+    </div>
 
-    <label for="instrument">Instrument</label>
-    <select id="instrument" name="instrument" placeholder="Instrument">
-      <option value="guitare">Guitare</option>
-      <option value="chant">Chant</option>
-      <option value="batterie">Batterie</option>
-      <option value="basse">Basse</option>
-      <option value="piano">Piano</option>
-      <option value="violon">Violon</option>
-    </select>
 
-    <input type="number" min="0" max="100"id="exp" name="exp" placeholder="Années d expérience minimum">
-    <br>
-    <br>
-    <input type="number" min="18" max="100" id="age_min" name="age_min" placeholder="Age minimum">
-    <br>
-    <br>
-    <input type="number" min="18" max="100" id="age_max" name="age_max" placeholder="Age maximum">
-    <br>
 
-    <label for="style">Style</label>
-    <select id="style" name="style" placeholder="Style">
-      <option value="rock">Rock</option>
-      <option value="jazz">Jazz</option>
-      <option value="pop">Pop</option>
-      <option value="classique">Classique</option>
-      <option value="funk">Funk</option>
-      <option value="folk">Folk</option>
-    </select>
-  
-    <input type="submit-musician" value="Chercher un musicien">
-    <input type="submit-band" value="Chercher un groupe">
-  </form>
-</div>
 <% end %>
 
 <% if !user_signed_in? %>
@@ -149,3 +168,4 @@
   </div>
 </div>
 <% end %>
+</div>
