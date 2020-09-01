@@ -6,19 +6,19 @@ Band.destroy_all
 
 puts 'Creating bands and musicians...'
 
-band1 = Band.new(name: "Overmist", music_style: "rock", bio: "Overmist est avant tout une bande de potes. On a fondé ce groupe il y a quelques mois. Pour nous c'est le rock avant tout !! Plus qu'un simple style de musique, c'est presque devenu un art de vivre. On joue rock, on pense rock, on rêve rock. On fait régulièrement des reprises de grands classiques. Tous les morceaux sont disponibles sur notre compte Soundcloud. Ecoutez notre son !")
+band1 = Band.new(name: "Overmist", music_style: "rock")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo1.PNG"))
 band1.avatar.attach(io: file, filename: 'logo1.PNG', content_type: 'image/PNG')
 band1.save!
 puts 'Band 1/7 created'
 
-band2 = Band.new(name: "442", music_style: "rock", bio: "Même si notre groupe les 442 est jeune, les membres du groupe sont tous expérimentés. On joue souvent ensemble soirs et weekends. A l'ancienne, dans un vieux garage réaménagé en studio de répèt. On a déjà fait quelques concerts pendant des festivals d'été. On compte bien continuer sur cette belle lancée!")
+band2 = Band.new(name: "442", music_style: "rock")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo2.png"))
 band2.avatar.attach(io: file, filename: 'logo2.png', content_type: 'image/png')
 band2.save!
 puts 'Band 2/7 created'
 
-band3 = BandQuand.new(name: "Storm Dance Ego", music_style: "house")
+band3 = Band.new(name: "Storm Dance Ego", music_style: "house")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo3.png"))
 band3.avatar.attach(io: file, filename: 'logo3.png', content_type: 'image/png')
 band3.save!
