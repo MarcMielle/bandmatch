@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
-
+<%#= simple_form_for current_user.default_preferences %>
 <div class="container">
 <br><br>
   <div id="input-styling-address">
-    <input type="search" placeholder="Ville" />
+    <input type="text" placeholder="Ville" id="preference_location" />
   </div>
   <br>
-    <select id="sexe" name="sexe" placeholder="Sexe">
+    <select id="sexe" name="preference[gender]" placeholder="Sexe">
       <option value="homme">Homme</option>
       <option value="femme">Femme</option>
     </select>
