@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def filtered_musicians_with_affinity_score(user_scope = User.all)
-    user_scope.select('users.*', "#{affinity_query} AS affinity_score").where(filters_query, { 
+    user_scope.select('users.*', "#{affinity_query} AS affinity_score").where(filters_query, {
       instrument: default_preferences.instrument,
       age_min:    default_preferences.age_min,
       age_max:    default_preferences.age_max,

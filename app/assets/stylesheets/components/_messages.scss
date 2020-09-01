@@ -1,0 +1,42 @@
+.my-message {
+  background-color: #007bff;
+  border-style: solid;
+  border-width: 1px;
+  margin: 12px 0px;
+  border-color: white;
+  text-align: right;
+  border-radius: 50px 50px 50px 50px;
+  padding: 6px;
+  vertical-align: center;
+  p {
+    color: white;
+    margin-right: 14px;
+    padding: 6px;
+    margin-bottom: 0px;
+  }
+  span {
+    color: white;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+}
+.other-message {
+  background-color: $bandmatch-light-grey;
+  border-style: solid;
+  margin: 0;
+  border-width: 1px;
+  border-color: white;
+  text-align: left;
+  border-radius: 50px 50px 50px 50px;
+  padding: 6px;
+  vertical-align: center;
+  p {
+    margin-left: 14px;
+    padding: 6px;
+    margin-bottom: 0px;
+  }
+  span {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+}

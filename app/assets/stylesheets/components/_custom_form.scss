@@ -11,6 +11,46 @@ input[type=text], select {
 input[type=text] {
     transition: width 0.4s ease-in-out;
   }
+#options-view-button:checked ~ #options
+{
+    border: 1px solid #e2eded;
+    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+
+.option
+{
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+}
+
+.option i
+{
+    position: absolute;
+    left: 14px;
+    padding: 0;
+    display: none;
+}
+
+#options-view-button:checked ~ #options .option i
+{
+    display: block;
+    padding: 12px 0;
+}
+
+.label
+{
+    display: none;
+    padding: 0;
+    margin-left: 27px;
+}
+
+#options-view-button:checked ~ #options .label
+{
+    display: block;
+    padding: 12px 14px;
+}
 
   
 input[type=number], select {
@@ -97,3 +137,17 @@ input[type=submit-band]:hover {
 #input-styling-address input:hover { border-color: silver; }
 #input-styling-address input::placeholder { color: #aaaaaa; }
 #input-styling-address .ap-nostyle-suggestion { border-bottom: 1px solid #efefef; }
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #143240;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(20, 50, 64, 0.76);
+}

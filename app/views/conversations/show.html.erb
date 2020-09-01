@@ -1,2 +1,19 @@
-<h1>Conversations#show</h1>
-<p>Find me in app/views/conversations/show.html.erb</p>
+<div class="container">
+  <% @messages.each do |message| %>
+    <% if message.author == current_user %>
+      <div class="my-message">
+        <span>Vous</span>
+        <p><%= message.content %></p>
+      </div>
+    <% else %>
+      <div class="other-message">
+      <span><%= @conversation.user2.first_name %></span>
+        <p><%= message.content %></p>
+      </div>
+    <% end %>
+  <% end %>
+<%= simple_form_for [ @conversation, @message ] do |f| %>
+  <%= f.input :content, label: false, placeholder: "Nouveau Message" %>
+  <%= f.submit %>
+<% end %>
+</div>
