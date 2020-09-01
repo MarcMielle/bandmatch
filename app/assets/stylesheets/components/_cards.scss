@@ -280,78 +280,19 @@
   object-fit: cover;
 }
 .gauge-index-band {
-  width: 20% !important;
+  width: 25% !important;
 }
 
 .gauge-number {
-  font-size: 12px !important;
+  font-size: 16px !important;
 }
 
 .last-info {
   // justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 10px;
 }
-// .card-avatar-info-bands {
-//   margin-top: 15px;
-//   display: flex;
-//   // justify-content: space-around;
-//   height: 120px;
-//   margin-left: 20px;
-//   i {
-//     margin-right: 4px;
-//     color: $bandmatch_orange;
-//   h4 {
-//     color: $bandmatch_orange;
-//   }
-//   }
-// }
-// .card-avatar-bands {
-//   width: 100px;
-//   border-radius: 60px;
-//   object-fit: cover;
-//   align-self: center;
-//   text-align: center;
-//   vertical-align: middle;
-// }
-
-// .card-info-bands {
-//   text-align: left;
-//   margin-left: 70px;
-//   color: $bandmatch_orange;
-// }
-
-// .card-info-items-bands {
-//   display: flex;
-//   justify-content: align-left;
-//   text-align: left;
-//   i {
-//     margin-right: 4px;
-//     color: $bandmatch_purple;
-//   }
-// }
-// .card-preference-bands {
-//   display: flex;
-//   justify-content: space-around;
-//   // text-align: bottom;
-//   vertical-align: right;
-//   margin-bottom: 20px;
-// }
-// .card-preference-bands p {
-//   margin: 0px;
-// }
-// .card-preference-items-bands-bands {
-//   display: flex;
-//   justify-content: space-around;
-//   text-align: center;
-//   vertical-align: middle;
-//   align-self: center;
-
-//   i {
-//     margin-right: 4px;
-//     color: $bandmatch_purple;
-//   }
-// }
-
 
 
 
