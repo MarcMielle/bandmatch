@@ -9,20 +9,20 @@
   margin-bottom: 12px;
   border-color: white;
   text-align: right;
-  border-radius: 50px 50px 50px 50px;
-  padding: 6px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 2px;
   vertical-align: center;
   width: fit-content;
   min-width: 100px;
+  padding: 12px;
   p {
     color: white;
-    margin: 0 20px;
-    padding: 2px;
-    margin-bottom: 0px;
+    margin: 0px 20px;
+    text-align: justify;
   }
   span {
     color: white;
-    margin: 0 20px;
+    margin: 0px 20px;
     font-weight: bold;
   }
 }
@@ -36,13 +36,13 @@
   border-width: 1px;
   border-color: white;
   text-align: left;
-  border-radius: 50px 50px 50px 50px;
-  padding: 6px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 12px;
   vertical-align: center;
   p {
     margin: 0 20px;
     padding: 2px;
-    margin-bottom: 0px;
+    text-align: justify;
   }
   span {
     margin: 0 20px;
