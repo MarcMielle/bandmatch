@@ -1,42 +1,80 @@
+.my-message-container{
+  display: flex;
+  justify-content: flex-end;
+}
 .my-message {
   background-color: #007bff;
   border-style: solid;
   border-width: 1px;
-  margin: 12px 0px;
+  margin-bottom: 12px;
   border-color: white;
   text-align: right;
-  border-radius: 50px 50px 50px 50px;
-  padding: 6px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 2px;
   vertical-align: center;
+  width: fit-content;
+  min-width: 100px;
+  padding: 12px;
   p {
     color: white;
-    margin-right: 14px;
-    padding: 6px;
-    margin-bottom: 0px;
+    margin: 0px 20px;
+    text-align: justify;
   }
   span {
     color: white;
-    margin-right: 20px;
+    margin: 0px 20px;
     font-weight: bold;
   }
+}
+.other-message-container{
+  display: flex;
 }
 .other-message {
   background-color: $bandmatch-light-grey;
   border-style: solid;
-  margin: 0;
+  margin-bottom: 12px;
   border-width: 1px;
   border-color: white;
   text-align: left;
-  border-radius: 50px 50px 50px 50px;
-  padding: 6px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 12px;
   vertical-align: center;
   p {
-    margin-left: 14px;
-    padding: 6px;
-    margin-bottom: 0px;
+    margin: 0 20px;
+    padding: 2px;
+    text-align: justify;
   }
   span {
-    margin-left: 20px;
+    margin: 0 20px;
     font-weight: bold;
   }
+}
+.form-control {
+  margin-top: 12px;
+  border-radius: 50px 50px 50px 50px;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 50px 50px 50px 50px;
+  text-align:left;
+  vertical-align:center;
+  border-style: solid;
+  border-color: $bandmatch-light-grey;
+}
+textarea {
+  text-align:left;
+  padding: 0px;
+}
+.sub {
+  display:flex;
+  justify-content: flex-end;
+  padding: 0px;
+
 }

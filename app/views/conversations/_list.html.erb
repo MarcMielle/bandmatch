@@ -1,13 +1,12 @@
-<div class="container">
   <div class="conversations-container">
-  <h1 class="text-align: center">Vos Conversations</h1>
+  <h1 class="text-align: center">Discussions</h1>
     <div class="conversation-cards">
       <% @conversations.each do |conversation| %>
 
         <% other_user = conversation.other_user_than(current_user) %>
 
         <%= link_to conversation_path(conversation) do %>
-          <div class="conversation-card">
+          <div class="conversation-card<%= "-current" if conversation.id == params[:id].to_i %>">
             <div class="card-avatar-info">
               <div class="card-avatar">
                 <%= cl_image_tag other_user.avatar.key, height: 150, width: 100, class: "card-avatar",crop: :fill %>
@@ -16,7 +15,6 @@
 
                <div class="card-info">
                   <p><strong><%= other_user.first_name %> <%= other_user.last_name %></strong></p>
-                  <p><%= other_user.age %> ans</p>
                   <p><%= other_user.instrument.capitalize %></p>
                </div>
             </div>
@@ -25,4 +23,3 @@
       <% end %>
     </div>
   </div>
-</div>

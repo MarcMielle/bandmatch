@@ -4,4 +4,7 @@ class Conversation < ApplicationRecord
 
   has_many :messages
 
+  def other_user_than(user)
+    user == user1 ? user2 : user1
+  end
 end
