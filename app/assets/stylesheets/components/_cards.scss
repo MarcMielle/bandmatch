@@ -204,7 +204,11 @@
 }
 
 // -------- cards de la show band --------//
-
+.container-band {
+  justify-content: center;
+  width: 750px;
+  margin: auto;
+}
 .background-card-show-band {
   background-color: $bandmatch_light_grey;
   border-bottom-right-radius: 60px;
@@ -212,7 +216,6 @@
   border-top-left-radius: 60px;
   margin-bottom: 30px;
   margin-top: 30px;
-  width: 750px;
 }
 .background-card-show-text-band {
   margin-left: 30px;
