@@ -1,43 +1,54 @@
 <div class="container">
   <h1>Les groupes qui matchent avec vous !</h1>
-    <p>Vous recherchez un <strong>groupe</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
-        <div class="cards">
-          <% @bands.each do | band | %>
-          <%= link_to (band_path(band.id)) do %>
-             <div class="card">
-              <div class="card-avatar-info">
-                <div class="card-avatar">
-                  <%= cl_image_tag band.avatar.key, height: 150, width: 100, class: "card-avatar-in-band",crop: :fill %>
+  <p>Vous recherchez un <strong>groupe</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
+  <div class="cards-bands">
+    <% @bands.each do | band | %>
+      <%= link_to (band_path(band.id)) do %>
+
+        <!-- new card -->
+        <div class="card-show-band d-flex">
+          <!-- left side -->
+          <div class="band-img">
+            <!-- pic band -->
+            <%= cl_image_tag band.avatar.key, height: 150, width: 100, class: "band-logo-bands",crop: :fill %>
+          </div>
+          <!-- right side -->
+          <div class="info-band">
+            <div>
+              <h4 class=title-band><%= band.name %></h4>
+            </div>
+            <!-- list musicians -->
+            <div class="band-members d-flex">
+              <% band.users.each do |user| %>
+                <div class="one-member-pic-band">
+                  <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
                 </div>
-                <div class="card-info">
-                  <p><strong><%= band.name %></strong></p>
-          <!--         <% band.users.each do |user| %>
-                    <div class="card-avatar">
-                      <%= cl_image_tag user.avatar.key, height: 50, width: 50, class: "card-avatar-in-band",crop: :fill %>
-                    </div>
-                  <% end %> -->
-                </div>
-              </div>
-              <div class="card-preference">
-                <div class="card-preference-items-in-bands">
-                  <p><i class="fas fa-puzzle-piece"></i></p>
-                  <p><%= band.music_style.capitalize %></p>
-                </div>
-                <div class="affinity-container">
-                  <div class="affinity-container-bands">
-                    <div class="gauge-container">
-                      <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
-                        <circle class="rail" r="67" cx="75" cy="75" />
-                        <circle class="progress" r="67" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
-                      </svg>
-                      <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-                    </div>
+              <% end %>
+            </div>
+            <!-- last info -->
+            <div class="last-info d-flex">
+              <!-- style de musique -->
+              <div class="picto"><p> <i class="fas fa-music"></i> <%= band.music_style.capitalize %> </p></div>
+              <!-- score affinité % -->
+              <div class="affinity-container gauge-index-band">
+                <div class="affinity-container-bands">
+                  <div class="gauge-container">
+                    <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                      <circle class="rail" r="67" cx="75" cy="75" />
+                      <circle class="progress" r="67" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                    </svg>
+                    <span class="center percentage gauge-number"><span class="value">0</span><span class="percentSymbol">%</span></span>
                   </div>
                 </div>
               </div>
-             </div>
-          <% end %>
-          <% end %>
+            </div>
+          </div>
         </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
+
+
 
