@@ -1,47 +1,57 @@
 <div class="container">
   <h1>Les musiciens qui matchent avec vous !</h1>
     <p>Vous recherchez un <strong>guitariste</strong> de <strong>rock</strong> à <strong>Nantes</strong> disponible <strong>1 à 3 fois</strong> par semaine.</p>
-  <div id="map"
-       style="width: 100%; height: 600px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-        <div class="cards">
-          <% @users.each do | user | %>
-          <%= link_to(musician_path(user.id)) do %>
-           <div class="card">
-            <div class="card-avatar-info">
-              <div class="card-avatar">
-                <%= cl_image_tag user.avatar.key, height: 150, width: 100, class: "card-avatar",crop: :fill %>
+  <br>
+  <div class="content-index">
+    <!-- colonne gauche, la map -->
+    <div class="cards cards-in-wrap">
+            <% @users.each do | user | %>
+            <%= link_to(musician_path(user.id)) do %>
+             <div class="card">
+              <div class="card-avatar-info">
+                <div class="card-avatar">
+                  <%= cl_image_tag user.avatar.key, height: 150, width: 100, class: "card-avatar",crop: :fill %>
+                </div>
+                <div class="card-info">
+               <p><strong><%= user.first_name %> <%= user.last_name %></strong></p>
+               <p><%= user.age %> ans</p>
+               <div class="card-info-items">
+                 <p><i class="fas fa-map-marker-alt"></i> <%= user.location %></p>
+               </div>
+               </div>
               </div>
-              <div class="card-info">
-             <p><strong><%= user.first_name %> <%= user.last_name %></strong></p>
-             <p><%= user.age %> ans</p>
-             <div class="card-info-items">
-               <p><i class="fas fa-map-marker-alt"></i> <%= user.location %></p>
-             </div>
-             </div>
-            </div>
-            <div class="card-preference">
-              <div class="card-preference-items">
-                <p><i class="fas fa-music"></i></p>
-                <p><%= user.instrument.capitalize %></p>
-              </div>
-              <div class="card-preference-items">
-                <p><i class="fas fa-puzzle-piece"></i></p>
-                <p><%= user.music_styles.join(" ").capitalize %></p>
-              </div>
-              <div class="affinity-container">
-                <div class="gauge-container">
-                  <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
-                    <circle class="rail" r="67" cx="75" cy="75" />
-                    <circle class="progress" r="67" data-target="<%= user.affinity_score %>" cx="75" cy="75" />
-                  </svg>
-                  <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+              <div class="card-preference">
+                <div class="card-preference-items">
+                  <p><i class="fas fa-puzzle-piece"></i></p>
+                  <p><%= user.instrument.capitalize %></p>
+                </div>
+                <div class="card-preference-items">
+                  <p><i class="fas fa-music"></i></p>
+                  <p><%= user.music_styles.join(" ").capitalize %></p>
+                </div>
+                <div class="affinity-container">
+                  <div class="gauge-container">
+                    <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
+                      <circle class="rail" r="67" cx="75" cy="75" />
+                      <circle class="progress" r="67" data-target="<%= user.affinity_score %>" cx="75" cy="75" />
+                    </svg>
+                    <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-      <% end %>
-      <% end %>
-        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+    <!-- colonne droite, la map -->
+    <div id="map"
+         style="width: 100%; height: 600px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+
+
 </div>

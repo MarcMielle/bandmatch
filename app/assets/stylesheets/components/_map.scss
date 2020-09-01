@@ -1,8 +1,21 @@
 .mapboxgl-popup {
     max-width: 200px;
   }
-  
+
   .mapboxgl-popup-content {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
   }
+
+
+
+
+
+// la page index musicien avec nouvelle disposition map à droite //
+.content-index {
+  display: flex;
+}
+
+.cards-in-wrap {
+  flex-wrap: wrap;
+}
