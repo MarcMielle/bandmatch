@@ -11,47 +11,6 @@ input[type=text], select {
 input[type=text] {
     transition: width 0.4s ease-in-out;
   }
-#options-view-button:checked ~ #options
-{
-    border: 1px solid #e2eded;
-    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
-}
-
-.option
-{
-    position: relative;
-    line-height: 1;
-    transition: 0.3s ease all;
-    z-index: 2;
-}
-
-.option i
-{
-    position: absolute;
-    left: 14px;
-    padding: 0;
-    display: none;
-}
-
-#options-view-button:checked ~ #options .option i
-{
-    display: block;
-    padding: 12px 0;
-}
-
-.label
-{
-    display: none;
-    padding: 0;
-    margin-left: 27px;
-}
-
-#options-view-button:checked ~ #options .label
-{
-    display: block;
-    padding: 12px 14px;
-}
-
   
 input[type=number], select {
     width: 100%;

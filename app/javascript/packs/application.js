@@ -21,16 +21,20 @@ require("channels")
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
+import "https://cdn.jsdelivr.net/npm/places.js@1.19.0";
 
 import { initMapbox }         from '../plugins/init_mapbox';
 import { initGaugeAnimation } from '../plugins/gauge_animation';
+import { Algo }               from '../plugins/algolia';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initGaugeAnimation();
+  Algo();
 });
 // External imports
 import "bootstrap";
+import { Algo } from "../plugins/algolia";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
