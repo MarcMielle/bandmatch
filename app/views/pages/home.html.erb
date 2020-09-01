@@ -1,10 +1,11 @@
 <% if user_signed_in? %>
 
 <div class="container">
-<div id="input-styling-address">
-  <input type="search" placeholder="Ville" />
-</div>
-<br>
+<br><br>
+  <div id="input-styling-address">
+    <input type="search" placeholder="Ville" />
+  </div>
+  <br>
     <select id="sexe" name="sexe" placeholder="Sexe">
       <option value="homme">Homme</option>
       <option value="femme">Femme</option>
@@ -34,11 +35,13 @@
       <option value="funk">Funk</option>
       <option value="folk">Folk</option>
     </select>
+    <br><br><br>
   
-    <input type="submit-musician" value="Chercher un musicien">
-    <input type="submit-band" value="Chercher un groupe">
+    <%= link_to 'Chercher un musicien', musicians_path, class: "btn-musician" %>
+    <%= link_to 'Chercher un groupe', bands_path, class: "btn-band" %>
+    </div>
   </form>
-</div>
+
 <% end %>
 
 <% if !user_signed_in? %>
