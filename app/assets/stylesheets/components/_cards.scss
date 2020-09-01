@@ -227,6 +227,10 @@
 .info-band {
   padding: 20px;
   flex-grow: 1;
+    i {
+    // margin-right: 4px;
+    color: $bandmatch_orange;
+  }
 }
 
 .band-members {
