@@ -30,6 +30,10 @@ class User < ApplicationRecord
     }).near(default_preferences.location, default_preferences.location_radius_in_km)
   end
 
+  def default_preferences
+    band&.preference || preference
+  end
+
   private
 
   def music_styles_included_in_list
@@ -42,10 +46,6 @@ class User < ApplicationRecord
     if music_styles.count > matching_styles.count
       errors.add(:music_styles, :inclusion)
     end
-  end
-
-  def default_preferences
-    band&.preference || preference
   end
 
   def filters_query

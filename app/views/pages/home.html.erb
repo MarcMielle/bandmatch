@@ -1,44 +1,19 @@
 <% if user_signed_in? %>
 
 <div class="container">
-<div id="input-styling-address">
-  <input type="search" placeholder="Ville" />
-</div>
-<br>
-    <select id="sexe" name="sexe" placeholder="Sexe">
-      <option value="homme">Homme</option>
-      <option value="femme">Femme</option>
-    </select>
+  <%= simple_form_for current_user.default_preferences do |f| %>
+    <%= f.input :location, label: 'Lieu' %>
+    <%= f.input :location_radius_in_km, collection: 0..100, label: 'Rayon (km)' %>
+    <%= f.input :age_min, collection: 18..77, label: 'Age minimum', selected: 20 %>
+    <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
+    <%= f.input :years_of_experience_min, label: 'Années d expérience minimum', collection: 0..30, selected: 5 %>
+    <%= f.input :weekly_rehearsal_min, label: 'Fréquence de répétitions hebdomadaires', collection: 0..5, selected: 3 %>
+    <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['0', 'Femme'], ['1', 'Homme']], label_method: :second, value_method: :first %>
+    <%= f.input :instrument, label: 'Instrument' %>
+    <%= f.input :music_style, label: 'Style' %>
+    <%= f.button :submit, "Rechercher un musicien", class: "my-button" %>
+    <% end %>
 
-    <select id="instrument" name="instrument" placeholder="Instrument">
-      <option value="guitare">Guitare</option>
-      <option value="chant">Chant</option>
-      <option value="batterie">Batterie</option>
-      <option value="basse">Basse</option>
-      <option value="piano">Piano</option>
-      <option value="violon">Violon</option>
-    </select>
-
-    <input type="number" min="0" max="100"id="exp" name="exp" placeholder="Années d expérience minimum">
-    <br>
-    <input type="number" min="18" max="100" id="age_min" name="age_min" placeholder="Age minimum">
-    <br>
-    <input type="number" min="18" max="100" id="age_max" name="age_max" placeholder="Age maximum">
-    <br>
-
-    <select id="music_style" name="music_style" placeholder="Style">
-      <option value="rock">Rock</option>
-      <option value="jazz">Jazz</option>
-      <option value="pop">Pop</option>
-      <option value="classique">Classique</option>
-      <option value="funk">Funk</option>
-      <option value="folk">Folk</option>
-    </select>
-  
-    <input type="submit-musician" value="Chercher un musicien">
-    <input type="submit-band" value="Chercher un groupe">
-  </form>
-</div>
 <% end %>
 
 <% if !user_signed_in? %>
