@@ -234,7 +234,8 @@
 }
 
 .band-members {
-  margin: 30px 0;
+  // margin: 30px 0;
+  margin-top: 13px;
   justify-content: center;
 }
 
@@ -243,7 +244,7 @@
   font-weight: bold;
   text-align: center;
 }
-.last-info {
+.last-info d-flex {
   i {
     // margin-right: 4px;
     color: $bandmatch_orange;
@@ -279,15 +280,15 @@
   object-fit: cover;
 }
 .gauge-index-band {
-  width: 16% !important;
+  width: 20% !important;
 }
 
 .gauge-number {
-  font-size: 10px !important;
+  font-size: 12px !important;
 }
 
 .last-info {
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-end;
 }
 // .card-avatar-info-bands {
