@@ -6,19 +6,19 @@ Band.destroy_all
 
 puts 'Creating bands and musicians...'
 
-band1 = Band.new(name: "Overmist", music_style: "rock")
+band1 = Band.new(name: "Overmist", music_style: "rock", bio: "Overmist est avant tout une bande de potes. On a fondé ce groupe il y a quelques mois. Pour nous c'est le rock avant tout !! Plus qu'un simple style de musique, c'est presque devenu un art de vivre. On joue rock, on pense rock, on rêve rock. On fait régulièrement des reprises de grands classiques. Tous les morceaux sont disponibles sur notre compte Soundcloud. Ecoutez notre son !")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo1.PNG"))
 band1.avatar.attach(io: file, filename: 'logo1.PNG', content_type: 'image/PNG')
 band1.save!
 puts 'Band 1/7 created'
 
-band2 = Band.new(name: "442", music_style: "rock")
+band2 = Band.new(name: "442", music_style: "rock", bio: "Même si notre groupe les 442 est jeune, les membres du groupe sont tous expérimentés. On joue souvent ensemble soirs et weekends. A l'ancienne, dans un vieux garage réaménagé en studio de répèt. On a déjà fait quelques concerts pendant des festivals d'été. On compte bien continuer sur cette belle lancée!")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo2.png"))
 band2.avatar.attach(io: file, filename: 'logo2.png', content_type: 'image/png')
 band2.save!
 puts 'Band 2/7 created'
 
-band3 = Band.new(name: "Storm Dance Ego", music_style: "house")
+band3 = BandQuand.new(name: "Storm Dance Ego", music_style: "house")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo3.png"))
 band3.avatar.attach(io: file, filename: 'logo3.png', content_type: 'image/png')
 band3.save!
@@ -138,7 +138,8 @@ user3 = User.new(
   years_of_experience: 12,
   instrument:    "basse",
   music_styles: ["rock"],
-  weekly_rehearsal_frequency:  3
+  weekly_rehearsal_frequency:  3,
+  bio: "La musique c'est de famille. Quand j'étais gamin mon grand-frère faisait déjà de la guitare électrique, alors je me suis lancé très jeune à jouer de la basse pour l'accompagner. J'ai démarré sur des airs de rocks, depuis je ne fais plus que ça! Comme j'adore jouer live en groupe, je me sui inscrit sur Bandmatch. Alors si vous aussi vous adore Queen, U2 et les Red Hot Chili Peppers, contactez-moi ! "
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user3.png"))
@@ -443,7 +444,8 @@ user17 = User.new(
   band: band2,
   instrument:    "basse",
   music_styles: ["rock"],
-  weekly_rehearsal_frequency:  2
+  weekly_rehearsal_frequency:  2,
+  bio: "Mon truc c'est le jazz. Cela fait une dizaine d'années que je pratique, je commence à jouer plusieurs styles : jazz fusion, cool jazz ou encore free jazz. Je commence à avoir un bon niveau. J'ai même fait un tour au conservatoire quand j'étais petit. Je joue régulièrement dans un groupe avec quelques amis. On s'apelle les '442', un clin d'oeil à la formation de développement web où on s'est rencontrés."
 )
 
 file = File.open(Rails.root.join("db/fixtures/images/users/user17.jpg"))
