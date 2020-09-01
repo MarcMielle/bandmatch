@@ -30,7 +30,7 @@ input[type=text]:focus {
   width: 100%;
 }
 
-input[type=submit-musician] {
+input[type=submit-band] {
   width: 49%;
   background-color: #e79d3c;
   color: white;
@@ -39,13 +39,14 @@ input[type=submit-musician] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
 }
 
-input[type=submit-musician]:hover {
+input[type=submit-band]:hover {
   background-color: #9e4d0b;
 }
 
-input[type=submit-band] {
+input[type=submit-musician] {
   width: 49%;
   background-color: #983cce;
   color: white;
@@ -54,9 +55,10 @@ input[type=submit-band] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
 }
 
-input[type=submit-band]:hover {
+input[type=submit-musician]:hover {
   background-color:  #451064;
 }
 
