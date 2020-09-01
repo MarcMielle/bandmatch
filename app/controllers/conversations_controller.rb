@@ -14,6 +14,15 @@ class ConversationsController < ApplicationController
   end
 
   def create
+    @interlocutor = User.find(params[:musician_id])
+    @conversation = Conversation.new
+    @conversation.user1 = current_user
+    @conversation.user2 = @interlocutor
+    if @conversation.save!
+      redirect_to conversation_path(@conversation)
+    else
+      render "conversations/show"
+    end
   end
 
   private
