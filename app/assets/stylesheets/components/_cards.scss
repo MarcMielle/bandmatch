@@ -73,7 +73,6 @@
 .card-avatar-info {
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
   height: 150px;
 }
 .card-avatar {
@@ -121,6 +120,185 @@
     color: $bandmatch_purple;
   }
 }
+
+
+//// --------Cards de la band index ---------------////
+
+.cards-bands {
+  display: grid;
+  grid-gap: 60px;
+  margin-top: 60px;
+  // margin-top: 70px;
+  p {
+  color: $bandmatch_black;
+  }
+  a {
+    text-decoration: none;
+    color: $bandmatch_black;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  a:hover {
+    // -webkit-transform: scale(1.01);
+    // transform: scale(1.03);
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-bands {
+    grid-template-columns: 1fr;
+    padding: 0 25px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-bands {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-bands {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-bands {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-bands {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-title {
+  text-align: center;
+}
+
+
+.card-bands {
+  background-color: $bandmatch_light_grey;
+  padding: 0px;
+  height: 230px;
+  display: flex;
+  border-radius: 40px 0 40px 40px;
+  box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+  a {
+    color: $bandmatch_black;
+  }
+}
+
+.card-show-band:hover {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transform: scale(1.01);
+}
+
+.card-show-band {
+  background-color: $bandmatch_light_grey;
+  padding: 0px;
+  height: 220px;
+  display: flex;
+  border-radius: 60px 0 60px 60px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  a h4 {
+    color: $bandmatch_black;
+  }
+}
+
+.band-img {
+
+}
+
+.info-band {
+  padding: 20px;
+  flex-grow: 1;
+    i {
+    // margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+}
+
+.band-members {
+  // margin: 30px 0;
+  margin-top: 13px;
+  justify-content: center;
+}
+
+.title-band {
+  color: $bandmatch_orange;
+  font-weight: bold;
+  text-align: center;
+}
+.last-info d-flex {
+  i {
+    // margin-right: 4px;
+    color: $bandmatch_orange;
+  }
+}
+
+.band-logo-bands {
+  width: 150px;
+  height: 220px;
+  align-self: center;
+  border-radius: 60px 0 0 60px;
+  object-fit: cover;
+  margin: 0px;
+}
+
+.member {
+  font-size: 10px;
+  display: flex;
+}
+
+.picto {
+  margin-right: 30px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.one-member-pic-band {
+  width: 45px;
+  height: 45px;
+  align-self: center;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.gauge-index-band {
+  width: 25% !important;
+}
+
+.gauge-number {
+  font-size: 16px !important;
+}
+
+.last-info {
+  // justify-content: space-between;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+
+
+//// -------- FIN de Cards de la band index ---------------////
+
+
 
 /// Card de la show musician ///
 .background-card-show {
@@ -204,7 +382,11 @@
 }
 
 // -------- cards de la show band --------//
-
+.container-band {
+  justify-content: center;
+  width: 750px;
+  margin: auto;
+}
 .background-card-show-band {
   background-color: $bandmatch_light_grey;
   border-bottom-right-radius: 60px;
@@ -212,7 +394,6 @@
   border-top-left-radius: 60px;
   margin-bottom: 30px;
   margin-top: 30px;
-  width: 750px;
 }
 .background-card-show-text-band {
   margin-left: 30px;
