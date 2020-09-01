@@ -54,14 +54,70 @@
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+<body>
+  <div class="container">
+      <style type="text/css">
+        h2 {
+          color: #8F5BFE;
+          font-size: 40px;
+          text-align: center;
+        }
+
+        p {
+          color: #8F5BFE;
+          text-align: center;
+          text-decoration-style: none;
+          text-decoration-color: none;
+        }
+
+        .div-img {
+          text-align: center;
+        }
+
+        .displayed {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 500px;
+        }
+        a {
+          text-decoration-style: none;
+          text-decoration-color: none;
+        }
+        .displayed-btn {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80px;
+        }
+        .btn-404 {
+          background-color: #8F5BFE;
+          color: white !important;
+          padding: 12px 25px;
+          border-radius: 50px;
+          border: 0.5px solid #8F5BFE;
+          font-size: 15px;
+          text-align: center;
+          margin-bottom: 30px;
+          text-decoration: none;
+          font-family: arial;
+            &:hover {
+              text-decoration: none;
+              background-color: #7434FE;
+              border: 0.5px solid #7434FE;
+            }
+        }
+    </style>
+      <br>
+      <br>
+      <h2>Oups, cette page s'est perdue !</h2>
+      <p>Meme les plus grands musiciens font des fausses notes :/</p>
+      <br>
+      <a class="btn-404 displayed-btn" href="http://www.bandmatch.app">Retour</a>
+      <div class="div-img">
+        <img class="displayed" src="/404-woman.svg">
+      </div>
   </div>
+
 </body>
 </html>
