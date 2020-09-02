@@ -21,9 +21,9 @@
         <% end %>
       <% end %>
       <%= simple_form_for [ @conversation, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Nouveau Message" %>
+        <%= f.input :content, label: false, placeholder: "Nouveau message" %>
         <div class="sub">
-          <%= f.submit value: "Envoyer" %>
+          <%= f.submit value: "Envoyer", class: "primary-purple-btn" %>
         </div>
       <% end %>
     <% if other_user.band_id == @band.id %>
