@@ -15,6 +15,8 @@ class MusiciansController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    user_scope = User.where(id: params[:id])
+    @musician_with_score = current_user.filtered_musicians_with_affinity_score(user_scope).first
   end
 
   def update
@@ -22,6 +24,14 @@ class MusiciansController < ApplicationController
 
     # no need for app/views/users/update.html.erb
     # redirect_to user_path(@user)
+  end
+
+  def join
+    @band = Band.find(params[:band_id])
+    @user = User.find(params[:id])
+    @user.update(band: @band)
+
+    redirect_to band_path(@band)
   end
 
   private

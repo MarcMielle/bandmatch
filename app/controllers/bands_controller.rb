@@ -18,9 +18,6 @@ class BandsController < ApplicationController
     # redirect_to band_path(@band)
   end
 
-  def add_musician
-  end
-
   private
 
   def band_params

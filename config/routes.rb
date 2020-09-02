@@ -14,8 +14,10 @@ Rails.application.routes.draw do
   end
 
   resources :bands, only: [:index, :show, :edit, :update] do
-    member do
-      post :add_musician
+    resources :musicians, only: [] do
+      member do
+        post :join
+      end
     end
   end
 end

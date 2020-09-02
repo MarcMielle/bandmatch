@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container conv-container">
   <div class="mailbox-container">
     <%= render 'conversations/list' %>
     <div class="messages-container">
@@ -21,11 +21,16 @@
         <% end %>
       <% end %>
       <%= simple_form_for [ @conversation, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Nouveau Message" %>
+        <%= f.input :content, label: false, placeholder: "Nouveau message" %>
         <div class="sub">
-          <%= f.submit value: "Envoyer" %>
+          <%= f.submit value: "Envoyer", class: "primary-purple-btn" %>
         </div>
       <% end %>
+    <% if other_user.band_id == @band.id %>
+    <p></p>
+    <% else %>
+      <%= link_to "Add to Band", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post %>
+    <% end %>
     </div>
   </div>
 </div>

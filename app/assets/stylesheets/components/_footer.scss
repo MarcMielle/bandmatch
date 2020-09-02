@@ -1,11 +1,12 @@
 .background-footer {
   background-color: $bandmatch_light_grey;
   margin: 0;
-  margin-top: 100px;
+  margin-top: 50px;
   border-top-right-radius: 248px;
   display: flex;
   padding: 35px;
-  position: static;
+  position: inherit;
+  width: -webkit-fill-available;
   bottom: 0;
   ul li a {
     text-decoration: none;
