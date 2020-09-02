@@ -26,6 +26,11 @@
           <%= f.submit value: "Envoyer" %>
         </div>
       <% end %>
+    <% if other_user.band_id == @band.id %>
+    <p></p>
+    <% else %>
+      <%= link_to "Add to Band", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post %>
+    <% end %>
     </div>
   </div>
 </div>
