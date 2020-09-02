@@ -1,27 +1,39 @@
 <% if user_signed_in? %>
 
-<div class="container">
+<div class="container home">
   <%= simple_form_for current_user.default_preferences do |f| %>
-    <%= f.input :location, label: 'Lieu' %>
-    <%= f.input :location_radius_in_km, collection: 0..100, label: 'Rayon (km)' %>
-    <%= f.input :age_min, collection: 18..77, label: 'Age minimum', selected: 20 %>
-    <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
+    <div class="d-flex band-location">
+        <div class="loca col-6 p-0 pr-2">
+          <%= f.input :location, label: 'Lieu' %>
+        </div>
+        <div class="loca-rad col-6 p-0 pl-2">
+          <%= f.input :location_radius_in_km, collection: 0..100, label: 'Rayon (km)' %>
+        </div>
+    </div>
+    <div class="user-age d-flex">
+      <div class="min-age col-6 p-0 pr-2">
+        <%= f.input :age_min, collection: 18..77, label: 'Age minimum', selected: 20 %>
+      </div>
+      <div class="max-age col-6 p-0 pl-2">
+        <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
+      </div>
+    </div>
     <%= f.input :years_of_experience_min, label: 'Années d expérience minimum', collection: 0..30, selected: 5 %>
     <%= f.input :weekly_rehearsal_min, label: 'Fréquence de répétitions hebdomadaires', collection: 0..5, selected: 3 %>
     <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['0', 'Femme'], ['1', 'Homme']], label_method: :second, value_method: :first %>
     <%= f.input :instrument, label: 'Instrument' %>
     <%= f.input :music_style, label: 'Style' %>
     <%= f.button :submit, "Rechercher un musicien", class: "my-button" %>
-    <% end %>
+  <% end %>
 
 <% end %>
 
 <% if !user_signed_in? %>
-<br>
-<div class="container justify-content-center">
-  <h2>Comment ça marche ?</h2>
-</div>
-<div class="container justify-content-center">
+  <br>
+  <div class="container justify-content-center">
+    <h2>Comment ça marche ?</h2>
+  </div>
+  <div class="container justify-content-center">
     <div class="box-picto">
       <div>
         <div>
@@ -38,7 +50,7 @@
     <div class="box-picto">
       <div>
         <div>
-        <%= image_tag "picto-match.svg", class: "picto-img" %>
+          <%= image_tag "picto-match.svg", class: "picto-img" %>
         </div>
         <div>
           <p class="picto-title">Trouvez le meilleur match</p>
@@ -51,7 +63,7 @@
     <div class="box-picto">
       <div>
         <div>
-        <%= image_tag "picto-play-music.svg", class: "picto-img" %>
+          <%= image_tag "picto-play-music.svg", class: "picto-img" %>
         </div>
         <div>
           <p class="picto-title">Jouez ensemble !</p>
@@ -61,60 +73,55 @@
         </div>
       </div>
     </div>
-</div>
-<br>
-
-<div class="background-testimonials">
-  <br>
-  <div class="container justify-content-center">
-    <h2>Ils témoignent</h2>
   </div>
   <br>
-  <br>
-  <div class="container justify-content-center flex-column width-850px">
 
+  <div class="background-testimonials">
+    <br>
+    <div class="container justify-content-center">
+      <h2>Ils témoignent</h2>
+    </div>
+    <br>
+    <br>
+    <div class="container justify-content-center flex-column width-850px">
+      <div class="card-testimonial">
+        <div class="card-testimonial-content">
+          <!-- <div class="card-testimonial-content-img"> -->
+          <div>
+            <%= image_tag "john-mayer.jpg", class: "card-testimonial-content-img" %>
+          </div>
 
-
-   <div class="card-testimonial">
-    <div class="card-testimonial-content">
-      <!-- <div class="card-testimonial-content-img"> -->
-      <div>
-        <%= image_tag "john-mayer.jpg", class: "card-testimonial-content-img" %>
+          <div class="card-testimonial-content-text">
+            <h3>John Yamer</h3>
+            <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
+          </div>
+        </div>
       </div>
 
-      <div class="card-testimonial-content-text">
-        <h3>John Yamer</h3>
-        <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
+      <div class="card-testimonial-right">
+        <div class="card-testimonial-content">
+          <div class="card-testimonial-content-text-right">
+            <h3>Alicia Seky</h3>
+            <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
+          </div>
+          <div>
+            <%= image_tag "alicia-2.jpg", class: "card-testimonial-content-img" %>
+          </div>
+        </div>
       </div>
+
+      <div class="card-testimonial">
+        <div class="card-testimonial-content">
+          <div>
+            <%= image_tag "mick.jpg", class: "card-testimonial-content-img" %>
+          </div>
+        <div class="card-testimonial-content-text">
+          <h3>Mick Ggajer</h3>
+          <p>" Après des années à jouer avec mes frères je voulais changer. Je pense que le cd de notre nouveau groupe est le prochain dans le top 5. "</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-
-   <div class="card-testimonial-right">
-    <div class="card-testimonial-content">
-
-
-      <div class="card-testimonial-content-text-right">
-        <h3>Alicia Seky</h3>
-        <p>" J'ai trouvé le groupe de mes rêves grâce à BandMatch. Le groupe correspondait exactement à ce que je recherhais sur Nantes. Allez-y ! "</p>
-      </div>
-      <div>
-        <%= image_tag "alicia-2.jpg", class: "card-testimonial-content-img" %>
-      </div>
-    </div>
-  </div>
-
-       <div class="card-testimonial">
-    <div class="card-testimonial-content">
-      <div>
-        <%= image_tag "mick.jpg", class: "card-testimonial-content-img" %>
-      </div>
-      <div class="card-testimonial-content-text">
-        <h3>Mick Ggajer</h3>
-        <p>" Après des années à jouer avec mes frères je voulais changer. Je pense que le cd de notre nouveau groupe est le prochain dans le top 5. "</p>
-      </div>
-    </div>
-  </div>
-
-  </div>
-</div>
 <% end %>

@@ -15,3 +15,17 @@
     margin-bottom: 20px
   }
 }
+
+.home .simple_form {
+  padding:50px;
+  margin:0 200px;
+  background: $bandmatch_light_grey;
+
+  .form-control {
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
