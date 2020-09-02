@@ -14,17 +14,17 @@
             <br>
             <div> <i class="fas fa-map-marker-alt"></i> Au <%= @user.location %> </div>
             <br>
-            <div> <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d'expérience</div>
+            <div> <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d expérience</div>
             <br>
             <div> <i class="fas fa-check-circle"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois / semaine </div>
           </ul>
         </div>
 
-          <div class="affinity-container">
+        <div class="affinity-container">
                   <div class="gauge-container">
                     <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
                       <circle class="rail" r="47" cx="75" cy="75" />
-                      <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
+                      <circle class="progress" r="47" data-target="<%= @musician_with_score.affinity_score %>" cx="75" cy="75" />
                     </svg>
                     <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
                   </div>
