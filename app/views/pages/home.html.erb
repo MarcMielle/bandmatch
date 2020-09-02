@@ -8,11 +8,14 @@
     <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
     <%= f.input :years_of_experience_min, label: 'Années d expérience minimum', collection: 0..30, selected: 5 %>
     <%= f.input :weekly_rehearsal_min, label: 'Fréquence de répétitions hebdomadaires', collection: 0..5, selected: 3 %>
-    <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['0', 'Femme'], ['1', 'Homme']], label_method: :second, value_method: :first %>
-    <%= f.input :instrument, label: 'Instrument' %>
-    <%= f.input :music_style, label: 'Style' %>
-    <%= f.button :submit, "Rechercher un musicien", class: "my-button" %>
+    <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['Femme', 'Femme'], ['Homme', 'Homme']], label_method: :second, value_method: :first %>
+    <%= f.input :instrument, as: :radio_buttons, label: 'Instrument', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'] %>
+    <%= f.input :music_style, as: :radio_buttons, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>
+    <div class="submit-butt">
+      <%= f.button :submit, "Rechercher un musicien", class: "primary-purple-btn" %>
+    </div>
     <% end %>
+</div>
 
 <% end %>
 
