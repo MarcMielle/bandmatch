@@ -1,5 +1,5 @@
 meta_product_name: "Bandmatch"
 meta_title: "Bandmatch - Trouvez le musicien idéal pour votre groupe !"
 meta_description: "BandMatch est la seule app qui permet aux musiciens et aux groupes de musique de se rencontrer par affinité"
-meta_image: "logo-bandmatch.svg" # should exist in `app/assets/images/`
+meta_image: "og-bandmatch2.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
