@@ -15,6 +15,8 @@ class MusiciansController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    user_scope = User.where(id: params[:id])
+    @musician_with_score = current_user.filtered_musicians_with_affinity_score(user_scope).first
   end
 
   def update
