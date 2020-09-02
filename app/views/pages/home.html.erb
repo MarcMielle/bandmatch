@@ -11,18 +11,34 @@
         </div>
       </div>
       <div class="user-age d-flex">
-        <div class="min-age col-6 p-0 pr-2">
+        <div class="min-age col-4 p-0 pr-2">
           <%= f.input :age_min, collection: 18..77, label: 'Age minimum', selected: 20 %>
         </div>
-        <div class="max-age col-6 p-0 pl-2">
+        <div class="max-age col-4 p-0 pl-2 ml-4">
           <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
         </div>
+        <div class="sexe col-4 p-0 pl-2 ml-4">
+          <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['Femme', 'Femme'], ['Homme', 'Homme']], label_method: :second, value_method: :first %>
+        </div>
       </div>
-      <%= f.input :years_of_experience_min, label: 'Années d expérience minimum', collection: 0..30, selected: 5 %>
-      <%= f.input :weekly_rehearsal_min, label: 'Fréquence de répétitions hebdomadaires', collection: 0..5, selected: 3 %>
-      <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['Femme', 'Femme'], ['Homme', 'Homme']], label_method: :second, value_method: :first %>
-      <%= f.input :instrument, as: :radio_buttons, label: 'Instrument', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'] %>
-      <%= f.input :music_style, as: :radio_buttons, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>
+
+      <div class="expe-and-repet d-flex" >
+          <div class="expe col-6 p-0 pl-2">
+            <%= f.input :years_of_experience_min, label: 'Expérience minimum', collection: 0..30, selected: 5 %>
+          </div>
+          <div class="repet col-6 p-0 pl-2">
+            <%= f.input :weekly_rehearsal_min, label: 'Répétitions hebdo', collection: 0..5, selected: 3 %>
+          </div>
+      </div>
+      <div class="instrum-style d-flex">
+        <div class="instrum col-6 p-0 pl-2">
+          <%= f.input :instrument, as: :radio_buttons, label: 'Instrument', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'] %>
+        </div>
+        <div class="style col-6 p-0 pl-2">
+          <%= f.input :music_style, as: :radio_buttons, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>
+        </div>
+      </div>
+      <br>
       <div class="submit-butt">
         <%= f.button :submit, "Rechercher un musicien", class: "primary-purple-btn" %>
       </div>
