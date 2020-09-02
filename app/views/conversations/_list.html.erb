@@ -7,13 +7,13 @@
 
         <%= link_to conversation_path(conversation) do %>
           <div class="conversation-card<%= "-current" if conversation.id == params[:id].to_i %>">
-            <div class="card-avatar-info">
-              <div class="card-avatar">
-                <%= cl_image_tag other_user.avatar.key, height: 150, width: 100, class: "card-avatar",crop: :fill %>
+            <div class="card-conversations-avatar-info">
+              <div class="card-conversations-avatar">
+                <%= cl_image_tag other_user.avatar.key, class: "card-conversations-avatar",crop: :fill %>
               </div>
 
 
-               <div class="card-info">
+               <div class="card-conversations-info">
                   <p><strong><%= other_user.first_name %> <%= other_user.last_name %></strong></p>
                   <p><%= other_user.instrument.capitalize %></p>
                </div>

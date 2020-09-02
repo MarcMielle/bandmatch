@@ -2,16 +2,16 @@
   display: flex;
 }
 .conversations-container {
-  border-radius: 40px 0px 0px 40px;
+  border-radius: 60px 0px 60px 60px;
   padding: 12px;
   width: 50%;
   border-style: none;
-  border-color: $bandmatch_dark_grey;
-  border-width: 1px;
+  border-color: $bandmatch_light_grey;
+  border-width: 0.5px;
   height: fit-content;
 }
 .messages-container {
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 60px 0px 60px 60px;
   padding: 12px;
   width: 50%;
   border-style: nones;
@@ -21,12 +21,12 @@
 }
 .conversation-cards {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 7px;
   margin-top: 20px;
   p {
   color: $bandmatch_black;
   margin-bottom: 0;
-  padding: 12px;
+  padding: 6px;
   }
   a {
     text-decoration: none;
@@ -45,23 +45,27 @@
   }
 }
 .conversation-card {
-  background-color: $bandmatch_light_grey;
-  padding: 12px;
-  height: 200px;
+  // background-color: $bandmatch_light_grey;
+  padding: 10px;
+  // height: 110px;
+  width: 400px;
   display: flex;
-  border-radius: 40px 0 40px 40px;
-  box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+  border-radius: 60px 0px 60px 60px;
+  border-bottom-color: $bandmatch_light_grey;
+  // box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
   a {
     color: $bandmatch_black;
   }
 }
 .conversation-card-current {
-  background-color: $bandmatch_dark_grey;
-  padding: 12px;
-  height: 200px;
+  background-color: $bandmatch_light_grey;
+  padding: 10px;
+  // height: 110px;
+  width: 400px;
   display: flex;
-  border-radius: 40px 0 40px 40px;
-  box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+  border-radius: 60px 0 60px 60px;
+  border-bottom-color: $bandmatch_light_grey;
+  // box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
   a {
     color: $bandmatch_black;
   }
@@ -71,3 +75,35 @@
   justify-content: align-left;
   text-align: left;
 }
+
+/////////// cutsom marion /////////////////:
+
+.card-conversations-avatar-info {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: center;
+  margin-left: 15px;
+  padding: 0px;
+  // height: 150px;
+  p {
+    padding: 0px;
+  }
+}
+
+.card-conversations-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+  object-fit: cover;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.card-conversations-info {
+  text-align: left;
+  padding: 0px;
+  align-self: center;
+}
+
