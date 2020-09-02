@@ -8,6 +8,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     @messages     = @conversation.messages
     @message      = Message.new
+    @band         = current_user.band
   end
 
   def new

@@ -24,6 +24,14 @@ class MusiciansController < ApplicationController
     # redirect_to user_path(@user)
   end
 
+  def join
+    @band = Band.find(params[:band_id])
+    @user = User.find(params[:id])
+    @user.update(band: @band)
+
+    redirect_to band_path(@band)
+  end
+
   private
 
   def user_params
