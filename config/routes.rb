@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :messages , only: [ :create ]
   end
 
+  resource :profile
+
   resources :bands, only: [:index, :show, :edit, :update] do
     resources :musicians, only: [] do
       member do
