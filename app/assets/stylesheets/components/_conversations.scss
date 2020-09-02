@@ -21,7 +21,7 @@
 }
 .conversation-cards {
   display: grid;
-  grid-gap: 2px;
+  grid-gap: 7px;
   margin-top: 20px;
   p {
   color: $bandmatch_black;
@@ -46,9 +46,9 @@
 }
 .conversation-card {
   // background-color: $bandmatch_light_grey;
-  padding: 0px;
-  height: 110px;
-  width: 450px;
+  padding: 10px;
+  // height: 110px;
+  width: 400px;
   display: flex;
   border-radius: 60px 0px 60px 60px;
   border-bottom-color: $bandmatch_light_grey;
@@ -59,9 +59,9 @@
 }
 .conversation-card-current {
   background-color: $bandmatch_light_grey;
-  padding: 0px;
-  height: 110px;
-  width: 450px;
+  padding: 10px;
+  // height: 110px;
+  width: 400px;
   display: flex;
   border-radius: 60px 0 60px 60px;
   border-bottom-color: $bandmatch_light_grey;
@@ -82,7 +82,7 @@
   display: flex;
   justify-content: space-around;
   vertical-align: center;
-  margin-left: 20px;
+  margin-left: 15px;
   padding: 0px;
   // height: 150px;
   p {
@@ -91,8 +91,8 @@
 }
 
 .card-conversations-avatar {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 60px;
   object-fit: cover;
   align-self: center;
