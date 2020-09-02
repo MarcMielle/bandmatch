@@ -27,10 +27,21 @@ class ConversationsController < ApplicationController
 
   private
 
+
+# ordonner messages d'une conversation
+# selectionner dernier message
+# ordonner les conversations en fonction du dernier message
+
   def set_conversations
-    @conversations = Conversation.where(
+    conversations = Conversation.where(
       "user1_id = :current_user_id OR user2_id =:current_user_id",
       current_user_id: current_user.id
     )
+
+    @conversations = conversations.sort_by do |conversation|
+      conversation.last_message.created_at
+    end
+
+    @conversations.reverse!
   end
 end
