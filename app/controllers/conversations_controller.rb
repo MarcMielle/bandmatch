@@ -40,7 +40,13 @@ class ConversationsController < ApplicationController
     )
 
     @conversations = conversations.sort_by do |conversation|
-      conversation.last_message.created_at
+      last_message = conversation.last_message
+
+      if last_message
+        last_message.created_at
+      else
+        Time.zone.now
+      end
     end
 
     @conversations.reverse!
