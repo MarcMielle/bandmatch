@@ -13,8 +13,8 @@
       <div class="nav-item dropdown">
           <%= cl_image_tag current_user.avatar.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "My profile", musician_path(current_user.id), class: "dropdown-item" %>
-          <%= link_to "My band profile", "/bands/:id", class: "dropdown-item" %>
+          <%= link_to "My profile", profile_path, class: "dropdown-item" %>
+          <%= link_to "My band profile", band_path(current_user.band_id), class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </div>
