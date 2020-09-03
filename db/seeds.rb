@@ -6,9 +6,9 @@ Band.destroy_all
 
 puts 'Creating bands and musicians...'
 
-band1 = Band.new(name: "Overmist", music_style: "rock")
+band1 = Band.new(name: "Overmist", music_style: "rock", bio:"Chez Overmist, on joue surtout du rock (U2, Nirvana, RHCP, etc). Marc (guitariste), Nicolas (batteur) et Marion (chanteuse), recherchons tous les trois un bassiste pour compléter notre groupe.")
 file = File.open(Rails.root.join("db/fixtures/images/bands/logo1.PNG"))
-band1.avatar.attach(io: file, filename: 'logo1.PNG', content_type: 'image/PNG')
+band1.avatar.attach(io: file, filename: 'logo1.png', content_type: 'image/png')
 band1.save!
 puts 'Band 1/7 created'
 
@@ -77,12 +77,12 @@ puts 'User 1/27 created'
 pref1 = Preference.new(
   instrument: "basse",
   age_min: 20,
-  age_max: 30,
+  age_max: 40,
   gender: "Homme",
   years_of_experience_min: 5,
   weekly_rehearsal_frequency_min: 2,
   location: "Nantes",
-  location_radius_in_km: 2,
+  location_radius_in_km: 10,
   music_style: "rock"
 )
 pref1.entity = user1
@@ -91,12 +91,12 @@ pref1.save!
 pref2 = Preference.new(
   instrument: "basse",
   age_min: 20,
-  age_max: 30,
+  age_max: 40,
   gender: "Homme",
   years_of_experience_min: 5,
   weekly_rehearsal_frequency_min: 2,
   location: "Nantes",
-  location_radius_in_km: 2,
+  location_radius_in_km: 10,
   music_style: "rock"
 )
 pref2.entity = band1
@@ -200,7 +200,7 @@ user6 = User.new(
   longitude: -1.6450670154310498,
   gender:    "Homme",
   years_of_experience: 20,
-  instrument:    "batterie",
+  instrument:    "basse",
   music_styles: ["funk"],
   weekly_rehearsal_frequency:  3
 )
@@ -244,7 +244,7 @@ user8 = User.new(
   gender:    "Homme",
   years_of_experience: 4,
   band: band5,
-  instrument:    "guitare",
+  instrument:    "basse",
   music_styles: ["folk"],
   weekly_rehearsal_frequency:  2
 )
@@ -458,7 +458,7 @@ user18 = User.new(
   password: "password",
   first_name:    "Cedric",
   last_name: "Villard",
-  age:  40,
+  age:  37,
   location:  "17 Rue de la Chataigneraie, 44120 Vertou, France",
   latitude: 47.16640177231086,
   longitude: -1.474853602217494,
@@ -501,7 +501,7 @@ user20 = User.new(
   password: "password",
   first_name:    "Zaïd",
   last_name: "Maalouf",
-  age:  19,
+  age:  20,
   location:  "5 Rue Alexandre Arnaud, 44120 Vertou, France",
   latitude: 47.165316436116605,
   longitude: -1.4675778474907553,
@@ -522,7 +522,7 @@ user21 = User.new(
   password: "password",
   first_name:    "Alexandre",
   last_name: "Duvilliers",
-  age:  44,
+  age:  38,
   location:  "15 Allée Racine, 44470 Carquefou, France",
   latitude: 47.29776656441853,
   longitude: -1.4896089085892528,
@@ -574,7 +574,7 @@ user23 = User.new(
   password: "password",
   first_name:    "Nathan",
   last_name: "Kloutz",
-  age:  18,
+  age:  20,
   location:  "7 Allée Molière, 44470 Carquefou, France",
   latitude: 47.29982487014429,
   longitude: -1.4902957917761217,
@@ -658,7 +658,7 @@ user27 = User.new(
   password: "password",
   first_name:    "Zhou",
   last_name: "Wenshu",
-  age:  37,
+  age:  30,
   location:  "17 Rue de Belleville, 44100 Nantes, France",
   latitude: 47.215911182514276,
   longitude: -1.5367528832422006,
