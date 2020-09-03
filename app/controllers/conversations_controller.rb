@@ -25,6 +25,9 @@ class ConversationsController < ApplicationController
 
     @conversation = Conversation.where(condition, current_user_id: current_user.id, interlocutor_id: @interlocutor.id).first_or_initialize
 
+    @conversation.user1 = current_user
+    @conversation.user2 = @interlocutor
+
     if @conversation.save!
       redirect_to conversation_path(@conversation)
     else
