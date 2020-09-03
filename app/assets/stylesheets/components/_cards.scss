@@ -1,5 +1,6 @@
 .cards {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   height: fit-content;
   p {
@@ -26,49 +27,62 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
-    padding: 0 25px;
+    // padding: 0 25px;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .cards {
     grid-template-columns: 1fr;
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+// // Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
+.band-name {
+  text-transform: uppercase;
+  font-weight: bold;
 }
-
 .card {
   background-color: $bandmatch_light_grey;
   padding: 13px;
   height: 250px;
   display: flex;
   border-radius: 40px 0 40px 40px;
-  box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
   align-self: flex-start;
   a {
     color: $bandmatch_black;
   }
+}
+
+.musicians-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border:0;
+}
+.musicians-card .affinity-container {
+  width: 17%;
+}
+
+.musicians-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.01);
 }
 
 .card-avatar-info {
@@ -314,6 +328,7 @@
 .background-card-show-content {
   display: flex;
   padding: 20px;
+  justify-content:center;
 }
 .background-card-show-text {
   margin-left: 30px;
@@ -351,7 +366,6 @@
 }
 .soundcloud {
   width: 50px;
-  margin-left: 180px;
   align-self: center;
 }
 .background-card-soundcloud {
@@ -368,6 +382,10 @@
 .soundclound-text{
   align-self: center;
   margin-left: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 /// ----------------------------------- ///
 
@@ -395,8 +413,15 @@
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 40px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
+.group-img img{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 .background-card-show-text-band {
   margin-left: 30px;
   align-self: center;
@@ -407,54 +432,69 @@
   }
 }
 .band-logo {
-  width: 115px;
-  height: 115px;
   align-self: center;
   border-radius: 90px;
   object-fit: cover;
 }
-.box-logo {
-  flex-direction: column;
-  margin-bottom: 20px;
-  // border: 0.5px solid grey;
+.band-logo-band {
+  width: 250px;
+  height: 130px;
+  align-self: center;
+  border-radius: 30px;
+  object-fit: cover;
 }
-.box-members {
-  // border: 0.5px solid grey;
-  flex-direction: column;
-  margin: 10px 0;
+.box-logo {
+  margin-bottom: 20px;
+}
+.box-style {
+  justify-content: left;
+  text-align: left;
+}
+
+.box-style {
+  justify-content: left;
 }
 .col1 {
   padding-right: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
     i {
-      margin-right: 4px;
       color: $bandmatch_orange;
+      justify-content: center;
+      font-size: larger;
     }
 }
 .col2 {
   padding: 0 30px;
   padding-top: 0px;
-  text-align: justify;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   i {
     margin-right: 4px;
     color: $bandmatch_orange;
   }
 }
 .quote-right {
-  justify-content: right;
+  text-align: right;
 }
-.one-member {
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
 .one-member-pic {
   width: 45px;
   height: 45px;
   align-self: center;
   border-radius: 50px;
   object-fit: cover;
+  margin-right: 10px;
 }
+.one-member {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
 
 .one-member-name {
   text-align: center;
@@ -472,7 +512,25 @@
 .members {
   color: $bandmatch_orange;
 }
-
+.sticky-bottom {
+  position: sticky;
+  bottom: 0px;
+}
+.pic-band {
+  margin-bottom: 30px;
+  width:  -webkit-fill-available;
+  border-radius: 30px;
+}
+.background-card-soundcloud-band {
+  background-color: $bandmatch_light_grey;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-left-radius: 60px;
+  padding-top: 20px;
+  height: 130px;
+  width:  -webkit-fill-available;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 // ----------------------------------------//
 
 .justify-center {
