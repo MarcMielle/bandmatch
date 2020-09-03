@@ -1,5 +1,5 @@
 <div class="container-band">
-  <h1 class="center"> <%= @band.name  %> </h1>
+  <h1 class="center band-name"> <%= @band.name  %> </h1>
 
   <div class="container">
   <div class="background-card-show-band">
@@ -9,57 +9,55 @@
 
       <div class="col1">
         <!-- le logo  -->
-        <div class="box-logo">
-          <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "band-logo" %>
+        <div class="first-infos">
+          <div class="box-logo">
+            <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "band-logo-band" %>
+          </div>
+          <!-- le style du groupe  -->
+          <div class="box-style">
+            <i class="fas fa-music mr-3"></i><strong><%= @band.music_style.capitalize %></strong>
+          </div>
         </div>
-        <!-- le style du groupe  -->
-        <div class=center> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
         <!-- les membres du groupe  -->
         <div class="box-members">
-            <div class="one-member">
-              <% @band.users.each do |user| %>
-              <div class="one-member-pic">
-                <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
-              </div>
-              <div class="one-member-name">
-                <p> <%= user.first_name %> </p>
-
-              </div>
-              <% end %>
+          <hr class="mb-3">
+          <div class="one-member">
+            <% @band.users.each do |user| %>
+            <div class="one-member-pic">
+              <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "one-member-pic" %>
             </div>
+           <!--  <div class="one-member-name">
+              <p> <%= user.first_name %> </p>
+
+            </div> -->
+            <% end %>
           </div>
+        </div>
       </div>
         <!-- colonne 2 (bio du band) -->
       <div class="col2">
-        <i class="fas fa-quote-left"></i>
-        <p> Chez Overmist, on joue surtout du rock (U2, Nirvana, RHCP, etc). Marc (guitariste), Nicolas (batteur) et Marion (chanteuse), recherchons tous les trois un bassiste pour compléter notre groupe. </p>
-        <i class="fas fa-quote-right quote-right"></i>
-      </div>
-
-
-
-
-        <!-- colonne 3 (matching score) -->
-      <!-- <div class="col3"> -->
-
-
- <!--        </div> -->
-      </div>
-
-      <!-- ci-dessous FIN background-card-show-content -->
-      </div>
-
-      <div>
+        <div class="mb-5">
+          <i class="fas fa-quote-left fa-lg"></i>
+          <p class="mb-0">Chez Overmist, on joue surtout du rock (U2, Nirvana, RHCP, etc). Marc (guitariste), Nicolas (batteur) et Marion (chanteuse), recherchons tous les trois un bassiste pour compléter notre groupe. On ne se prend pas la tête, le principal c'est de passer de bons moments, venez essayer une répèt avec nous ! </p>
+          <div class="end-quote d-flex justify-content-end">
+            <i class="fas fa-quote-right fa-lg quote-right"></i>
+          </div>
+        </div>
         <div class="contact-btn">
-          <%= link_to "Nous contacter", conversations_path, class: "primary-orange-btn" %>
+          <%= link_to "Nous contacter", conversations_path, class: "primary-orange-btn contact-us" %>
         </div>
       </div>
-
+      <!-- ci-dessous FIN background-card-show-content -->
+      </div>
     <!-- ci-dessous FIN background-card-show -->
     </div>
 
-    <div class="container justify-content-center">
-      <div class="background-card-soundcloud ">
+    <div class="center group-img">
+      <%= image_tag "pic-overmist.jpg", class: "pic-band center" %>
+    </div>
+
+    <div class="container follow-card justify-content-center px-0">
+      <div class="background-card-soundcloud-band ">
         <div class="background-card-show-content">
           <div class="soundcloud-logo">
             <%= link_to "https://soundcloud.com/" do %>
