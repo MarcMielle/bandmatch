@@ -29,7 +29,9 @@
     <% if other_user.band_id == @band.id %>
     <p></p>
     <% else %>
-      <%= link_to "Add to Band", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post %>
+      <div class="hvr-sweep-to-right">
+      <%= link_to "Add to Band", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
+      </div>
     <% end %>
     </div>
   </div>
