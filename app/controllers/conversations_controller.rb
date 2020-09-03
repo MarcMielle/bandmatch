@@ -16,9 +16,15 @@ class ConversationsController < ApplicationController
 
   def create
     @interlocutor = User.find(params[:musician_id])
-    @conversation = Conversation.new
-    @conversation.user1 = current_user
-    @conversation.user2 = @interlocutor
+
+    condition = <<~SQL
+      (user1_id = :current_user_id AND user2_id = :interlocutor_id)
+      OR
+      (user1_id = :interlocutor_id AND user2_id = :current_user_id)
+    SQL
+
+    @conversation = Conversation.where(condition, current_user_id: current_user.id, interlocutor_id: @interlocutor.id).first_or_initialize
+
     if @conversation.save!
       redirect_to conversation_path(@conversation)
     else
