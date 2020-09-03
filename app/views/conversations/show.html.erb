@@ -1,8 +1,12 @@
 <div class="container conv-container">
+  <h1 class="text-align: center">Discussions</h1>
   <div class="mailbox-container">
-    <%= render 'conversations/list' %>
-    <div class="messages-container">
-      <% other_user = @conversation.other_user_than(current_user) %>
+
+
+  <%= render 'conversations/list' %>
+  <div class="messages-container">
+    <% other_user = @conversation.other_user_than(current_user) %>
+    <div class="messages">
       <% @messages.each do |message| %>
         <% if message.author == current_user %>
           <div class="my-message-container">
@@ -20,18 +24,22 @@
           </div>
         <% end %>
       <% end %>
-      <%= simple_form_for [ @conversation, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Nouveau message" %>
-        <div class="sub">
-          <% if other_user.band_id != @band.id %>
-            <div class="hvr-sweep-to-right">
-            <%= link_to "Ajouter à #{current_user.band.name}", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
-            </div>
-          <% end %>
-
-          <%= f.submit value: "Envoyer", data: { disable_with: "envoi..." }, class: "primary-purple-btn" %>
-        </div>
-      <% end %>
     </div>
+    <%= simple_form_for [ @conversation, @message ] do |f| %>
+      <%= f.input :content, as: :string, label: false, placeholder: "Nouveau message" %>
+      <div class="sub">
+        <% if other_user.band_id == @band.id %>
+          <!-- empty div to place submit button on the right side even with a space between justify -->
+          <div></div>
+        <% else %>
+          <div class="hvr-sweep-to-right">
+          <%= link_to "Ajouter à #{current_user.band.name}", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
+          </div>
+        <% end %>
+
+        <%= f.submit value: "Envoyer", data: { disable_with: "envoi..." }, class: "primary-purple-btn" %>
+      </div>
+    <% end %>
+  </div>
   </div>
 </div>

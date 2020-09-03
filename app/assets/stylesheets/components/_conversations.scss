@@ -1,8 +1,11 @@
 .conv-container {
-  min-height: 500px;
+  // min-height: 500px;
+  height: calc(100vh - #{$navbar-height} - #{$navbar-margin-bottom} - #{$footer-height} - #{$footer-margin-top} - (2 * #{$footer-padding}));
+
 }
 .mailbox-container {
   display: flex;
+  height: 100%;
 }
 .conversations-container {
   border-radius: 60px 0px 60px 60px;
@@ -21,6 +24,20 @@
   border-color: $bandmatch_dark_grey;
   border-width: 1px;
   height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.messages {
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
 }
 .conversation-cards {
   display: grid;

@@ -2,7 +2,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  margin-bottom: 45px;
+
+  // see variables file
+  height: $navbar-height;
+  margin-bottom: $navbar-margin-bottom;
 }
 
 .navbar-lewagon .navbar-collapse {
