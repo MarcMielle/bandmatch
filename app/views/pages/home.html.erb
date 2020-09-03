@@ -18,7 +18,7 @@
           <%= f.input :age_max, collection: 18..77, label: 'Age maximum', selected: 30 %>
         </div>
         <div class="sexe col-4 p-0 pl-2 ml-4">
-          <%= f.input :gender, as: :radio_buttons, label: 'Sexe', collection: [['Femme', 'Femme'], ['Homme', 'Homme']], label_method: :second, value_method: :first %>
+          <%= f.input :gender, as: :check_boxes, label: 'Genre', collection: [['Femme', 'Femme'], ['Homme', 'Homme']], label_method: :second, value_method: :first %>
         </div>
       </div>
 
@@ -35,7 +35,7 @@
           <%= f.input :instrument, as: :radio_buttons, label: 'Instrument', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'] %>
         </div>
         <div class="style col-6 p-0 pl-2">
-          <%= f.input :music_style, as: :radio_buttons, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>
+          <%= f.input :music_style, as: :check_boxes, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>
         </div>
       </div>
       <br>
