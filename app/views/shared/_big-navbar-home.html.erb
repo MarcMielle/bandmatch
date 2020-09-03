@@ -23,7 +23,12 @@
       <% end  %>
     </div>
   </div>
-  <div class="container">
-    <h1>Avec Bandmatch, n'attendez plus <br>pour jouer ensemble !</h1>
-  </div>
+  <% if user_signed_in? %>
+    <div class="container">
+    </div>
+  <% else %>
+    <div class="container">
+      <h1>Avec Bandmatch, n'attendez plus <br>pour jouer ensemble !</h1>
+    </div>
+  <% end %>
 </div>
