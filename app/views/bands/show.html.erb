@@ -11,8 +11,20 @@
         <div class="box-logo">
           <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "band-logo" %>
         </div>
+        <div class=center> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
+
+      </div>
+        <!-- colonne 2 (bio du band) -->
+      <div class="col2">
+        <h3 class="center">Bio</h3>
+        <br>
+        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum vel cumque labore blanditiis dolores dolorem maiores in tempore alias. Veniam illum dolorum quod facilis laboriosam, aliquid, dignissimos deleniti eos molestias optio illo quaerat magnam id? Expedita maxime natus neque reprehenderit rerum, itaque alias omnis cupiditate ab ex, minus quis? "</p>
+      </div>
+        <!-- colonne 3 (matching score) -->
+      <div class="col3">
+
         <div class="box-members">
-            <p class="members">Membres : </p>
+            <p class="members">Membres</p>
 
             <div class="one-member">
               <% @band.users.each do |user| %>
@@ -26,28 +38,6 @@
               <% end %>
             </div>
           </div>
-
-      </div>
-        <!-- colonne 2 (bio du band) -->
-      <div class="col2">
-        <h3 class="center">Bio</h3>
-        <br>
-        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum vel cumque labore blanditiis dolores dolorem maiores in tempore alias. Veniam illum dolorum quod facilis laboriosam, aliquid, dignissimos deleniti eos molestias optio illo quaerat magnam id? Expedita maxime natus neque reprehenderit rerum, itaque alias omnis cupiditate ab ex, minus quis? "</p>
-      </div>
-        <!-- colonne 3 (matching score) -->
-      <div class="col3">
-        <div class="affinity-container band-circle">
-          <div class="affinity-container-bands band-circle">
-            <div class="gauge-container band-gauge">
-              <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
-                <circle class="rail" r="47" cx="75" cy="75" />
-                <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
-              </svg>
-              <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-            </div>
-          </div>
-        <div> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
-
         </div>
       </div>
 
