@@ -61,7 +61,7 @@ user1 = User.new(
   latitude: 47.226942523237135,
   longitude: -1.5574251094395386,
   gender:    "Homme",
-  years_of_experience: 2,
+  years_of_experience: 7,
   band: band1,
   instrument:    "batterie",
   music_styles: ["rock"],
@@ -146,6 +146,20 @@ file = File.open(Rails.root.join("db/fixtures/images/users/user3.png"))
 user3.avatar.attach(io: file, filename: 'user3.png', content_type: 'image/png')
 user3.save!
 puts 'User 3/27 created'
+
+pref3 = Preference.new(
+  instrument: "batterie",
+  age_min: 20,
+  age_max: 40,
+  gender: "Homme",
+  years_of_experience_min: 3,
+  weekly_rehearsal_frequency_min: 2,
+  location: "Nantes",
+  location_radius_in_km: 10,
+  music_style: "rock"
+)
+pref3.entity = user3
+pref3.save!
 
 user4 = User.new(
   email:    "elsa.toledo@gmail.com",
@@ -673,6 +687,27 @@ file = File.open(Rails.root.join("db/fixtures/images/users/user27.jpg"))
 user27.avatar.attach(io: file, filename: 'user27.jpg', content_type: 'image/jpg')
 user27.save!
 puts 'User 27/27 created'
+
+user28 = User.new(
+  email:    "marion.debo@gmail.com",
+  password: "password",
+  first_name:    "Marion",
+  last_name: "Débonnaire",
+  age:  31,
+  location:  "6 Allée de Touraine, 44400 Rezé, France",
+  latitude: 47.18585320807197,
+  longitude: -1.5557529340667098,
+  gender:    "Femme",
+  years_of_experience: 6,
+  band: band1,
+  instrument:    "chant",
+  music_styles: ["rock"],
+  weekly_rehearsal_frequency:  3
+)
+
+file = File.open(Rails.root.join("db/fixtures/images/users/marion.jpg"))
+user28.avatar.attach(io: file, filename: 'user28.jpg', content_type: 'image/jpg')
+user28.save!
 
 puts 'Finished! Now enjoy our awesome website!'
 
