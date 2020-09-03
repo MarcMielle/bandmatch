@@ -23,16 +23,15 @@
       <%= simple_form_for [ @conversation, @message ] do |f| %>
         <%= f.input :content, label: false, placeholder: "Nouveau message" %>
         <div class="sub">
-          <%= f.submit value: "Envoyer", class: "primary-purple-btn" %>
+          <% if other_user.band_id != @band.id %>
+            <div class="hvr-sweep-to-right">
+            <%= link_to "Ajouter à #{current_user.band.name}", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
+            </div>
+          <% end %>
+
+          <%= f.submit value: "Envoyer", data: { disable_with: "envoi..." }, class: "primary-purple-btn" %>
         </div>
       <% end %>
-    <% if other_user.band_id == @band.id %>
-    <p></p>
-    <% else %>
-      <div class="hvr-sweep-to-right">
-      <%= link_to "Add to Band", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
-      </div>
-    <% end %>
     </div>
   </div>
 </div>
