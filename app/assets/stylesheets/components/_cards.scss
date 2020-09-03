@@ -79,8 +79,7 @@
 .musicians-card .affinity-container {
   width: 17%;
 }
-
-.musicians-card:hover {
+ç.musicians-card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(1.01);
 }
@@ -325,7 +324,11 @@
   margin-bottom: 30px;
   margin-top: 30px;
   padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border:0;
 }
+
 .background-card-show-content {
   display: flex;
   padding: 20px;
@@ -402,6 +405,7 @@
 }
 
 // -------- cards de la show band --------//
+
 .container-band {
   justify-content: center;
   width: 850px;
@@ -469,7 +473,7 @@
 .col2 {
   padding: 0 30px;
   padding-top: 0px;
-  text-align: left;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
