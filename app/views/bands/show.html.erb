@@ -8,12 +8,14 @@
       <!-- colonne 1 (logo et membres) -->
 
       <div class="col1">
+        <!-- le logo  -->
         <div class="box-logo">
           <%= cl_image_tag @band.avatar.key, height: 300, width: 400, crop: :fill, class: "band-logo" %>
         </div>
+        <!-- le style du groupe  -->
+        <div class=center> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
+        <!-- les membres du groupe  -->
         <div class="box-members">
-            <p class="members">Membres : </p>
-
             <div class="one-member">
               <% @band.users.each do |user| %>
               <div class="one-member-pic">
@@ -26,29 +28,22 @@
               <% end %>
             </div>
           </div>
-
       </div>
         <!-- colonne 2 (bio du band) -->
       <div class="col2">
-        <h3 class="center">Bio</h3>
-        <br>
+        <i class="fas fa-quote-left"></i>
         <p> Chez Overmist, on joue surtout du rock (U2, Nirvana, RHCP, etc). Marc (guitariste), Nicolas (batteur) et Marion (chanteuse), recherchons tous les trois un bassiste pour compléter notre groupe. </p>
+        <i class="fas fa-quote-right quote-right"></i>
       </div>
-        <!-- colonne 3 (matching score) -->
-      <div class="col3">
-        <div class="affinity-container band-circle">
-          <div class="affinity-container-bands band-circle">
-            <div class="gauge-container band-gauge">
-              <svg class="gauge" viewBox="0 0 150 150" preserveAscpectRatio="xMinYMin Meet">
-                <circle class="rail" r="47" cx="75" cy="75" />
-                <circle class="progress" r="47" data-target="<%= rand(50..100) %>" cx="75" cy="75" />
-              </svg>
-              <span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-            </div>
-          </div>
-        <div> <i class="fas fa-music"></i> <%= @band.music_style.capitalize %> </div>
 
-        </div>
+
+
+
+        <!-- colonne 3 (matching score) -->
+      <!-- <div class="col3"> -->
+
+
+ <!--        </div> -->
       </div>
 
       <!-- ci-dessous FIN background-card-show-content -->
