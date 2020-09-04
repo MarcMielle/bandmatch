@@ -4,19 +4,22 @@
 
 
   <%= render 'conversations/list' %>
+
   <div class="messages-container">
     <% other_user = @conversation.other_user_than(current_user) %>
     <div class="messages">
       <% @messages.each do |message| %>
+        <% is_last_message = message == @conversation.last_message %>
+
         <% if message.author == current_user %>
-          <div class="my-message-container">
+          <div class="my-message-container" data-conversation-last-message="<%= is_last_message %>">
             <div class="my-message">
               <span>Vous</span>
               <p><%= message.content %></p>
             </div>
           </div>
         <% else %>
-          <div class="other-message-container">
+          <div class="other-message-container" data-conversation-last-message="<%= is_last_message %>">
             <div class="other-message">
             <span><%= other_user.first_name %></span>
               <p><%= message.content %></p>

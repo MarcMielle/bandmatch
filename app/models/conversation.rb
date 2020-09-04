@@ -10,6 +10,6 @@ class Conversation < ApplicationRecord
   end
 
   def last_message
-    messages.order(created_at: :desc).first
+    @last_message ||= messages.order(created_at: :desc).first
   end
 end
