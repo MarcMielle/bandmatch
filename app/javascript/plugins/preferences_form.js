@@ -21,6 +21,17 @@ const initPreferencesForm = () => {
       label.classList.toggle('active');
     });
   });
+
+  const genderLabels = document.querySelectorAll(".gender-checkbox label");
+
+  genderLabels.forEach((label) => {
+    label.addEventListener('click', (e) => {
+
+
+
+      label.classList.toggle('active');
+    });
+  });
 };
 
 export { initPreferencesForm };

@@ -132,6 +132,8 @@
   background-image: asset-url("violin.png");
 }
 
+//////////////////////////////////////////////////////////////
+
 .style-label {
   width: 28px;
   height: 28px;
@@ -178,4 +180,46 @@
     border: 1px solid $bandmatch_light_purple;
   }
 }
+
+//////////////////////////////////////////////////////////////
+
+.gender-label {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  border-color: black;
+}
+
+.gender-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
+  margin-top: 8px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
+  }
+}
+
+.gender-checkbox label.active{
+  background-color: $bandmatch_light_purple;
+}
+
+.gender-label.Femme {
+  background-image: asset-url("woman.png");
+}
+
+.gender-label.Homme {
+  background-image: asset-url("man.png");
+}
+
+.gender-checkbox input {
+  display: none
+}
+
 
