@@ -4,19 +4,22 @@
 
 
   <%= render 'conversations/list' %>
+
   <div class="messages-container">
     <% other_user = @conversation.other_user_than(current_user) %>
     <div class="messages">
       <% @messages.each do |message| %>
+        <% is_last_message = message == @conversation.last_message %>
+
         <% if message.author == current_user %>
-          <div class="my-message-container">
+          <div class="my-message-container" data-conversation-last-message="<%= is_last_message %>">
             <div class="my-message">
               <span>Vous</span>
               <p><%= message.content %></p>
             </div>
           </div>
         <% else %>
-          <div class="other-message-container">
+          <div class="other-message-container" data-conversation-last-message="<%= is_last_message %>">
             <div class="other-message">
             <span><%= other_user.first_name %></span>
               <p><%= message.content %></p>
@@ -25,16 +28,16 @@
         <% end %>
       <% end %>
     </div>
-    <%= simple_form_for [ @conversation, @message ] do |f| %>
+    <%= simple_form_for [ @conversation, @message ], html: { autocomplete: 'off' } do |f| %>
       <%= f.input :content, as: :string, label: false, placeholder: "Nouveau message" %>
       <div class="sub">
-        <% if other_user.band_id == @band.id %>
-          <!-- empty div to place submit button on the right side even with a space between justify -->
-          <div></div>
-        <% else %>
+        <% if @band && other_user.band_id != @band.id %>
           <div class="hvr-sweep-to-right">
           <%= link_to "Ajouter à #{current_user.band.name}", join_band_musician_path(@band, other_user, conversation_id: @conversation.id), method: :post, class: 'hvr-sweep-to-right:hover:before hvr-sweep-to-right:focus:before hvr-sweep-to-right:active:before' %>
           </div>
+        <% else %>
+          <!-- empty div to place submit button on the right side even with a space between justify -->
+          <div></div>
         <% end %>
 
         <%= f.submit value: "Envoyer", data: { disable_with: "Envoi..." }, class: "primary-purple-btn" %>

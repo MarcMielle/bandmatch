@@ -21,7 +21,9 @@
           <%= cl_image_tag current_user.avatar.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "My profile", profile_path, class: "dropdown-item" %>
+            <% if current_user.band_id != nil %>
             <%= link_to "My band profile", band_path(current_user.band_id), class: "dropdown-item" %>
+            <% end %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
