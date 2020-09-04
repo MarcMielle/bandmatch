@@ -52,20 +52,26 @@
   font-weight: bold;
 }
 
+.preference_style legend {
+  font-weight: bold;
+}
 
 .intruments-checkbox label {
   color: $bandmatch_purple !important;
-  border: 1px solid $bandmatch_purple;
-  border-radius: 10px;
-  padding: 1px 5px;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
   &:hover {
     background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
   }
 }
 
 .instrument-checkbox input .is-valid {
   .intruments-checkbox label {
     background-color: $bandmatch_purple;
+    border-radius: 60px;
   }
 }
 
@@ -88,23 +94,36 @@
 }
 
 .intruments-checkbox label.active{
-  background-color: red;
+  background-color: $bandmatch_light_purple;
 }
 
-// .intruments-checkbox input {
-//   display: none
-// }
+.intruments-checkbox input {
+  display: none
+}
 
 .instrument-label {
-  width: 100px;
-  height: 100px;
+  width: 28px;
+  height: 28px;
   background-size: cover;
 }
 
 .instrument-label.guitare {
-  background-image: asset-url("logo.png");
+  background-image: asset-url("guitar.png");
 }
 
+.instrument-label.chant {
+  background-image: asset-url("microphone.png");
+}
 
-
-
+.instrument-label.batterie {
+  background-image: asset-url("drumstick.png");
+}
+.instrument-label.basse {
+  background-image: asset-url("bass-guitar.png");
+}
+.instrument-label.piano {
+  background-image: asset-url("keyboard.png");
+}
+.instrument-label.violon {
+  background-image: asset-url("violin.png");
+}
