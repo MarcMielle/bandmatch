@@ -17,14 +17,19 @@
 }
 
 .home .simple_form {
+  font-size: 14px;
   position: relative;
   top: -250px;
   margin-top: 20px;
-  padding:50px;
-  margin:0 220px;
+  padding: 50px;
+  margin:0 290px;
   background: $bandmatch_light_grey;
   border-radius: 60px 0px 60px 60px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  h4 {
+    // color: $bandmatch_purple;
+  }
 
   .form-control {
     margin: 8px 0;
@@ -43,13 +48,178 @@
   background-image: none;
 }
 
+// .preference_instrument legend {
+//   font-weight: bold;
+// }
 
+// .preference_style legend {
+//   font-weight: bold;
+// }
 
+.intruments-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
+  }
+}
 
+.instrument-checkbox input .is-valid {
+  .intruments-checkbox label {
+    background-color: $bandmatch_purple;
+    border-radius: 60px;
+  }
+}
 
+.instrument-checkbox input {
+  &.active {
+  color: red !important;
+  }
+}
 
+.instrument-checkbox input[type="radio"]:checked + label {
+    background-color:#bfb !important;
+    border-color: #4c4 !important;
+}
+// .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+//   background-color: red;
+// }
 
+.intruments-checkbox {
+  margin: 10px;
+}
 
+.style-checkbox {
+  margin: 10px;
+}
 
+.intruments-checkbox label.active{
+  background-color: $bandmatch_light_purple;
+}
+
+.intruments-checkbox input {
+  display: none
+}
+
+.instrument-label {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+}
+
+.instrument-label.guitare {
+  background-image: asset-url("guitar.png");
+}
+
+.instrument-label.chant {
+  background-image: asset-url("microphone.png");
+}
+
+.instrument-label.batterie {
+  background-image: asset-url("drumstick.png");
+}
+.instrument-label.basse {
+  background-image: asset-url("bass-guitar.png");
+}
+.instrument-label.piano {
+  background-image: asset-url("keyboard.png");
+}
+.instrument-label.violon {
+  background-image: asset-url("violin.png");
+}
+
+//////////////////////////////////////////////////////////////
+
+.style-label {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.style-label.rock {
+  background-image: asset-url("rock.png");
+}
+.style-label.jazz {
+  background-image: asset-url("jazz.png");
+}
+.style-label.pop {
+  background-image: asset-url("pop.png");
+}
+.style-label.classique {
+  background-image: asset-url("classique2.png");
+}
+.style-label.funk {
+  background-image: asset-url("funk2.png");
+}
+.style-label.folk {
+  background-image: asset-url("folk.png");
+}
+.style-checkbox label.active{
+  background-color: $bandmatch_light_purple;
+}
+
+.style-checkbox input {
+  display: none
+}
+
+.style-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
+  }
+}
+
+//////////////////////////////////////////////////////////////
+
+.gender-label {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  border-color: black;
+}
+
+.gender-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
+  margin-top: 8px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
+  }
+}
+
+.gender-checkbox label.active{
+  background-color: $bandmatch_light_purple;
+}
+
+.gender-label.Femme {
+  background-image: asset-url("woman.png");
+}
+
+.gender-label.Homme {
+  background-image: asset-url("man.png");
+}
+
+.gender-checkbox input {
+  display: none
+}
 
 

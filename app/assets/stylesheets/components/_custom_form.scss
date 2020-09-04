@@ -1,9 +1,25 @@
 .submit-butt{
   text-align: center;
+  margin-bottom: 0px;
+}
+
+.primary-orange-btn-searchform {
+  background-color: $bandmatch_orange;
+  color: white !important;
+  padding: 12px 25px;
+  border-radius: 50px;
+  // border: 0.5px solid $bandmatch_orange;
+  font-size: 15px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background-color: $bandmatch_orange_hover;
+    border: 0.5px solid $bandmatch_orange_hover;
+  }
 }
 
 .simple_form input {
-  border: 1px solid purple; 
+  // border: 1px solid purple;
 }
 
 input[type=text], select {
@@ -119,4 +135,9 @@ text-decoration: none;
 background-color: #143240;
 border-radius: 4px;
 box-shadow: 0 10px 20px -5px rgba(20, 50, 64, 0.76);
+}
+
+.label {
+    display: inline-block;
+    // margin-bottom: 0.5rem;
 }
