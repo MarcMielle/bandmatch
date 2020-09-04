@@ -25,13 +25,19 @@ require("channels")
 import { initMapbox }         from '../plugins/init_mapbox';
 import { initGaugeAnimation } from '../plugins/gauge_animation';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initJumpToMessage } from '../components/jump_to_last_message';
+
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initGaugeAnimation();
   initAutocomplete();
+  initJumpToMessage();
 });
+
 // External imports
 import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+
+
