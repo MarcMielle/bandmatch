@@ -10,7 +10,17 @@ const initPreferencesForm = () => {
       label.classList.add('active');
     });
   });
+
+  const styleLabels = document.querySelectorAll(".style-checkbox label");
+
+  styleLabels.forEach((label) => {
+    label.addEventListener('click', (e) => {
+
+
+
+      label.classList.toggle('active');
+    });
+  });
 };
 
 export { initPreferencesForm };
-

@@ -48,13 +48,13 @@
   background-image: none;
 }
 
-.preference_instrument legend {
-  font-weight: bold;
-}
+// .preference_instrument legend {
+//   font-weight: bold;
+// }
 
-.preference_style legend {
-  font-weight: bold;
-}
+// .preference_style legend {
+//   font-weight: bold;
+// }
 
 .intruments-checkbox label {
   color: $bandmatch_purple !important;
@@ -93,6 +93,10 @@
   margin: 10px;
 }
 
+.style-checkbox {
+  margin: 10px;
+}
+
 .intruments-checkbox label.active{
   background-color: $bandmatch_light_purple;
 }
@@ -127,3 +131,51 @@
 .instrument-label.violon {
   background-image: asset-url("violin.png");
 }
+
+.style-label {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.style-label.rock {
+  background-image: asset-url("rock.png");
+}
+.style-label.jazz {
+  background-image: asset-url("jazz.png");
+}
+.style-label.pop {
+  background-image: asset-url("pop.png");
+}
+.style-label.classique {
+  background-image: asset-url("classique2.png");
+}
+.style-label.funk {
+  background-image: asset-url("funk2.png");
+}
+.style-label.folk {
+  background-image: asset-url("folk.png");
+}
+.style-checkbox label.active{
+  background-color: $bandmatch_light_purple;
+}
+
+.style-checkbox input {
+  display: none
+}
+
+.style-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_dark_grey;
+  border-radius: 60px;
+  padding: 7px 7px;
+  margin-bottom: 0px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+    border: 1px solid $bandmatch_light_purple;
+  }
+}
+
