@@ -51,6 +51,24 @@
   }
 }
 
+.back-to-form {
+  background-color: $bandmatch_purple;
+  color: white !important;
+  padding: 15px 15px;
+  border-radius: 50px;
+  border: 0.5px solid $bandmatch_purple;
+  font-size: 14px;
+  text-align: center;
+  justify-content: right;
+  position: absolute; 
+  right: 24px;
+  &:hover {
+    text-decoration: none;
+    background-color: $bandmatch_purple_hover;
+    border: 0.5px solid $bandmatch_purple_hover;
+  }
+}
+
 .secondary-orange-btn {
   background-color: white;
   color: $bandmatch_orange !important;
