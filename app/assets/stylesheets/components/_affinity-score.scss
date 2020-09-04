@@ -10,8 +10,8 @@ $strawberry: $bandmatch_purple;
 
 .affinity-container {
 
-  height: 50%;
-  width: 25%;
+  height: 70%;
+  width: 50%;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -78,7 +78,7 @@ $strawberry: $bandmatch_purple;
     position: relative;
     display: block;
 
-    circle{ stroke-width: 15; }
+    circle{ stroke-width: 10; }
 
     .rail{ fill: transparent; }
 
