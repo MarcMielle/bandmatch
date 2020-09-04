@@ -27,7 +27,7 @@ class User < ApplicationRecord
       age_min:    default_preferences.age_min,
       age_max:    default_preferences.age_max,
       gender:     default_preferences.gender
-    }).near(default_preferences.location, default_preferences.location_radius_in_km)
+    }).order('affinity_score DESC').near(default_preferences.location, default_preferences.location_radius_in_km)
   end
 
   def default_preferences
