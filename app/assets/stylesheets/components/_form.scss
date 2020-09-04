@@ -17,14 +17,19 @@
 }
 
 .home .simple_form {
+  font-size: 14px;
   position: relative;
   top: -250px;
   margin-top: 20px;
-  padding:50px;
-  margin:0 220px;
+  padding: 50px;
+  margin:0 290px;
   background: $bandmatch_light_grey;
   border-radius: 60px 0px 60px 60px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  h4 {
+    // color: $bandmatch_purple;
+  }
 
   .form-control {
     margin: 8px 0;
@@ -41,6 +46,10 @@
 
 .was-validated .form-control:valid, .form-control.is-valid {
   background-image: none;
+}
+
+.preference_instrument legend {
+  font-weight: bold;
 }
 
 
@@ -78,9 +87,23 @@
   margin: 10px;
 }
 
+.intruments-checkbox label.active{
+  background-color: red;
+}
 
+// .intruments-checkbox input {
+//   display: none
+// }
 
+.instrument-label {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
 
+.instrument-label.guitare {
+  background-image: asset-url("logo.png");
+}
 
 
 
