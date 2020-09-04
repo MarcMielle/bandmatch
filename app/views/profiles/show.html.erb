@@ -7,18 +7,17 @@
         <div>
         <%= cl_image_tag @user.avatar.key, crop: :fill, class: "background-card-show-picture" %>
         </div>
-
         <div class="background-card-show-text">
-          <ul>
-            <div> <i class="fas fa-birthday-cake"></i> <%= @user.age %> ans </div>
-            <br>
-            <div> <i class="fas fa-map-marker-alt"></i> <%= @user.location.split()[-2].gsub(/[\s,]/ ,"") %> </div>
-            <br>
-            <div> <i class="fas fa-music"></i> <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d expérience</div>
-            <br>
-            <div> <i class="fas fa-check-circle"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois / semaine </div>
-          </ul>
-        </div>
+        <ul>
+          <div> <i class="fas fa-birthday-cake"></i> <%= @user.age %> ans </div>
+          <br>
+          <div> <i class="fas fa-map-marker-alt"></i> <%= @user.location.split()[-2].gsub(/[\s,]/ ,"") %> </div>
+          <br>
+          <div> <i class="fas fa-music"></i> <%= @user.instrument.capitalize %>, <%= @user.music_styles.join("").capitalize %>, <%= @user.years_of_experience %> ans d expérience</div>
+          <br>
+          <div> <i class="fas fa-check-circle"></i> Disponible <%= @user.weekly_rehearsal_frequency %> fois / semaine </div>
+        </ul>
+      </div>
       </div>
     </div>
 
