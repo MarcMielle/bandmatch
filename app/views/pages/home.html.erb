@@ -32,7 +32,7 @@
       </div>
       <div class="instrum-style d-flex">
         <div class="instrum col-6 p-0 pl-2">
-          <%= f.input :instrument, as: :radio_buttons, label: 'Instrument', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'] %>
+          <%= f.input :instrument, as: :radio_buttons, label: false, item_wrapper_class: 'intruments-checkbox', collection: ['guitare', 'chant', 'batterie', 'basse', 'piano', 'violon'], label_method: lambda { |instrument| ActionController::Base.new.render_to_string(partial: "pages/instrument_label", locals: { instrument: instrument }) } %>
         </div>
         <div class="style col-6 p-0 pl-2">
           <%= f.input :music_style, as: :check_boxes, label: 'Style', collection: ['rock', 'jazz', 'pop', 'classique', 'funk', 'folk'] %>

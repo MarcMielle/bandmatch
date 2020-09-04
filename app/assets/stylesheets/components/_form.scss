@@ -44,7 +44,39 @@
 }
 
 
+.intruments-checkbox label {
+  color: $bandmatch_purple !important;
+  border: 1px solid $bandmatch_purple;
+  border-radius: 10px;
+  padding: 1px 5px;
+  &:hover {
+    background-color: $bandmatch_light_purple;
+  }
+}
 
+.instrument-checkbox input .is-valid {
+  .intruments-checkbox label {
+    background-color: $bandmatch_purple;
+  }
+}
+
+.instrument-checkbox input {
+  &.active {
+  color: red !important;
+  }
+}
+
+.instrument-checkbox input[type="radio"]:checked + label {
+    background-color:#bfb !important;
+    border-color: #4c4 !important;
+}
+// .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+//   background-color: red;
+// }
+
+.intruments-checkbox {
+  margin: 10px;
+}
 
 
 
